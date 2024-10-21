@@ -14,7 +14,7 @@ class CustomClient(fl.client.NumPyClient):
 
         
     def __init__(self):
-        
+    
         with open('public_key.pkl', 'rb') as f:
             self.__public_key = pickle.load(f)
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     partition_id = args.partition_id
     
-    dataset_train = pd.read_csv(f'./df_{partition_id+1}.csv')
+    dataset_train = pd.read_csv(f'./IID_df_{partition_id+1}.csv')
     
     dataset_test = pd.read_csv(f'./test_glob.csv')
 
