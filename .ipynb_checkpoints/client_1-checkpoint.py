@@ -4,7 +4,7 @@ import pickle
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-import FedAvg.tasks as ts
+import tasks as ts
 import warnings
 import argparse
 import numpy as np
@@ -110,7 +110,6 @@ if __name__ == "__main__":
 
     X_train, y_train = dataset_train.drop(columns=['Fraud']), dataset_train['Fraud']
     X_test, y_test = dataset_test.drop(columns='Fraud'), dataset_test['Fraud']
-    
 
 
     model = LogisticRegression(
