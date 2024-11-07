@@ -1,4 +1,5 @@
 import os 
+import json
 import pickle
 import logging
 import warnings
@@ -73,16 +74,53 @@ class CustomClient(fl.client.NumPyClient):
         
         return loss, len(X_test), {"accuracy": accuracy, "roc_auc": roc_auc, "f1-score": f1}
 
-def save_metrics(client, filename="metrics_client_1.txt"):
-    
-    with open(filename, 'w') as f:
-        f.write("losses: {}\n".format(np.array(client.losses)))
-        f.write("ROC_AUCs: {}\n".format(np.array(client.ROC_AUCs)))
-        f.write("ACCURACYs: {}\n".format(np.array(client.ACCURACYs)))
-        f.write("F1s: {}\n".format(np.array(client.F1s)))
+def save_metrics_json(client, strategy_suffix, filename="./metrics.json"):
+    # Структура метрик для текущего запуска
+    metrics = {
+        "losses": list(client.losses),
+        "ROC_AUCs": list(client.ROC_AUCs),
+        "ACCURACYs": list(client.ACCURACYs),
+        "F1s": list(client.F1s)
+    }
 
+    # Проверка существования файла и его содержимого
+    if os.path.exists(filename) and os.path.getsize(filename) > 0:
+        with open(filename, 'r') as f:
+            try:
+                all_metrics = json.load(f)
+            except json.JSONDecodeError:
+                # Если файл поврежден, начинаем с пустого словаря
+                all_metrics = {}
+    else:
+        all_metrics = {}
+
+    # Добавляем метрики для текущей стратегии
+    if strategy_suffix not in all_metrics:
+        all_metrics[strategy_suffix] = []
+    
+    all_metrics[strategy_suffix].append(metrics)
+
+    # Сохраняем обновленные метрики
+    os.makedirs(os.path.dirname(filename), exist_ok=True)  # Создаем директорию, если ее нет
+    with open(filename, 'w') as f:
+        json.dump(all_metrics, f, indent=4)
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Run Flower client with specific version")
+    parser.add_argument("--strategy-id", type=int, required=True, help="strategy ID to determine ")
+    args = parser.parse_args()
+
+    
+    if args.strategy_id == 0:
+        strategy_suffix = "fed_avg"
+    elif args.strategy_id == 1:
+        strategy_suffix = "dp_fixed"
+    elif args.strategy_id == 2:
+        strategy_suffix = "dp_adaptive"
+    else:
+        raise ValueError("Unsupported strategy. Use 0 for fed_avg, 1 for dp_fixed, or 2 for dp_adaptive")
+
     N_CLIENTS = 2
 
     model = LogisticRegression(
@@ -93,8 +131,8 @@ if __name__ == "__main__":
     scaler = MinMaxScaler()
     smote = SMOTE(random_state=42)
 
-    path_for_train_data = './IID_df_1.csv'
-    path_for_test_data = './test_glob.csv'
+    path_for_train_data = './datas/IID_df_1.csv'
+    path_for_test_data = './datas/test_glob.csv'
 
     data_train = pd.read_csv(path_for_train_data)
     data_test = pd.read_csv(path_for_test_data)
@@ -117,4 +155,4 @@ if __name__ == "__main__":
     )
 
     
-    save_metrics(client_1, filename="metrics_client_1.txt")
+    save_metrics_json(client_1, strategy_suffix)

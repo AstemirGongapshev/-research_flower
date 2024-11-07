@@ -17,8 +17,8 @@ if __name__ == "__main__":
         on_fit_config_fn=fit_round,
     )
     
-    # # Оберните стратегию в DifferentialPrivacyClientSideFixedClipping
-    # dp_strategy = DifferentialPrivacyClientSideFixedClipping(
+
+    # dp_strategy = DifferentialPrivacyServerSideFixedClipping(
     #     strategy=fed_strategy,
     #     noise_multiplier=0.5,
     #     clipping_norm=0.1,
@@ -27,9 +27,9 @@ if __name__ == "__main__":
 
 
 
-    #     dp_stratagy = DifferentialPrivacyServerSideAdaptiveClipping(
+    # dp_stratagy = DifferentialPrivacyServerSideAdaptiveClipping(
 
-    #     strategy=strategy, 
+    #     strategy=fed_strategy, 
     #     noise_multiplier=0.5,
     #     num_sampled_clients=2,
     #     initial_clipping_norm=0.1,

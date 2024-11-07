@@ -73,14 +73,6 @@ class CustomClient(fl.client.NumPyClient):
         
         return loss, len(X_test), {"accuracy": accuracy, "roc_auc": roc_auc, "f1-score": f1}
 
-# def save_metrics(client, filename="metrics_client_1.txt"):
-    
-#     with open(filename, 'w') as f:
-#         f.write("losses: {}\n".format(np.array(client.losses)))
-#         f.write("ROC_AUCs: {}\n".format(np.array(client.ROC_AUCs)))
-#         f.write("ACCURACYs: {}\n".format(np.array(client.ACCURACYs)))
-#         f.write("F1s: {}\n".format(np.array[(client.F1s)]))
-
 
 if __name__ == "__main__":
     N_CLIENTS = 2
@@ -93,8 +85,8 @@ if __name__ == "__main__":
     scaler = MinMaxScaler()
     smote = SMOTE(random_state=42)
 
-    path_for_train_data = './IID_df_2.csv'
-    path_for_test_data = './test_glob.csv'
+    path_for_train_data = './datas/IID_df_2.csv'
+    path_for_test_data = './datas/test_glob.csv'
 
     data_train = pd.read_csv(path_for_train_data)
     data_test = pd.read_csv(path_for_test_data)
@@ -117,4 +109,4 @@ if __name__ == "__main__":
     )
 
     
-    # save_metrics(client_1, filename="metrics_client_1.txt")
+ 
