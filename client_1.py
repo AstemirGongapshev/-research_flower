@@ -1,127 +1,120 @@
-import flwr as fl 
-import pandas as pd
+import os 
 import pickle
+import logging
+import warnings
+import argparse
+import flwr as fl 
+import numpy as np
+import tasks as ts
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-import tasks as ts
-import warnings
-import argparse
-import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+from imblearn.over_sampling import SMOTE
+from flwr.common import NDArrays
+from typing import Dict
+
 
 
 class CustomClient(fl.client.NumPyClient):
-
-        
-    def __init__(self):
-        
-        with open('public_key.pkl', 'rb') as f:
-            self.__public_key = pickle.load(f)
-
-        with open('private_key.pkl', 'rb') as f:
-            self.__private_key = pickle.load(f)
-
+  
+    def __init__(self, model, X_train, X_test, y_train, y_test):
+        self.model = model
+        self.X_train = X_train
+        self.X_test = X_test
+        self.y_train = y_train
+        self.y_test = y_test
+        self.losses = []
+        self.ROC_AUCs = []
+        self.ACCURACYs = []
+        self.F1s = []
 
     def get_parameters(self, config):
-
-        print('================== INITIAL PARAMS ==================')
-        params = ts.get_model_parameters(model)
-        print(params)
-
-        return params
-
+         
+        return ts.get_model_parameters(model)
+    
     def fit(self, parameters, config):
-        
-        
         ts.set_model_parameters(model, parameters)
-        print('============================ PARAMS BEFORE  FIT===========================')
-        print(parameters)
         
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             model.fit(X_train, y_train)
-        print(f"Training finished for round {config['server_round']}")
-        print('============================= PARAMETERS AFTER FIT ===============================')
-        params_1 = ts.get_model_parameters(model)
-        print(f'clear: {params_1}')
-        encrypted_params = [(self.__public_key.encrypt(value),) for param in params_1 for value in param.flatten()]
-        enc_result = []
-        index = 0
-
-        for param in params_1:
-                num_elements = param.size
-                reshaped_array = np.array(encrypted_params[index:index + num_elements]).reshape(param.shape)
-                enc_result.append(reshaped_array)
-                index += num_elements
-            # encrypt parameters here
-
-
-        print(f'Encrypted: {enc_result}')
+    
         
-        return enc_result, len(X_train), {}
+        return ts.get_model_parameters(model), len(X_train), {}
 
     def evaluate(self, parameters, config):
-        print('========================== evaluate PARAMS =============================================')
-        # i got agg parameters for server, here i have to decrypt them
-        print(parameters, parameters[0].size, parameters[1].size)
-        decrypted_params = [(self.__private_key.decrypt(value),) for param in parameters for value in param.flatten()]
-        dec_res = []
-        index = 0
-        for param in parameters:
-               num_elements = param.size
-               reshaped_array = np.array(decrypted_params[index:index + num_elements]).reshape(param.shape)
-               dec_res.append(reshaped_array)
-               index += num_elements
-        print(f' Decrypted for EVAL {dec_res}')
-
-
         
-        ts.set_model_parameters(model, dec_res)
+        ts.set_model_parameters(model, parameters)
+        
         y_pred_proba = model.predict_proba(X_test)[:, 1]
         y_pred = model.predict(X_test)
+        
+       
         loss = log_loss(y_test, y_pred_proba)
         accuracy = accuracy_score(y_test, y_pred)
         roc_auc = roc_auc_score(y_test, y_pred_proba)
         f1 = f1_score(y_test, y_pred)
+
         print(f'accuracy: {accuracy}')
         print(f'ROC_AUC: {roc_auc}')
         print(f'f1_score: {f1}')
+
+        
+        self.losses.append(loss)
+        self.ROC_AUCs.append(roc_auc)
+        self.ACCURACYs.append(accuracy)
+        self.F1s.append(f1)
+        
         
         return loss, len(X_test), {"accuracy": accuracy, "roc_auc": roc_auc, "f1-score": f1}
 
+def save_metrics(client, filename="metrics_client_1.txt"):
+    
+    with open(filename, 'w') as f:
+        f.write("losses: {}\n".format(np.array(client.losses)))
+        f.write("ROC_AUCs: {}\n".format(np.array(client.ROC_AUCs)))
+        f.write("ACCURACYs: {}\n".format(np.array(client.ACCURACYs)))
+        f.write("F1s: {}\n".format(np.array(client.F1s)))
+
+
 if __name__ == "__main__":
     N_CLIENTS = 2
-    parser = argparse.ArgumentParser(description="Flower")
-    parser.add_argument(
-        "--partition-id",
-        type=int,
-        choices=range(0, N_CLIENTS),
-        required=True,
-        help="Specifies the artificial data partition",
-    )
-    args = parser.parse_args()
-    partition_id = args.partition_id
-    
-    dataset_train = pd.read_csv(f'./IID_df_{partition_id+1}.csv')
-    
-    dataset_test = pd.read_csv(f'./test_glob.csv')
-
-    
-
-    X_train, y_train = dataset_train.drop(columns=['Fraud']), dataset_train['Fraud']
-    X_test, y_test = dataset_test.drop(columns='Fraud'), dataset_test['Fraud']
-    
-
 
     model = LogisticRegression(
-        penalty='l2',
-        max_iter=1
+        max_iter=1,
+        warm_start=True
     )
+
+    scaler = MinMaxScaler()
+    smote = SMOTE(random_state=42)
+
+    path_for_train_data = './IID_df_1.csv'
+    path_for_test_data = './test_glob.csv'
+
+    data_train = pd.read_csv(path_for_train_data)
+    data_test = pd.read_csv(path_for_test_data)
+
+    X_train_, y_train_ = data_train.drop(columns='Fraud'), data_train['Fraud']
+    X_test_, y_test = data_test.drop(columns='Fraud'), data_test['Fraud']
+
+    X_train_scale = scaler.fit_transform(X_train_)
+    X_train, y_train = smote.fit_resample(X_train_scale, y_train_)
+    X_test = scaler.transform(X_test_)
+      
 
     ts.set_initial_parameters(model)
-
+    
+    client_1 = CustomClient(model, X_train, X_test, y_train, y_test)
+    
     fl.client.start_client(
         server_address="127.0.0.1:8080",
-        client=CustomClient()
+        client=client_1
     )
 
+    
+    save_metrics(client_1, filename="metrics_client_1.txt")

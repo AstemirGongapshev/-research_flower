@@ -1,14 +1,17 @@
 import flwr as fl
 import time
 from flwr.server.strategy import FedAvg
-from flwr.server.strategy import DifferentialPrivacyClientSideFixedClipping
+from flwr.server.strategy import ( DifferentialPrivacyServerSideFixedClipping,
+                                   DifferentialPrivacyServerSideAdaptiveClipping,
+                                   FedAvg
+                                   ) 
 
 def fit_round(server_round):
-    """Отправляет номер раунда клиенту."""
+   
     return {"server_round": server_round}
 
 if __name__ == "__main__":
-    # Базовая стратегия FedAvg
+   
     fed_strategy = FedAvg(
         min_available_clients=2,
         on_fit_config_fn=fit_round,
@@ -22,12 +25,25 @@ if __name__ == "__main__":
     #     num_sampled_clients=2,
     # )
 
+
+
+    #     dp_stratagy = DifferentialPrivacyServerSideAdaptiveClipping(
+
+    #     strategy=strategy, 
+    #     noise_multiplier=0.5,
+    #     num_sampled_clients=2,
+    #     initial_clipping_norm=0.1,
+    #     target_clipped_quantile=0.5,
+    #     clipped_count_stddev=0.5
+    # )
+    
+
     start_time = time.time()
 
     fl.server.start_server(
         server_address="0.0.0.0:8080",
         strategy=fed_strategy,
-        config=fl.server.ServerConfig(num_rounds=10)
+        config=fl.server.ServerConfig(num_rounds=50)
     )
 
     end_time = time.time()
