@@ -24,7 +24,7 @@ def set_model_parameters(model, params):
 
 def set_initial_parameters(model):
     
-    n_features = 33 # Number of features in dataset
+    n_features = 33 
     model.classes_ = np.arange(1)
     model.coef_ = np.zeros((1, n_features))
     if model.fit_intercept:
@@ -33,8 +33,8 @@ def set_initial_parameters(model):
 
 
 
-def save_metrics_json(client, strategy_suffix, filename="./test_results/metrics_2.json"):
-    # Структура метрик для текущего запуска
+def save_metrics_json(client, strategy_suffix, filename="./metrics_2.json"):
+    
     metrics = {
         "losses": list(client.losses),
         "ROC_AUCs": list(client.ROC_AUCs),
