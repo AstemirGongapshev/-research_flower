@@ -69,16 +69,16 @@ class CustomClient(fl.client.NumPyClient):
     def get_parameters(self, config):
         print('================== INITIAL PARAMS ==================')
         params = ts.get_model_parameters(self.model)
-        encrypted_params = self.encrypt_parameters(params)
-        print(params)
-        return encrypted_params
+        # encrypted_params = self.encrypt_parameters(params)
+        # print(params)
+        return params
 
     def fit(self, parameters, config):
         print('============================ PARAMS BEFORE FIT ===========================')
         print(parameters)
         
-        decrypted_params = self.decrypt_parameters(parameters)
-        ts.set_model_parameters(self.model, decrypted_params)
+        # decrypted_params = self.decrypt_parameters(parameters)
+        ts.set_model_parameters(self.model, parameters)
         
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")

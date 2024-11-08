@@ -33,7 +33,7 @@ def set_initial_parameters(model):
 
 
 
-def save_metrics_json(client, strategy_suffix, filename="./metrics_2.json"):
+def save_metrics_json(client, strategy_suffix, filename="./test_results/metrics_2.json"):
     # Структура метрик для текущего запуска
     metrics = {
         "losses": list(client.losses),
