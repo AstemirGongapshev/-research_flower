@@ -123,40 +123,6 @@ class CustomClient(fl.client.NumPyClient):
         
         return loss, len(self.X_test), metrics
 
-def save_metrics_json(client: CustomClient, strategy_suffix: str, filename: str = "./tests_results/metrics.json"):
-
-    metrics = {
-        "losses": client.losses,
-        "ROC_AUCs": client.ROC_AUCs,
-        "ACCURACYs": client.ACCURACYs,
-        "F1s": client.F1s
-    }
-
-    
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-    
-    if os.path.exists(filename) and os.path.getsize(filename) > 0:
-        try:
-            with open(filename, 'r') as f:
-                all_metrics = json.load(f)
-        except json.JSONDecodeError:
-            print(f"Файл {filename} поврежден или пуст. Инициализация нового файла.")
-            all_metrics = {}
-    else:
-        all_metrics = {}
-
-    
-    if strategy_suffix not in all_metrics:
-        all_metrics[strategy_suffix] = []
-
-    all_metrics[strategy_suffix].append(metrics)
-
-    
-    with open(filename, 'w') as f:
-        json.dump(all_metrics, f, indent=4)
-    print(f"Метрики сохранены в {filename} с суффиксом {strategy_suffix}")
-
 
 
 def main():
@@ -222,7 +188,7 @@ def main():
 
    
 
-    save_metrics_json(client, strategy_suffix)
+    ts.save_metrics_json(client, strategy_suffix)
 
 
 if __name__ == "__main__":
