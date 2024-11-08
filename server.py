@@ -20,29 +20,27 @@ if __name__ == "__main__":
 
     # dp_strategy = DifferentialPrivacyServerSideFixedClipping(
     #     strategy=fed_strategy,
-    #     noise_multiplier=0.5,
-    #     clipping_norm=0.1,
+    #     noise_multiplier=5.0,
+    #     clipping_norm=1.0,
     #     num_sampled_clients=2,
     # )
 
 
 
-    dp_stratagy = DifferentialPrivacyServerSideAdaptiveClipping(
-
-        strategy=fed_strategy, 
-        noise_multiplier=1.0,
-        num_sampled_clients=2,
-        initial_clipping_norm=0.1,
-        target_clipped_quantile=0.5,
-        clipped_count_stddev=1.0
-    )
-    
+#     dp_strategy = DifferentialPrivacyServerSideAdaptiveClipping(
+#     strategy=fed_strategy, 
+#     noise_multiplier=5.0,
+#     num_sampled_clients=2,
+#     initial_clipping_norm=1.0,
+#     target_clipped_quantile=0.8,
+#     clipped_count_stddev=10.0  # Попробуйте увеличить это значение
+# )
 
     start_time = time.time()
 
     fl.server.start_server(
         server_address="0.0.0.0:8080",
-        strategy=dp_stratagy,
+        strategy=fed_strategy,
         config=fl.server.ServerConfig(num_rounds=50)
     )
 
