@@ -1,6 +1,6 @@
 import flwr as fl
 import time
-from flwr.server.strategy import FedAvg
+
 from flwr.server.strategy import ( DifferentialPrivacyServerSideFixedClipping,
                                    DifferentialPrivacyServerSideAdaptiveClipping,
                                    FedAvg

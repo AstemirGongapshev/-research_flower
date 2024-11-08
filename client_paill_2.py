@@ -126,8 +126,7 @@ class CustomClient(fl.client.NumPyClient):
 
 
 
-def main():
-
+if __name__ == "__main__":
     model = LogisticRegression(
         max_iter=1,  
         warm_start=True
@@ -173,5 +172,3 @@ def main():
    
 
 
-if __name__ == "__main__":
-    main()

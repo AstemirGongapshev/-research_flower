@@ -125,7 +125,7 @@ class CustomClient(fl.client.NumPyClient):
 
 
 
-def main():
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run Flower client with specific version")
     parser.add_argument("--strategy-id", type=int, required=True, help="strategy ID to determine ")
     args = parser.parse_args()
@@ -191,5 +191,4 @@ def main():
     ts.save_metrics_json(client, strategy_suffix)
 
 
-if __name__ == "__main__":
-    main()
+
