@@ -23,17 +23,16 @@ def set_model_parameters(model, params):
     return model
 
 def set_initial_parameters(model):
-    
     n_features = 33 
     model.classes_ = np.arange(1)
-    model.coef_ = np.zeros((1, n_features))
+    model.coef_ = np.random.randn(1, n_features)  
     if model.fit_intercept:
-        model.intercept_ = np.zeros((1,))
+        model.intercept_ = np.random.randn(1)  
 
 
 
 
-def save_metrics_json(client, strategy_suffix, filename="./metrics_2.json"):
+def save_metrics_json(client, strategy_suffix, filename="./met_.json"):
     
     metrics = {
         "losses": list(client.losses),

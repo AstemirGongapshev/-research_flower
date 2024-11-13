@@ -39,6 +39,8 @@ class CustomClient(fl.client.NumPyClient):
         return ts.get_model_parameters(model)
     
     def fit(self, parameters, config):
+        print(parameters)
+        
         ts.set_model_parameters(model, parameters)
         
         with warnings.catch_warnings():
@@ -101,7 +103,7 @@ if __name__ == "__main__":
     scaler = MinMaxScaler()
     smote = SMOTE(random_state=42)
 
-    path_for_train_data = './datas/Non_IID_1.csv'
+    path_for_train_data = './datas/IID_df_1.csv'
     path_for_test_data = './datas/test_glob.csv'
 
     data_train = pd.read_csv(path_for_train_data)
