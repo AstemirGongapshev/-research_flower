@@ -97,7 +97,8 @@ if __name__ == "__main__":
 
     model = LogisticRegression(
         max_iter=1,
-        warm_start=True
+        warm_start=True,
+        penalty="l2"
     )
 
     scaler = MinMaxScaler()
