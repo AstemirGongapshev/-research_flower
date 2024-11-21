@@ -1,0 +1,2 @@
+2024-11-21 21:58:48,425 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-11-21 21:58:48,426 - ERROR - Failed to load data from ./datas/NON_IID_2.csv: [Errno 2] No such file or directory: './datas/NON_IID_2.csv'

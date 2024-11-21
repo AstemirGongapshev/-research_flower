@@ -1,0 +1,55 @@
+2024-11-21 21:40:30,649 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-11-21 21:40:30,676 - INFO - Data successfully loaded from ./datas/IID.csv
+2024-11-21 21:40:31,011 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:40:46,703 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:40:46,703 - INFO - Metrics for 'global_iid' successfully saved to ./results/iid_res.json
+2024-11-21 21:40:46,729 - INFO - Data successfully loaded from ./datas/NON_IID.csv
+2024-11-21 21:40:46,773 - INFO - Gaussian noise added to columns: Index(['Unnamed: 0', 'Month', 'WeekOfMonth', 'DayOfWeek', 'Make',
+       'AccidentArea', 'DayOfWeekClaimed', 'MonthClaimed',
+       'WeekOfMonthClaimed', 'Sex', 'MaritalStatus', 'Age', 'Fault',
+       'PolicyType', 'VehicleCategory', 'VehiclePrice', 'PolicyNumber',
+       'RepNumber', 'Deductible', 'DriverRating', 'Days_Policy_Accident',
+       'Days_Policy_Claim', 'PastNumberOfClaims', 'AgeOfVehicle',
+       'PoliceReportFiled', 'WitnessPresent', 'AgentType',
+       'NumberOfSuppliments', 'AddressChange_Claim', 'NumberOfCars', 'Year',
+       'BasePolicy', 'AgeGroup', 'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.6
+2024-11-21 21:40:47,018 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:41:01,144 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:41:01,144 - INFO - Metrics for 'global_noniid' successfully saved to ./results/non_iid_res.json
+2024-11-21 21:41:01,159 - INFO - Data successfully loaded from ./datas/IID_1.csv
+2024-11-21 21:41:01,323 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:41:07,652 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:41:07,652 - INFO - Metrics for 'local_1_iid' successfully saved to ./results/iid_res.json
+2024-11-21 21:41:07,664 - INFO - Data successfully loaded from ./datas/IID_2.csv
+2024-11-21 21:41:07,784 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:41:13,764 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:41:13,764 - INFO - Metrics for 'local_2_iid' successfully saved to ./results/iid_res.json
+2024-11-21 21:41:13,774 - INFO - Data successfully loaded from ./datas/NON_IID_1.csv
+2024-11-21 21:41:13,784 - INFO - Gaussian noise added to columns: Index(['Month', 'WeekOfMonth', 'DayOfWeek', 'Make', 'AccidentArea',
+       'DayOfWeekClaimed', 'MonthClaimed', 'WeekOfMonthClaimed', 'Sex',
+       'MaritalStatus', 'Age', 'Fault', 'PolicyType', 'VehicleCategory',
+       'VehiclePrice', 'PolicyNumber', 'RepNumber', 'Deductible',
+       'DriverRating', 'Days_Policy_Accident', 'Days_Policy_Claim',
+       'PastNumberOfClaims', 'AgeOfVehicle', 'PoliceReportFiled',
+       'WitnessPresent', 'AgentType', 'NumberOfSuppliments',
+       'AddressChange_Claim', 'NumberOfCars', 'Year', 'BasePolicy', 'AgeGroup',
+       'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.6
+2024-11-21 21:41:13,885 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:41:17,094 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:41:17,094 - INFO - Metrics for 'local_1_noniid' successfully saved to ./results/non_iid_res.json
+2024-11-21 21:41:17,109 - INFO - Data successfully loaded from ./datas/NON_IID_2.csv
+2024-11-21 21:41:17,124 - INFO - Gaussian noise added to columns: Index(['Month', 'WeekOfMonth', 'DayOfWeek', 'Make', 'AccidentArea',
+       'DayOfWeekClaimed', 'MonthClaimed', 'WeekOfMonthClaimed', 'Sex',
+       'MaritalStatus', 'Age', 'Fault', 'PolicyType', 'VehicleCategory',
+       'VehiclePrice', 'PolicyNumber', 'RepNumber', 'Deductible',
+       'DriverRating', 'Days_Policy_Accident', 'Days_Policy_Claim',
+       'PastNumberOfClaims', 'AgeOfVehicle', 'PoliceReportFiled',
+       'WitnessPresent', 'AgentType', 'NumberOfSuppliments',
+       'AddressChange_Claim', 'NumberOfCars', 'Year', 'BasePolicy', 'AgeGroup',
+       'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.6
+2024-11-21 21:41:17,284 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:41:21,574 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:41:21,574 - INFO - Metrics for 'local_2_noniid' successfully saved to ./results/non_iid_res.json

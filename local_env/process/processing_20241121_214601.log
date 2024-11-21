@@ -1,0 +1,5 @@
+2024-11-21 21:46:01,393 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-11-21 21:46:01,420 - INFO - Data successfully loaded from ./datas/IID.csv
+2024-11-21 21:46:01,756 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-21 21:46:16,603 - INFO - Model successfully trained and predictions made.
+2024-11-21 21:46:16,603 - ERROR - Failed to save metrics for 'global_iid' to ./results/iid_res.json: Expecting value: line 1 column 1 (char 0)

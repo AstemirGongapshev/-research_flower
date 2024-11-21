@@ -1,0 +1,165 @@
+import numpy as np
+import os
+import json
+import logging
+from typing import List, Tuple, Dict
+from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
+from imblearn.over_sampling import SMOTE
+from sklearn.model_selection import train_test_split
+import pandas as pd
+from datetime import datetime
+
+
+log_dir = "./fed_env/process"
+os.makedirs(log_dir, exist_ok=True)
+
+
+log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+
+logging.basicConfig(
+    filename=log_filename,
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+
+
+
+def get_model_parameters(model) -> List[np.ndarray]:
+    """
+    Retrieve the parameters of a given model.
+
+    Parameters:
+    model: A scikit-learn model (e.g., LogisticRegression).
+
+    Returns:
+    List[np.ndarray]: A list containing the model's coefficients and intercepts (if applicable).
+    """
+    if model.fit_intercept:
+        params = [model.coef_, model.intercept_]
+    else:
+        params = [model.coef_]
+    return params
+
+
+def set_model_parameters(model, params: List[np.ndarray]) -> object:
+    """
+    Set the parameters of a given model.
+
+    Parameters:
+    model: A scikit-learn model (e.g., LogisticRegression).
+    params (List[np.ndarray]): A list containing the model's coefficients and intercepts.
+
+    Returns:
+    object: The updated model with the new parameters.
+    """
+    model.coef_ = params[0]
+    if model.fit_intercept:
+        model.intercept_ = params[1]
+    return model
+
+
+def set_initial_parameters(model) -> None:
+    """
+    Initialize a model's parameters with random values.
+
+    Parameters:
+    model: A scikit-learn model (e.g., LogisticRegression).
+    """
+    n_features = 594  # Fixed number of features
+    model.classes_ = np.arange(1)  # Dummy class
+    model.coef_ = np.random.randn(1, n_features)
+    if model.fit_intercept:
+        model.intercept_ = np.random.randn(1)
+
+
+def save_metrics_json(client, strategy_suffix: str, filename: str ) -> None:
+    """
+    Save client metrics to a JSON file. Append metrics to the given strategy suffix.
+
+    Parameters:
+    client: An object containing metric attributes (losses, ROC_AUCs, ACCURACYs, F1s).
+    strategy_suffix (str): The key under which metrics are stored (e.g., 'fed_avg_iid').
+    filename (str): Path to the JSON file where metrics are saved (default is './met_.json').
+    """
+    metrics = {
+        "losses": list(client.losses),
+        "ROC_AUCs": list(client.ROC_AUCs),
+        "ACCURACYs": list(client.ACCURACYs),
+        "F1s": list(client.F1s)
+    }
+
+    if os.path.exists(filename) and os.path.getsize(filename) > 0:
+        with open(filename, 'r') as f:
+            try:
+                all_metrics = json.load(f)
+            except json.JSONDecodeError:
+                all_metrics = {}
+    else:
+        all_metrics = {}
+
+    if strategy_suffix not in all_metrics:
+        all_metrics[strategy_suffix] = []
+
+    all_metrics[strategy_suffix].append(metrics)
+
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, 'w') as f:
+        json.dump(all_metrics, f, indent=4)
+    print(f"Metrics successfully saved to {filename} under suffix {strategy_suffix}")
+
+
+def get_data(path: str) -> pd.DataFrame:
+    """
+    Load a CSV file into a Pandas DataFrame.
+
+    Parameters:
+    path (str): The path to the CSV file.
+
+    Returns:
+    pd.DataFrame: Loaded dataset as a DataFrame.
+    """
+    try:
+        df = pd.read_csv(path)
+        logging.info(f"Data successfully loaded from {path}")
+        return df
+    except Exception as e:
+        logging.error(f"Failed to load data from {path}: {e}")
+        raise
+
+
+def prepare_data(df: pd.DataFrame, X_test: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Preprocess data by scaling, generating polynomial features, and applying SMOTE.
+
+    Parameters:
+    df (pd.DataFrame): Training data with a 'Fraud' column as the target variable.
+    X_test (pd.DataFrame): Test data to be scaled and transformed.
+
+    Returns:
+    Tuple[np.ndarray, np.ndarray, np.ndarray]: Processed training features, 
+    resampled training targets, and processed test features.
+    """
+    if 'Unnamed: 0' in df.columns:
+        df = df.drop(columns=['Unnamed: 0'])
+    if 'Unnamed: 0' in X_test.columns:
+        X_test = X_test.drop(columns=['Unnamed: 0'])
+    try:
+        scaler = MinMaxScaler()
+        smote = SMOTE(random_state=22)
+
+        X_train, y_train = df.drop(columns="Fraud"), df.Fraud
+
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+
+        poly = PolynomialFeatures(degree=2, include_bias=False)
+        X_train_poly = poly.fit_transform(X_train_scaled)
+        X_test_poly = poly.transform(X_test_scaled)
+        X_smote, y_smote = smote.fit_resample(X_train_poly, y_train)
+
+        logging.info("Data successfully prepared (scaling, SMOTE, polynomial features).")
+        return X_smote, y_smote, X_test_poly
+    except Exception as e:
+        logging.error(f"Failed to prepare data: {e}")
+        raise
