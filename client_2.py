@@ -1,113 +1,90 @@
-import os 
-import pickle
-import logging
-import warnings
-import argparse
-import flwr as fl 
+import flwr as fl
 import numpy as np
-import tasks as ts
-import pandas as pd
-import matplotlib.pyplot as plt
-
-
-from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, f1_score
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, f1_score
+from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
+import pandas as pd
+import tasks as ts
+from typing import List, Dict, Tuple
 from flwr.common import NDArrays
-from typing import Dict
 
 
+glob_round = 0
 
 class CustomClient(fl.client.NumPyClient):
-  
-    def __init__(self, model, X_train, X_test, y_train, y_test):
+    def __init__(self, model, X_train, X_val, X_test, y_train, y_val, y_test):
         self.model = model
         self.X_train = X_train
+        self.X_val = X_val
         self.X_test = X_test
         self.y_train = y_train
+        self.y_val = y_val
         self.y_test = y_test
-        self.losses = []
-        self.ROC_AUCs = []
-        self.ACCURACYs = []
-        self.F1s = []
 
-    def get_parameters(self, config):
-         
-        return ts.get_model_parameters(model)
+    def get_parameters(self, config: Dict[str, int]) -> NDArrays:
+        return ts.get_model_parameters(self.model)
     
-    def fit(self, parameters, config):
-        ts.set_model_parameters(model, parameters)
-        
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore")
-            model.fit(X_train, y_train)
+    def fit(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[NDArrays, int, Dict]:
+        global glob_round
+        glob_round += 1
+
+        ts.set_model_parameters(self.model, parameters)
+        self.model.fit(self.X_train, self.y_train)
+
+        return ts.get_model_parameters(self.model), len(self.X_train), {}
     
-        
-        return ts.get_model_parameters(model), len(X_train), {}
+    def evaluate(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[float, int, Dict]:
+        global glob_round
+        ts.set_model_parameters(self.model, parameters)
 
-    def evaluate(self, parameters, config):
-        
-        ts.set_model_parameters(model, parameters)
-        
-        y_pred_proba = model.predict_proba(X_test)[:, 1]
-        y_pred = model.predict(X_test)
-        
-       
-        loss = log_loss(y_test, y_pred_proba)
-        accuracy = accuracy_score(y_test, y_pred)
-        roc_auc = roc_auc_score(y_test, y_pred_proba)
-        f1 = f1_score(y_test, y_pred)
+        if glob_round < 50:
+            y_pred_proba = self.model.predict_proba(self.X_val)[:, 1]
+            y_pred = self.model.predict(self.X_val)
 
-        print(f'accuracy: {accuracy}')
-        print(f'ROC_AUC: {roc_auc}')
-        print(f'f1_score: {f1}')
+            loss = log_loss(self.y_val, y_pred_proba)
+            accuracy = accuracy_score(self.y_val, y_pred)
+            roc_auc = roc_auc_score(self.y_val, y_pred_proba)
+            f1 = f1_score(self.y_val, y_pred)
 
-        
-        self.losses.append(loss)
-        self.ROC_AUCs.append(roc_auc)
-        self.ACCURACYs.append(accuracy)
-        self.F1s.append(f1)
-        
-        
-        return loss, len(X_test), {"accuracy": accuracy, "roc_auc": roc_auc, "f1-score": f1}
+            print(f"Validation Metrics (Round {glob_round}):")
+            print(f" - Loss: {loss}")
+            print(f" - Accuracy: {accuracy}")
+            print(f" - ROC AUC: {roc_auc}")
+            print(f" - F1 Score: {f1}")
+        else:
+            y_pred_proba = self.model.predict_proba(self.X_test)[:, 1]
+            y_pred = self.model.predict(self.X_test)
 
+            loss = log_loss(self.y_test, y_pred_proba)
+            accuracy = accuracy_score(self.y_test, y_pred)
+            roc_auc = roc_auc_score(self.y_test, y_pred_proba)
+            f1 = f1_score(self.y_test, y_pred)
+
+            print(f"Test Metrics (Final Round):")
+            print(f" - Loss: {loss}")
+            print(f" - Accuracy: {accuracy}")
+            print(f" - ROC AUC: {roc_auc}")
+            print(f" - F1 Score: {f1}")
+
+        return loss, len(self.X_val), {"accuracy": accuracy, "roc_auc": roc_auc, "f1-score": f1}
 
 if __name__ == "__main__":
-    N_CLIENTS = 2
+    
+    path_train = "./NON_IID_2.csv"
+    path_test = "./datas/test_glob.csv"
 
-    model = LogisticRegression(
-        max_iter=1,
-        warm_start=True,
-        penalty="l2"
-    )
+    data_train = pd.read_csv(path_train)
+    data_test = pd.read_csv(path_test)
+    X_test, y_test = data_test.drop(columns="Fraud"), data_test.Fraud
 
-    scaler = MinMaxScaler()
-    smote = SMOTE(random_state=42)
+    X_train, X_val, X_test, y_train, y_val  =  ts.prepare_data(data_train, X_test)
 
-    path_for_train_data = './datas/IID_df_2.csv'
-    path_for_test_data = './datas/test_glob.csv'
-
-    data_train = pd.read_csv(path_for_train_data)
-    data_test = pd.read_csv(path_for_test_data)
-
-    X_train_, y_train_ = data_train.drop(columns='Fraud'), data_train['Fraud']
-    X_test_, y_test = data_test.drop(columns='Fraud'), data_test['Fraud']
-
-    X_train_scale = scaler.fit_transform(X_train_)
-    X_train, y_train = smote.fit_resample(X_train_scale, y_train_)
-    X_test = scaler.transform(X_test_)
-      
+    model = LogisticRegression(max_iter=5, warm_start=True)
 
     ts.set_initial_parameters(model)
-    
-    client_1 = CustomClient(model, X_train, X_test, y_train, y_test)
-    
-    fl.client.start_client(
-        server_address="127.0.0.1:8080",
-        client=client_1
-    )
 
-    
- 
+    client = CustomClient(model, X_train, X_val, X_test, y_train, y_val, y_test)
+
+    fl.client.start_client(server_address="127.0.0.1:8080", client=client)
