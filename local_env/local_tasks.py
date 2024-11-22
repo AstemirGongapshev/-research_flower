@@ -124,7 +124,7 @@ def fit_predict(
     """
     try:
         model = LogisticRegression(max_iter=250)
-
+        #TODO change SGD optimazer
         roc_auc_cv = cross_val_score(model, X_train, y_train, cv=5, scoring="roc_auc")
 
         model.fit(X_train, y_train)
