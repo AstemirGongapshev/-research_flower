@@ -148,18 +148,21 @@ def prepare_data(df: pd.DataFrame, X_test: pd.DataFrame) -> Tuple[np.ndarray, np
         scaler = MinMaxScaler()
         smote = SMOTE(random_state=22)
 
-        X_train, y_train = df.drop(columns="Fraud"), df.Fraud
+        X, y = df.drop(columns="Fraud"), df.Fraud
+        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size= 0.2, random_state=234)
 
         X_train_scaled = scaler.fit_transform(X_train)
+        X_val_scaled = scaler.transform(X_val)
         X_test_scaled = scaler.transform(X_test)
 
         poly = PolynomialFeatures(degree=2, include_bias=False)
         X_train_poly = poly.fit_transform(X_train_scaled)
+        X_val_poly = poly.transform(X_val_scaled)
         X_test_poly = poly.transform(X_test_scaled)
         X_smote, y_smote = smote.fit_resample(X_train_poly, y_train)
 
         logging.info("Data successfully prepared (scaling, SMOTE, polynomial features).")
-        return X_smote, y_smote, X_test_poly
+        return X_smote, X_val_poly, X_test_poly, y_smote, y_val
     except Exception as e:
         logging.error(f"Failed to prepare data: {e}")
         raise

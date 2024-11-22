@@ -1,0 +1,1315 @@
+2024-11-22 10:47:23,586 - INFO - Data successfully loaded from ./datas/NON_IID_FL_1.csv
+2024-11-22 10:47:23,597 - INFO - Data successfully loaded from ./datas/NON_IID_FL_2.csv
+2024-11-22 10:47:23,812 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-22 10:47:23,828 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-11-22 10:47:23,843 - DEBUG - ChannelConnectivity.IDLE
+2024-11-22 10:47:23,843 - DEBUG - ChannelConnectivity.CONNECTING
+2024-11-22 10:47:23,843 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-22 10:47:23,843 - DEBUG - ChannelConnectivity.READY
+2024-11-22 10:47:23,843 - INFO - 
+2024-11-22 10:47:23,859 - INFO - Received: get_parameters message 81e15cb4-5d72-424d-9ee4-b79a09f4e928
+2024-11-22 10:47:23,859 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:23,859 - INFO - Sent reply
+2024-11-22 10:47:23,859 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-11-22 10:47:23,879 - DEBUG - ChannelConnectivity.IDLE
+2024-11-22 10:47:23,883 - DEBUG - ChannelConnectivity.CONNECTING
+2024-11-22 10:47:23,886 - DEBUG - ChannelConnectivity.READY
+2024-11-22 10:47:23,888 - INFO - 
+2024-11-22 10:47:23,888 - INFO - Received: train message 0c2029db-fef0-41dd-a46d-87305a3c0be0
+2024-11-22 10:47:23,888 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:23,888 - INFO - 
+2024-11-22 10:47:23,888 - INFO - Received: train message 20ec024b-911b-4b62-abf8-fd5bc0638630
+2024-11-22 10:47:23,888 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:23,964 - INFO - Sent reply
+2024-11-22 10:47:23,972 - INFO - Sent reply
+2024-11-22 10:47:24,002 - INFO - 
+2024-11-22 10:47:24,002 - INFO - Received: evaluate message 5c47abb7-47d2-4477-8e50-b26b04ebb9af
+2024-11-22 10:47:24,002 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,002 - INFO - 
+2024-11-22 10:47:24,002 - INFO - Received: evaluate message 08b1e853-2eb9-46a7-90a4-702efb4acc46
+2024-11-22 10:47:24,002 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,015 - INFO - Evaluation Metrics (Round 1):
+2024-11-22 10:47:24,015 - INFO - Evaluation Metrics (Round 1):
+2024-11-22 10:47:24,015 - INFO -  - Loss: 1.2430248375340045
+2024-11-22 10:47:24,015 - INFO -  - Loss: 1.4475200961609287
+2024-11-22 10:47:24,015 - INFO -  - Accuracy: 0.4409448818897638
+2024-11-22 10:47:24,015 - INFO -  - Accuracy: 0.36363636363636365
+2024-11-22 10:47:24,015 - INFO -  - ROC AUC: 0.5156774916013438
+2024-11-22 10:47:24,015 - INFO -  - ROC AUC: 0.4935130369064114
+2024-11-22 10:47:24,015 - INFO -  - F1 Score: 0.13414634146341464
+2024-11-22 10:47:24,015 - INFO -  - F1 Score: 0.06288032454361055
+2024-11-22 10:47:24,015 - INFO - Sent reply
+2024-11-22 10:47:24,019 - INFO - 
+2024-11-22 10:47:24,019 - INFO - Received: train message 71b0cd27-439d-44ae-8736-66620de18d39
+2024-11-22 10:47:24,019 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,019 - INFO - 
+2024-11-22 10:47:24,019 - INFO - Received: train message 6ad4eb97-807a-45bc-a3ea-768362b05372
+2024-11-22 10:47:24,021 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,086 - INFO - Sent reply
+2024-11-22 10:47:24,103 - INFO - Sent reply
+2024-11-22 10:47:24,138 - INFO - 
+2024-11-22 10:47:24,138 - INFO - Received: evaluate message b27427be-23a0-43e2-93f1-e6789e80b05a
+2024-11-22 10:47:24,138 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,138 - INFO - 
+2024-11-22 10:47:24,139 - INFO - Received: evaluate message 32ac7a63-65eb-4fd6-a10a-2e65ce33810a
+2024-11-22 10:47:24,139 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,152 - INFO - Evaluation Metrics (Round 2):
+2024-11-22 10:47:24,152 - INFO -  - Loss: 0.6183238067337499
+2024-11-22 10:47:24,152 - INFO -  - Accuracy: 0.6840551181102362
+2024-11-22 10:47:24,152 - INFO -  - ROC AUC: 0.52238241881299
+2024-11-22 10:47:24,152 - INFO -  - F1 Score: 0.12534059945504086
+2024-11-22 10:47:24,152 - INFO - Sent reply
+2024-11-22 10:47:24,152 - INFO - Evaluation Metrics (Round 2):
+2024-11-22 10:47:24,152 - INFO -  - Loss: 0.6520508418641959
+2024-11-22 10:47:24,152 - INFO -  - Accuracy: 0.6577134986225895
+2024-11-22 10:47:24,152 - INFO -  - ROC AUC: 0.4986914108969783
+2024-11-22 10:47:24,152 - INFO -  - F1 Score: 0.064030131826742
+2024-11-22 10:47:24,152 - INFO - Sent reply
+2024-11-22 10:47:24,157 - INFO - 
+2024-11-22 10:47:24,157 - INFO - Received: train message cab4913e-8d97-4cdf-bfcf-77af342f5756
+2024-11-22 10:47:24,157 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,157 - INFO - 
+2024-11-22 10:47:24,157 - INFO - Received: train message 36446870-a4a4-4088-9d37-d443f4a8d293
+2024-11-22 10:47:24,157 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,223 - INFO - Sent reply
+2024-11-22 10:47:24,241 - INFO - Sent reply
+2024-11-22 10:47:24,284 - INFO - 
+2024-11-22 10:47:24,284 - INFO - Received: evaluate message 29975412-271d-49b4-83b6-bea703026fcc
+2024-11-22 10:47:24,284 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,284 - INFO - 
+2024-11-22 10:47:24,284 - INFO - Received: evaluate message 533b1e06-534c-45df-b27a-1fa0033ffa4a
+2024-11-22 10:47:24,284 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,294 - INFO - Evaluation Metrics (Round 3):
+2024-11-22 10:47:24,294 - INFO -  - Loss: 0.9822319284350953
+2024-11-22 10:47:24,294 - INFO -  - Accuracy: 0.4419291338582677
+2024-11-22 10:47:24,294 - INFO -  - ROC AUC: 0.531173012318029
+2024-11-22 10:47:24,294 - INFO -  - F1 Score: 0.13169984686064318
+2024-11-22 10:47:24,294 - INFO - Evaluation Metrics (Round 3):
+2024-11-22 10:47:24,294 - INFO -  - Loss: 1.0486904001617778
+2024-11-22 10:47:24,294 - INFO -  - Accuracy: 0.39669421487603307
+2024-11-22 10:47:24,294 - INFO -  - ROC AUC: 0.4994891604036332
+2024-11-22 10:47:24,294 - INFO -  - F1 Score: 0.06808510638297872
+2024-11-22 10:47:24,294 - INFO - Sent reply
+2024-11-22 10:47:24,294 - INFO - Sent reply
+2024-11-22 10:47:24,298 - INFO - 
+2024-11-22 10:47:24,298 - INFO - Received: train message 97262bc2-70fc-4249-96a0-b6c58c75e16e
+2024-11-22 10:47:24,298 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,298 - INFO - 
+2024-11-22 10:47:24,302 - INFO - Received: train message 46e729fb-f617-4eaf-ba2b-2cbfe3edb4de
+2024-11-22 10:47:24,302 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,422 - INFO - Sent reply
+2024-11-22 10:47:24,422 - INFO - Sent reply
+2024-11-22 10:47:24,455 - INFO - 
+2024-11-22 10:47:24,455 - INFO - Received: evaluate message c866967f-9933-485b-90ea-d9c3a96f6043
+2024-11-22 10:47:24,455 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,455 - INFO - 
+2024-11-22 10:47:24,455 - INFO - Received: evaluate message 9ba92a34-b15f-4c3a-bb73-a2e84b4f0995
+2024-11-22 10:47:24,455 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,470 - INFO - Evaluation Metrics (Round 4):
+2024-11-22 10:47:24,470 - INFO -  - Loss: 0.6099873752073771
+2024-11-22 10:47:24,470 - INFO -  - Accuracy: 0.6614173228346457
+2024-11-22 10:47:24,470 - INFO -  - ROC AUC: 0.5413493840985443
+2024-11-22 10:47:24,470 - INFO -  - F1 Score: 0.14
+2024-11-22 10:47:24,470 - INFO - Sent reply
+2024-11-22 10:47:24,470 - INFO - Evaluation Metrics (Round 4):
+2024-11-22 10:47:24,470 - INFO -  - Loss: 0.5746271968280435
+2024-11-22 10:47:24,470 - INFO -  - Accuracy: 0.6955922865013774
+2024-11-22 10:47:24,470 - INFO -  - ROC AUC: 0.5071167653356845
+2024-11-22 10:47:24,470 - INFO -  - F1 Score: 0.0635593220338983
+2024-11-22 10:47:24,470 - INFO - Sent reply
+2024-11-22 10:47:24,470 - INFO - 
+2024-11-22 10:47:24,470 - INFO - Received: train message 5144e47c-b6d9-420a-ba0c-a6893b021ca6
+2024-11-22 10:47:24,470 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,470 - INFO - 
+2024-11-22 10:47:24,470 - INFO - Received: train message 2e5f3159-32ad-4600-8c4c-d837ce6442e4
+2024-11-22 10:47:24,470 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,553 - INFO - Sent reply
+2024-11-22 10:47:24,574 - INFO - Sent reply
+2024-11-22 10:47:24,604 - INFO - 
+2024-11-22 10:47:24,604 - INFO - Received: evaluate message 1113763c-c191-47b7-a219-db4c381c413f
+2024-11-22 10:47:24,604 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,604 - INFO - 
+2024-11-22 10:47:24,604 - INFO - Received: evaluate message fc13327f-b2d7-45a9-ab6f-b3165c105577
+2024-11-22 10:47:24,608 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,618 - INFO - Evaluation Metrics (Round 5):
+2024-11-22 10:47:24,618 - INFO -  - Loss: 0.7168476240955916
+2024-11-22 10:47:24,618 - INFO -  - Accuracy: 0.547244094488189
+2024-11-22 10:47:24,618 - INFO -  - ROC AUC: 0.5750979843225084
+2024-11-22 10:47:24,618 - INFO -  - F1 Score: 0.16058394160583941
+2024-11-22 10:47:24,618 - INFO - Evaluation Metrics (Round 5):
+2024-11-22 10:47:24,619 - INFO -  - Loss: 0.6467748680333381
+2024-11-22 10:47:24,619 - INFO -  - Accuracy: 0.6191460055096418
+2024-11-22 10:47:24,619 - INFO -  - ROC AUC: 0.5216581993254119
+2024-11-22 10:47:24,619 - INFO -  - F1 Score: 0.07058823529411765
+2024-11-22 10:47:24,619 - INFO - Sent reply
+2024-11-22 10:47:24,619 - INFO - Sent reply
+2024-11-22 10:47:24,621 - INFO - 
+2024-11-22 10:47:24,621 - INFO - Received: train message 46efe016-97f7-47dd-acea-3220ecbf507e
+2024-11-22 10:47:24,621 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,621 - INFO - 
+2024-11-22 10:47:24,621 - INFO - Received: train message 782b762d-24fb-4719-a65e-5ef31a547f51
+2024-11-22 10:47:24,621 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,692 - INFO - Sent reply
+2024-11-22 10:47:24,708 - INFO - Sent reply
+2024-11-22 10:47:24,741 - INFO - 
+2024-11-22 10:47:24,741 - INFO - Received: evaluate message 3054eda2-f884-483d-9490-b2848907b5a8
+2024-11-22 10:47:24,741 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,741 - INFO - 
+2024-11-22 10:47:24,741 - INFO - Received: evaluate message f088a448-dedf-4638-aac4-e1cd0a375e14
+2024-11-22 10:47:24,741 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,755 - INFO - Evaluation Metrics (Round 6):
+2024-11-22 10:47:24,755 - INFO -  - Loss: 0.6966841651620131
+2024-11-22 10:47:24,755 - INFO -  - Accuracy: 0.5600393700787402
+2024-11-22 10:47:24,755 - INFO -  - ROC AUC: 0.5738101903695408
+2024-11-22 10:47:24,755 - INFO -  - F1 Score: 0.15819209039548024
+2024-11-22 10:47:24,755 - INFO - Evaluation Metrics (Round 6):
+2024-11-22 10:47:24,755 - INFO -  - Loss: 0.6406817195007495
+2024-11-22 10:47:24,755 - INFO -  - Accuracy: 0.6260330578512396
+2024-11-22 10:47:24,755 - INFO -  - ROC AUC: 0.5216581993254119
+2024-11-22 10:47:24,755 - INFO -  - F1 Score: 0.07495741056218058
+2024-11-22 10:47:24,755 - INFO - Sent reply
+2024-11-22 10:47:24,755 - INFO - Sent reply
+2024-11-22 10:47:24,755 - INFO - 
+2024-11-22 10:47:24,755 - INFO - Received: train message 3ff113ae-ab78-4435-a127-73d684630bad
+2024-11-22 10:47:24,755 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,755 - INFO - 
+2024-11-22 10:47:24,755 - INFO - Received: train message 156c832c-2013-48b9-a85f-f0bd0d0a0573
+2024-11-22 10:47:24,755 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,850 - INFO - Sent reply
+2024-11-22 10:47:24,853 - INFO - Sent reply
+2024-11-22 10:47:24,893 - INFO - 
+2024-11-22 10:47:24,893 - INFO - Received: evaluate message b8036f49-54ca-4861-9c7a-6dc2f961cced
+2024-11-22 10:47:24,893 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,893 - INFO - 
+2024-11-22 10:47:24,893 - INFO - Received: evaluate message 2d62ecd5-26a6-4363-a9da-e61971360c31
+2024-11-22 10:47:24,893 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,907 - INFO - Evaluation Metrics (Round 7):
+2024-11-22 10:47:24,907 - INFO -  - Loss: 0.6969867775364336
+2024-11-22 10:47:24,907 - INFO -  - Accuracy: 0.5649606299212598
+2024-11-22 10:47:24,907 - INFO -  - ROC AUC: 0.5674412094064949
+2024-11-22 10:47:24,907 - INFO -  - F1 Score: 0.15648854961832062
+2024-11-22 10:47:24,907 - INFO - Sent reply
+2024-11-22 10:47:24,907 - INFO - Evaluation Metrics (Round 7):
+2024-11-22 10:47:24,907 - INFO -  - Loss: 0.6450941342069524
+2024-11-22 10:47:24,907 - INFO -  - Accuracy: 0.6143250688705234
+2024-11-22 10:47:24,907 - INFO -  - ROC AUC: 0.5239114917915775
+2024-11-22 10:47:24,907 - INFO -  - F1 Score: 0.06976744186046512
+2024-11-22 10:47:24,907 - INFO - Sent reply
+2024-11-22 10:47:24,907 - INFO - 
+2024-11-22 10:47:24,907 - INFO - Received: train message 179c288d-2881-4ec3-9717-c9c49947ef6a
+2024-11-22 10:47:24,907 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,907 - INFO - 
+2024-11-22 10:47:24,907 - INFO - Received: train message 27108ab5-beb3-4de9-a8d8-3fa3328436b5
+2024-11-22 10:47:24,907 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:24,993 - INFO - Sent reply
+2024-11-22 10:47:25,001 - INFO - Sent reply
+2024-11-22 10:47:25,041 - INFO - 
+2024-11-22 10:47:25,041 - INFO - Received: evaluate message a26e8857-4348-402d-afa4-c72c965cbacf
+2024-11-22 10:47:25,041 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,042 - INFO - 
+2024-11-22 10:47:25,042 - INFO - Received: evaluate message 06b88796-c6ab-48db-8fa5-0647ddccd092
+2024-11-22 10:47:25,042 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,052 - INFO - Evaluation Metrics (Round 8):
+2024-11-22 10:47:25,052 - INFO - Evaluation Metrics (Round 8):
+2024-11-22 10:47:25,052 - INFO -  - Accuracy: 0.5929752066115702
+2024-11-22 10:47:25,052 - INFO -  - Loss: 0.7007803529871852
+2024-11-22 10:47:25,052 - INFO -  - ROC AUC: 0.5251990874865293
+2024-11-22 10:47:25,052 - INFO -  - Accuracy: 0.5501968503937008
+2024-11-22 10:47:25,052 - INFO -  - F1 Score: 0.06929133858267716
+2024-11-22 10:47:25,052 - INFO -  - ROC AUC: 0.5693729003359462
+2024-11-22 10:47:25,052 - INFO -  - F1 Score: 0.148975791433892
+2024-11-22 10:47:25,052 - INFO - Sent reply
+2024-11-22 10:47:25,052 - INFO - Sent reply
+2024-11-22 10:47:25,055 - INFO - 
+2024-11-22 10:47:25,055 - INFO - Received: train message 64650035-15c9-4006-9189-48308304423d
+2024-11-22 10:47:25,055 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,055 - INFO - 
+2024-11-22 10:47:25,055 - INFO - Received: train message 1dc6ae13-47a5-4c55-b508-8b360f4cc1b9
+2024-11-22 10:47:25,058 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,119 - INFO - Sent reply
+2024-11-22 10:47:25,143 - INFO - Sent reply
+2024-11-22 10:47:25,176 - INFO - 
+2024-11-22 10:47:25,176 - INFO - Received: evaluate message 55194fa5-f0dc-4827-805a-51c81f668009
+2024-11-22 10:47:25,176 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,181 - INFO - 
+2024-11-22 10:47:25,181 - INFO - Received: evaluate message 2e33f45b-3337-4fb6-ada6-5f1e33d32150
+2024-11-22 10:47:25,182 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,192 - INFO - Evaluation Metrics (Round 9):
+2024-11-22 10:47:25,192 - INFO -  - Loss: 0.7103641997676023
+2024-11-22 10:47:25,192 - INFO - Evaluation Metrics (Round 9):
+2024-11-22 10:47:25,192 - INFO -  - Accuracy: 0.5561023622047244
+2024-11-22 10:47:25,192 - INFO -  - ROC AUC: 0.5853023516237402
+2024-11-22 10:47:25,192 - INFO -  - F1 Score: 0.16326530612244897
+2024-11-22 10:47:25,192 - INFO -  - ROC AUC: 0.5244293291906341
+2024-11-22 10:47:25,192 - INFO -  - F1 Score: 0.06514657980456026
+2024-11-22 10:47:25,192 - INFO - Sent reply
+2024-11-22 10:47:25,192 - INFO - Sent reply
+2024-11-22 10:47:25,196 - INFO - 
+2024-11-22 10:47:25,196 - INFO - Received: train message 1bde8c52-0875-4c10-8a43-d677fd645dbe
+2024-11-22 10:47:25,197 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,197 - INFO - 
+2024-11-22 10:47:25,197 - INFO - Received: train message b04d8540-793c-4749-af63-1c69d9195ce1
+2024-11-22 10:47:25,197 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,254 - INFO - Sent reply
+2024-11-22 10:47:25,291 - INFO - Sent reply
+2024-11-22 10:47:25,327 - INFO - 
+2024-11-22 10:47:25,327 - INFO - Received: evaluate message 0aa4fcde-4e2d-4f44-8d22-b66cacaf2d5f
+2024-11-22 10:47:25,327 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,328 - INFO - 
+2024-11-22 10:47:25,328 - INFO - Received: evaluate message c47acaa9-d050-4c14-973b-303ce9ef2f01
+2024-11-22 10:47:25,328 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,338 - INFO - Evaluation Metrics (Round 10):
+2024-11-22 10:47:25,338 - INFO -  - Loss: 0.7116502573148051
+2024-11-22 10:47:25,338 - INFO -  - Accuracy: 0.5521653543307087
+2024-11-22 10:47:25,338 - INFO -  - ROC AUC: 0.5890397536394176
+2024-11-22 10:47:25,338 - INFO -  - F1 Score: 0.1589648798521257
+2024-11-22 10:47:25,338 - INFO - Evaluation Metrics (Round 10):
+2024-11-22 10:47:25,338 - INFO -  - Loss: 0.6526631581931435
+2024-11-22 10:47:25,338 - INFO - Sent reply
+2024-11-22 10:47:25,338 - INFO -  - Accuracy: 0.5922865013774105
+2024-11-22 10:47:25,338 - INFO -  - ROC AUC: 0.5274523799526948
+2024-11-22 10:47:25,338 - INFO -  - F1 Score: 0.06329113924050633
+2024-11-22 10:47:25,338 - INFO - Sent reply
+2024-11-22 10:47:25,344 - INFO - 
+2024-11-22 10:47:25,344 - INFO - Received: train message 48cd3e9f-d745-4bfc-8837-b93726df6e95
+2024-11-22 10:47:25,344 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,344 - INFO - 
+2024-11-22 10:47:25,344 - INFO - Received: train message 51280623-ad9a-427f-a8bb-d81a4d036d96
+2024-11-22 10:47:25,344 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,420 - INFO - Sent reply
+2024-11-22 10:47:25,431 - INFO - Sent reply
+2024-11-22 10:47:25,460 - INFO - 
+2024-11-22 10:47:25,460 - INFO - Received: evaluate message fddfd262-e7ce-4bcb-8363-98f66e605f71
+2024-11-22 10:47:25,460 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,460 - INFO - 
+2024-11-22 10:47:25,460 - INFO - Received: evaluate message b6a0b4ac-87e4-47d8-97b4-e4fbce62bd36
+2024-11-22 10:47:25,460 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,471 - INFO - Evaluation Metrics (Round 11):
+2024-11-22 10:47:25,471 - INFO - Evaluation Metrics (Round 11):
+2024-11-22 10:47:25,471 - INFO -  - Loss: 0.7016675736367025
+2024-11-22 10:47:25,471 - INFO -  - Loss: 0.6548994610692973
+2024-11-22 10:47:25,471 - INFO -  - Accuracy: 0.5639763779527559
+2024-11-22 10:47:25,471 - INFO -  - Accuracy: 0.5950413223140496
+2024-11-22 10:47:25,471 - INFO -  - ROC AUC: 0.5804731243001119
+2024-11-22 10:47:25,471 - INFO -  - ROC AUC: 0.5291878350198037
+2024-11-22 10:47:25,471 - INFO -  - F1 Score: 0.16257088846880907
+2024-11-22 10:47:25,471 - INFO -  - F1 Score: 0.06369426751592357
+2024-11-22 10:47:25,471 - INFO - Sent reply
+2024-11-22 10:47:25,471 - INFO - Sent reply
+2024-11-22 10:47:25,471 - INFO - 
+2024-11-22 10:47:25,471 - INFO - Received: train message d380df34-3a03-4865-9c2b-40af499816c7
+2024-11-22 10:47:25,471 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,471 - INFO - 
+2024-11-22 10:47:25,471 - INFO - Received: train message 6f4b72bf-9fdb-45a0-b40b-dcbf25fa231b
+2024-11-22 10:47:25,471 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,577 - INFO - Sent reply
+2024-11-22 10:47:25,610 - INFO - Sent reply
+2024-11-22 10:47:25,639 - INFO - 
+2024-11-22 10:47:25,639 - INFO - Received: evaluate message f2254ad1-0b00-4421-8768-2d140c992a57
+2024-11-22 10:47:25,639 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,639 - INFO - 
+2024-11-22 10:47:25,639 - INFO - Received: evaluate message 0611944d-7f75-407b-82ad-46ec075e3d31
+2024-11-22 10:47:25,642 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,652 - INFO - Evaluation Metrics (Round 12):
+2024-11-22 10:47:25,652 - INFO -  - Loss: 0.7012063956120125
+2024-11-22 10:47:25,652 - INFO -  - Accuracy: 0.5679133858267716
+2024-11-22 10:47:25,652 - INFO -  - ROC AUC: 0.5844064949608063
+2024-11-22 10:47:25,652 - INFO -  - F1 Score: 0.16380952380952382
+2024-11-22 10:47:25,652 - INFO - Evaluation Metrics (Round 12):
+2024-11-22 10:47:25,652 - INFO -  - Loss: 0.6594351177339896
+2024-11-22 10:47:25,652 - INFO -  - Accuracy: 0.5819559228650137
+2024-11-22 10:47:25,652 - INFO -  - ROC AUC: 0.5332605561853578
+2024-11-22 10:47:25,652 - INFO - Sent reply
+ 0.05891472868217054
+2024-11-22 10:47:25,652 - INFO - Sent reply
+2024-11-22 10:47:25,656 - INFO - 
+2024-11-22 10:47:25,656 - INFO - Received: train message fba805b0-d768-4060-9f02-e22a29650c0b
+2024-11-22 10:47:25,657 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,658 - INFO - 
+2024-11-22 10:47:25,658 - INFO - Received: train message cce37f3a-8601-42ab-b884-7fedd8d268e1
+2024-11-22 10:47:25,658 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,737 - INFO - Sent reply
+2024-11-22 10:47:25,753 - INFO - Sent reply
+2024-11-22 10:47:25,795 - INFO - 
+2024-11-22 10:47:25,795 - INFO - Received: evaluate message 674e5a03-37fe-4112-8417-7913e8836868
+2024-11-22 10:47:25,795 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,795 - INFO - 
+2024-11-22 10:47:25,795 - INFO - Received: evaluate message 337b20e0-5692-46c2-9f8c-c9b6b447e941
+2024-11-22 10:47:25,795 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,806 - INFO - Evaluation Metrics (Round 13):
+2024-11-22 10:47:25,806 - INFO -  - Loss: 0.6917592160942992
+2024-11-22 10:47:25,806 - INFO -  - Accuracy: 0.5846456692913385
+2024-11-22 10:47:25,806 - INFO -  - ROC AUC: 0.5857362821948489
+2024-11-22 10:47:25,806 - INFO -  - F1 Score: 0.16929133858267717
+2024-11-22 10:47:25,806 - INFO - Sent reply
+2024-11-22 10:47:25,806 - INFO - Evaluation Metrics (Round 13):
+2024-11-22 10:47:25,806 - INFO -  - Loss: 0.6437618281293188
+2024-11-22 10:47:25,806 - INFO -  - Accuracy: 0.6039944903581267
+2024-11-22 10:47:25,806 - INFO -  - ROC AUC: 0.5315530923290087
+2024-11-22 10:47:25,806 - INFO -  - F1 Score: 0.058919803600654665
+2024-11-22 10:47:25,806 - INFO - Sent reply
+2024-11-22 10:47:25,811 - INFO - 
+2024-11-22 10:47:25,811 - INFO - Received: train message 8d2fff50-a024-40a2-89e4-1bb069a390af
+2024-11-22 10:47:25,811 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,811 - INFO - 
+2024-11-22 10:47:25,811 - INFO - Received: train message 5db3b17d-43d0-4c42-b83f-7d402f73fada
+2024-11-22 10:47:25,811 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,894 - INFO - Sent reply
+2024-11-22 10:47:25,919 - INFO - Sent reply
+2024-11-22 10:47:25,950 - INFO - 
+2024-11-22 10:47:25,950 - INFO - Received: evaluate message 97257866-b6d0-4a50-bb1c-c04083ee5962
+2024-11-22 10:47:25,950 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,951 - INFO - 
+2024-11-22 10:47:25,951 - INFO - Received: evaluate message 65eeebef-c02f-416c-b069-839e6394757e
+2024-11-22 10:47:25,951 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,961 - INFO - Evaluation Metrics (Round 14):
+2024-11-22 10:47:25,961 - INFO -  - Loss: 0.6938625669740222
+2024-11-22 10:47:25,961 - INFO -  - Accuracy: 0.5816929133858267
+2024-11-22 10:47:25,961 - INFO -  - ROC AUC: 0.5854983202687569
+2024-11-22 10:47:25,961 - INFO -  - F1 Score: 0.16829745596868884
+2024-11-22 10:47:25,961 - INFO - Sent reply
+2024-11-22 10:47:25,961 - INFO - Evaluation Metrics (Round 14):
+2024-11-22 10:47:25,961 - INFO -  - Loss: 0.6550147118359939
+2024-11-22 10:47:25,965 - INFO -  - Accuracy: 0.5860881542699724
+2024-11-22 10:47:25,965 - INFO -  - ROC AUC: 0.5361576464989993
+2024-11-22 10:47:25,965 - INFO -  - F1 Score: 0.062402496099843996
+2024-11-22 10:47:25,965 - INFO - Sent reply
+2024-11-22 10:47:25,965 - INFO - 
+2024-11-22 10:47:25,965 - INFO - Received: train message 946081c9-d9d2-4db1-8ce2-b665d498770f
+2024-11-22 10:47:25,965 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:25,965 - INFO - 
+2024-11-22 10:47:25,965 - INFO - Received: train message 4b33f5f1-61c6-467c-926a-caaf977c9fec
+2024-11-22 10:47:25,965 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,063 - INFO - Sent reply
+2024-11-22 10:47:26,072 - INFO - Sent reply
+2024-11-22 10:47:26,104 - INFO - 
+2024-11-22 10:47:26,104 - INFO - Received: evaluate message c249b5b4-92b9-4ddd-a5d2-096ec51daa5c
+2024-11-22 10:47:26,104 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,104 - INFO - 
+2024-11-22 10:47:26,104 - INFO - Received: evaluate message 2c41f4a1-7f25-45f7-a675-e12f0399074f
+2024-11-22 10:47:26,104 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,117 - INFO - Evaluation Metrics (Round 15):
+2024-11-22 10:47:26,118 - INFO -  - Loss: 0.694607964961303
+2024-11-22 10:47:26,118 - INFO -  - Accuracy: 0.5846456692913385
+2024-11-22 10:47:26,118 - INFO -  - ROC AUC: 0.5860162374020158
+2024-11-22 10:47:26,118 - INFO -  - F1 Score: 0.17578125
+2024-11-22 10:47:26,118 - INFO - Sent reply
+2024-11-22 10:47:26,120 - INFO - Evaluation Metrics (Round 15):
+2024-11-22 10:47:26,120 - INFO -  - Loss: 0.6526238124652434
+2024-11-22 10:47:26,120 - INFO -  - Accuracy: 0.5915977961432507
+2024-11-22 10:47:26,120 - INFO -  - ROC AUC: 0.5352619277546851
+2024-11-22 10:47:26,120 - INFO -  - F1 Score: 0.060221870047543584
+2024-11-22 10:47:26,121 - INFO - Sent reply
+2024-11-22 10:47:26,122 - INFO - 
+2024-11-22 10:47:26,122 - INFO - Received: train message 2e1280e4-3242-461c-a11f-0753d3795757
+2024-11-22 10:47:26,122 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,122 - INFO - 
+2024-11-22 10:47:26,122 - INFO - Received: train message 0a957dbc-8ef2-47b1-8b0f-d9bf66b29afc
+2024-11-22 10:47:26,122 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,202 - INFO - Sent reply
+2024-11-22 10:47:26,221 - INFO - Sent reply
+2024-11-22 10:47:26,243 - INFO - 
+2024-11-22 10:47:26,243 - INFO - Received: evaluate message a2af78b4-a59e-4229-b088-51bb37cfbec8
+2024-11-22 10:47:26,243 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,243 - INFO - 
+2024-11-22 10:47:26,243 - INFO - Received: evaluate message bf77ed66-4f3e-4144-a1b1-c0d0a097e205
+2024-11-22 10:47:26,243 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,255 - INFO - Evaluation Metrics (Round 16):
+2024-11-22 10:47:26,255 - INFO -  - Loss: 0.691026981907527
+2024-11-22 10:47:26,255 - INFO -  - Accuracy: 0.5856299212598425
+2024-11-22 10:47:26,255 - INFO -  - ROC AUC: 0.5859742441209406
+2024-11-22 10:47:26,255 - INFO -  - F1 Score: 0.16962524654832348
+2024-11-22 10:47:26,255 - INFO - Sent reply
+2024-11-22 10:47:26,258 - INFO - Evaluation Metrics (Round 16):
+2024-11-22 10:47:26,258 - INFO -  - Loss: 0.6480569190695764
+2024-11-22 10:47:26,258 - INFO -  - Accuracy: 0.5991735537190083
+2024-11-22 10:47:26,258 - INFO -  - ROC AUC: 0.5365915102657766
+2024-11-22 10:47:26,259 - INFO -  - F1 Score: 0.06129032258064516
+2024-11-22 10:47:26,259 - INFO - Sent reply
+2024-11-22 10:47:26,259 - INFO - 
+2024-11-22 10:47:26,259 - INFO - Received: train message 351df9a3-b11f-4555-b1e0-c0490a0b476f
+2024-11-22 10:47:26,259 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,259 - INFO - 
+2024-11-22 10:47:26,259 - INFO - Received: train message 7a4aad3b-96cc-45c8-b655-6be470a856e7
+2024-11-22 10:47:26,259 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,349 - INFO - Sent reply
+2024-11-22 10:47:26,369 - INFO - Sent reply
+2024-11-22 10:47:26,405 - INFO - 
+2024-11-22 10:47:26,405 - INFO - Received: evaluate message 46c2ce63-b73d-4d50-887a-337b90234853
+2024-11-22 10:47:26,405 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,405 - INFO - 
+2024-11-22 10:47:26,405 - INFO - Received: evaluate message 575fdb61-d145-49de-b75d-97a62c8e6616
+2024-11-22 10:47:26,405 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,415 - INFO - Evaluation Metrics (Round 17):
+2024-11-22 10:47:26,415 - INFO -  - Loss: 0.6878909438537413
+2024-11-22 10:47:26,415 - INFO -  - Accuracy: 0.5915354330708661
+2024-11-22 10:47:26,415 - INFO -  - ROC AUC: 0.5821248600223964
+2024-11-22 10:47:26,415 - INFO -  - F1 Score: 0.1749502982107356
+2024-11-22 10:47:26,415 - INFO - Sent reply
+2024-11-22 10:47:26,415 - INFO - Evaluation Metrics (Round 17):
+2024-11-22 10:47:26,415 - INFO -  - Loss: 0.653591957175653
+2024-11-22 10:47:26,415 - INFO -  - Accuracy: 0.5991735537190083
+2024-11-22 10:47:26,415 - INFO -  - ROC AUC: 0.5394326181578984
+2024-11-22 10:47:26,415 - INFO -  - F1 Score: 0.07028753993610223
+2024-11-22 10:47:26,415 - INFO - Sent reply
+2024-11-22 10:47:26,421 - INFO - 
+2024-11-22 10:47:26,421 - INFO - Received: train message b83d26cb-5f95-4f66-8368-4c81880e857a
+2024-11-22 10:47:26,422 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,422 - INFO - 
+2024-11-22 10:47:26,422 - INFO - Received: train message 5506fd74-9d3b-43df-9403-e5d7ebeeb66b
+2024-11-22 10:47:26,422 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,502 - INFO - Sent reply
+2024-11-22 10:47:26,502 - INFO - Sent reply
+2024-11-22 10:47:26,544 - INFO - 
+2024-11-22 10:47:26,544 - INFO - Received: evaluate message 044ed216-9cc4-46b7-90b3-8d4bc82230b7
+2024-11-22 10:47:26,544 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,544 - INFO - 
+2024-11-22 10:47:26,544 - INFO - Received: evaluate message 581ddde7-82a6-4b04-bd8b-3da0695df025
+2024-11-22 10:47:26,544 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,560 - INFO - Evaluation Metrics (Round 18):
+2024-11-22 10:47:26,560 - INFO -  - Loss: 0.697360483311021
+2024-11-22 10:47:26,560 - INFO -  - Accuracy: 0.5718503937007874
+2024-11-22 10:47:26,560 - INFO -  - ROC AUC: 0.5802491601343785
+2024-11-22 10:47:26,560 - INFO -  - F1 Score: 0.16506717850287908
+2024-11-22 10:47:26,560 - INFO - Sent reply
+2024-11-22 10:47:26,560 - INFO - Evaluation Metrics (Round 18):
+2024-11-22 10:47:26,560 - INFO -  - Loss: 0.6615043889193458
+2024-11-22 10:47:26,560 - INFO -  - Accuracy: 0.5805785123966942
+2024-11-22 10:47:26,560 - INFO -  - ROC AUC: 0.5382989741221257
+2024-11-22 10:47:26,560 - INFO -  - F1 Score: 0.06451612903225806
+2024-11-22 10:47:26,560 - INFO - Sent reply
+2024-11-22 10:47:26,568 - INFO - 
+2024-11-22 10:47:26,568 - INFO - Received: train message eee9439d-fcde-4cbe-ae53-78f3a0b91368
+2024-11-22 10:47:26,568 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,568 - INFO - 
+2024-11-22 10:47:26,568 - INFO - Received: train message 424624b9-6a85-4b5d-92cf-65db138e2400
+2024-11-22 10:47:26,568 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,636 - INFO - Sent reply
+2024-11-22 10:47:26,665 - INFO - Sent reply
+2024-11-22 10:47:26,691 - INFO - 
+2024-11-22 10:47:26,691 - INFO - Received: evaluate message b73a6ab1-6aee-4f28-9853-d813db925b4b
+2024-11-22 10:47:26,691 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,691 - INFO - 
+2024-11-22 10:47:26,691 - INFO - Received: evaluate message eba3553c-3dab-4e8d-a845-5975d97da7e8
+2024-11-22 10:47:26,691 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,710 - INFO - Evaluation Metrics (Round 19):
+2024-11-22 10:47:26,710 - INFO -  - Loss: 0.7093766829406668
+2024-11-22 10:47:26,710 - INFO -  - Accuracy: 0.5561023622047244
+2024-11-22 10:47:26,710 - INFO -  - ROC AUC: 0.5736282194848825
+2024-11-22 10:47:26,710 - INFO -  - F1 Score: 0.1601489757914339
+2024-11-22 10:47:26,710 - INFO - Sent reply
+2024-11-22 10:47:26,710 - INFO - Evaluation Metrics (Round 19):
+2024-11-22 10:47:26,710 - INFO -  - Loss: 0.674406762888876
+2024-11-22 10:47:26,710 - INFO -  - Accuracy: 0.5764462809917356
+2024-11-22 10:47:26,710 - INFO -  - ROC AUC: 0.537935088382248
+2024-11-22 10:47:26,710 - INFO -  - F1 Score: 0.06959152798789713
+2024-11-22 10:47:26,710 - INFO - Sent reply
+2024-11-22 10:47:26,710 - INFO - 
+2024-11-22 10:47:26,710 - INFO - Received: train message e0baaf47-95b8-4983-8dda-d27325a3a60c
+2024-11-22 10:47:26,710 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,710 - INFO - 
+2024-11-22 10:47:26,719 - INFO - Received: train message 631555f5-7766-4c1d-abed-ae0b16f5d026
+2024-11-22 10:47:26,719 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,785 - INFO - Sent reply
+2024-11-22 10:47:26,800 - INFO - Sent reply
+2024-11-22 10:47:26,839 - INFO - 
+2024-11-22 10:47:26,839 - INFO - Received: evaluate message 7ee0bd67-506c-454a-a65a-bcaf69b91146
+2024-11-22 10:47:26,840 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,840 - INFO - 
+2024-11-22 10:47:26,840 - INFO - Received: evaluate message eb1693e7-e996-49db-835d-19857cb5beff
+2024-11-22 10:47:26,840 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,850 - INFO - Evaluation Metrics (Round 20):
+2024-11-22 10:47:26,850 - INFO - Evaluation Metrics (Round 20):
+2024-11-22 10:47:26,850 - INFO -  - Loss: 0.7133114248781702
+2024-11-22 10:47:26,850 - INFO -  - Loss: 0.6907968278494739
+2024-11-22 10:47:26,850 - INFO -  - Accuracy: 0.5433070866141733
+2024-11-22 10:47:26,851 - INFO -  - Accuracy: 0.5475206611570248
+2024-11-22 10:47:26,851 - INFO -  - ROC AUC: 0.5659014557670773
+2024-11-22 10:47:26,851 - INFO -  - ROC AUC: 0.5391247148395404
+2024-11-22 10:47:26,851 - INFO -  - F1 Score: 0.15636363636363637
+2024-11-22 10:47:26,851 - INFO -  - F1 Score: 0.07072135785007072
+2024-11-22 10:47:26,851 - INFO - Sent reply
+2024-11-22 10:47:26,851 - INFO - Sent reply
+2024-11-22 10:47:26,852 - INFO - 
+2024-11-22 10:47:26,852 - INFO - Received: train message 4f8d552c-0ffd-481b-b9c0-c6dabad2b0ec
+2024-11-22 10:47:26,852 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,852 - INFO - 
+2024-11-22 10:47:26,852 - INFO - Received: train message 500dc1ff-0a6c-4965-b695-6b3fdf3f195a
+2024-11-22 10:47:26,852 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,954 - INFO - Sent reply
+2024-11-22 10:47:26,961 - INFO - Sent reply
+2024-11-22 10:47:26,994 - INFO - 
+2024-11-22 10:47:26,994 - INFO - Received: evaluate message 27b59fcd-82f9-49f2-9ff9-268da00dc9e8
+2024-11-22 10:47:26,994 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:26,994 - INFO - 
+2024-11-22 10:47:26,994 - INFO - Received: evaluate message 115840b3-95c7-4e83-b82b-a12a52e26d84
+2024-11-22 10:47:26,994 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,004 - INFO - Evaluation Metrics (Round 21):
+2024-11-22 10:47:27,004 - INFO -  - Loss: 0.7263384713412114
+2024-11-22 10:47:27,004 - INFO -  - Accuracy: 0.53248031496063
+2024-11-22 10:47:27,004 - INFO -  - ROC AUC: 0.5658734602463606
+2024-11-22 10:47:27,004 - INFO -  - F1 Score: 0.1592920353982301
+2024-11-22 10:47:27,004 - INFO - Evaluation Metrics (Round 21):
+2024-11-22 10:47:27,004 - INFO -  - Loss: 0.6986969652781663
+2024-11-22 10:47:27,004 - INFO - Sent reply
+2024-11-22 10:47:27,004 - INFO -  - Accuracy: 0.5447658402203857
+2024-11-22 10:47:27,004 - INFO -  - ROC AUC: 0.5382150004898462
+2024-11-22 10:47:27,004 - INFO -  - F1 Score: 0.06770098730606489
+2024-11-22 10:47:27,004 - INFO - Sent reply
+2024-11-22 10:47:27,009 - INFO - 
+2024-11-22 10:47:27,009 - INFO - Received: train message 15c225a2-a86b-4052-9cd7-f839d5185fd6
+2024-11-22 10:47:27,009 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,009 - INFO - 
+2024-11-22 10:47:27,009 - INFO - Received: train message 191f5f3c-63a2-4dd4-b6c3-33c53a1c09fc
+2024-11-22 10:47:27,009 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,079 - INFO - Sent reply
+2024-11-22 10:47:27,094 - INFO - Sent reply
+2024-11-22 10:47:27,118 - INFO - 
+2024-11-22 10:47:27,126 - INFO - Received: evaluate message 55c5d7f0-a147-4ec6-bd04-8e382190e8c1
+2024-11-22 10:47:27,126 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,126 - INFO - 
+2024-11-22 10:47:27,126 - INFO - Received: evaluate message c8b43002-878f-41a1-8305-292a831488ee
+2024-11-22 10:47:27,126 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,134 - INFO - Evaluation Metrics (Round 22):
+2024-11-22 10:47:27,134 - INFO -  - Loss: 0.7309470268810514
+2024-11-22 10:47:27,134 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,134 - INFO -  - ROC AUC: 0.5706606942889136
+2024-11-22 10:47:27,134 - INFO -  - F1 Score: 0.1646234676007005
+2024-11-22 10:47:27,134 - INFO - Sent reply
+2024-11-22 10:47:27,134 - INFO - Evaluation Metrics (Round 22):
+2024-11-22 10:47:27,134 - INFO -  - Loss: 0.7022679576359401
+2024-11-22 10:47:27,134 - INFO -  - Accuracy: 0.5433884297520661
+2024-11-22 10:47:27,134 - INFO -  - ROC AUC: 0.5389567675749815
+2024-11-22 10:47:27,134 - INFO -  - F1 Score: 0.07531380753138076
+2024-11-22 10:47:27,134 - INFO - Sent reply
+2024-11-22 10:47:27,134 - INFO - 
+2024-11-22 10:47:27,134 - INFO - Received: train message 6776fc9b-af17-452f-ba6c-8f4e2c8535e7
+2024-11-22 10:47:27,142 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,142 - INFO - 
+2024-11-22 10:47:27,142 - INFO - Received: train message 02dc2db4-f1ab-49d5-9e50-2fcee2ad609f
+2024-11-22 10:47:27,142 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,208 - INFO - Sent reply
+2024-11-22 10:47:27,226 - INFO - Sent reply
+2024-11-22 10:47:27,259 - INFO - 
+2024-11-22 10:47:27,259 - INFO - Received: evaluate message 053deaf0-977c-45c4-8687-5403d9c2a1fb
+2024-11-22 10:47:27,259 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,259 - INFO - 
+2024-11-22 10:47:27,259 - INFO - Received: evaluate message b69d9bbb-bc1a-4cf4-b041-98c086d11600
+2024-11-22 10:47:27,259 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,276 - INFO - Evaluation Metrics (Round 23):
+2024-11-22 10:47:27,277 - INFO -  - Loss: 0.729105351757963
+2024-11-22 10:47:27,277 - INFO -  - Accuracy: 0.531496062992126
+2024-11-22 10:47:27,277 - INFO -  - ROC AUC: 0.5711226203807391
+2024-11-22 10:47:27,277 - INFO -  - F1 Score: 0.15901060070671377
+2024-11-22 10:47:27,277 - INFO - Sent reply
+2024-11-22 10:47:27,277 - INFO - Evaluation Metrics (Round 23):
+2024-11-22 10:47:27,278 - INFO -  - Loss: 0.698209671662949
+2024-11-22 10:47:27,278 - INFO -  - Accuracy: 0.5495867768595041
+2024-11-22 10:47:27,278 - INFO -  - ROC AUC: 0.5389427719696016
+2024-11-22 10:47:27,278 - INFO -  - F1 Score: 0.07627118644067797
+2024-11-22 10:47:27,278 - INFO - Sent reply
+2024-11-22 10:47:27,279 - INFO - 
+2024-11-22 10:47:27,279 - INFO - Received: train message da207d55-ec88-4862-ae36-06b4635ecc47
+2024-11-22 10:47:27,279 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,279 - INFO - 
+2024-11-22 10:47:27,279 - INFO - Received: train message ee5e184d-bbf1-41b2-a0b7-5f30a5f53ce3
+2024-11-22 10:47:27,279 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,348 - INFO - Sent reply
+2024-11-22 10:47:27,364 - INFO - Sent reply
+2024-11-22 10:47:27,393 - INFO - 
+2024-11-22 10:47:27,393 - INFO - Received: evaluate message 35008aeb-5f81-4d55-aadb-288dfc0920b6
+2024-11-22 10:47:27,393 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,393 - INFO - 
+2024-11-22 10:47:27,393 - INFO - Received: evaluate message 21a22a04-4b4f-4f13-b685-3eaef83e921a
+2024-11-22 10:47:27,393 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,408 - INFO - Evaluation Metrics (Round 24):
+2024-11-22 10:47:27,409 - INFO -  - Loss: 0.7301436764975763
+2024-11-22 10:47:27,409 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,409 - INFO -  - ROC AUC: 0.5715985442329228
+2024-11-22 10:47:27,409 - INFO -  - F1 Score: 0.1616871704745167
+2024-11-22 10:47:27,409 - INFO - Sent reply
+2024-11-22 10:47:27,409 - INFO - Evaluation Metrics (Round 24):
+2024-11-22 10:47:27,409 - INFO -  - Loss: 0.6980628889438072
+2024-11-22 10:47:27,409 - INFO -  - Accuracy: 0.5488980716253443
+2024-11-22 10:47:27,409 - INFO -  - ROC AUC: 0.539026745601881
+2024-11-22 10:47:27,409 - INFO -  - F1 Score: 0.07355021216407355
+2024-11-22 10:47:27,409 - INFO - Sent reply
+2024-11-22 10:47:27,409 - INFO - 
+2024-11-22 10:47:27,409 - INFO - Received: train message 01644f7e-d83a-4cb3-9f5d-0ea4e55dea5f
+2024-11-22 10:47:27,409 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,409 - INFO - 
+2024-11-22 10:47:27,409 - INFO - Received: train message c26b435e-9461-45c3-8b9f-53f8510dcc97
+2024-11-22 10:47:27,413 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,470 - INFO - Sent reply
+2024-11-22 10:47:27,496 - INFO - Sent reply
+2024-11-22 10:47:27,521 - INFO - 
+2024-11-22 10:47:27,521 - INFO - Received: evaluate message 5961018f-0134-4d51-8440-b8ccee049a74
+2024-11-22 10:47:27,521 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,521 - INFO - 
+2024-11-22 10:47:27,521 - INFO - Received: evaluate message 42027f88-d37a-4a39-a38e-83c5f55d317a
+2024-11-22 10:47:27,526 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,539 - INFO - Evaluation Metrics (Round 25):
+2024-11-22 10:47:27,539 - INFO -  - Loss: 0.6969839785985621
+2024-11-22 10:47:27,539 - INFO -  - Accuracy: 0.5482093663911846
+2024-11-22 10:47:27,539 - INFO -  - ROC AUC: 0.5390687324180207
+2024-11-22 10:47:27,539 - INFO -  - F1 Score: 0.07344632768361582
+2024-11-22 10:47:27,539 - INFO - Evaluation Metrics (Round 25):
+2024-11-22 10:47:27,539 - INFO -  - Loss: 0.7300217615797279
+2024-11-22 10:47:27,539 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,539 - INFO -  - ROC AUC: 0.5722144456886898
+2024-11-22 10:47:27,539 - INFO -  - F1 Score: 0.1616871704745167
+2024-11-22 10:47:27,539 - INFO - Sent reply
+2024-11-22 10:47:27,539 - INFO - Sent reply
+2024-11-22 10:47:27,541 - INFO - 
+2024-11-22 10:47:27,541 - INFO - Received: train message 4b5274d8-f3cb-45f6-bbf7-36cee6ab80da
+2024-11-22 10:47:27,541 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,543 - INFO - 
+2024-11-22 10:47:27,543 - INFO - Received: train message 2038fac8-48d9-4a26-b717-d301674ca47c
+2024-11-22 10:47:27,543 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,608 - INFO - Sent reply
+2024-11-22 10:47:27,625 - INFO - Sent reply
+2024-11-22 10:47:27,651 - INFO - 
+2024-11-22 10:47:27,651 - INFO - Received: evaluate message bac3615f-7d7e-428b-9031-dcabcd7d6820
+2024-11-22 10:47:27,651 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,651 - INFO - 
+2024-11-22 10:47:27,651 - INFO - Received: evaluate message 5cce0fd6-0c83-4ec8-a61f-82f1fecf7aae
+2024-11-22 10:47:27,651 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,667 - INFO - Evaluation Metrics (Round 26):
+2024-11-22 10:47:27,667 - INFO -  - Loss: 0.7300953068180834
+2024-11-22 10:47:27,667 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,667 - INFO -  - ROC AUC: 0.5726903695408735
+2024-11-22 10:47:27,667 - INFO -  - F1 Score: 0.1616871704745167
+2024-11-22 10:47:27,667 - INFO - Evaluation Metrics (Round 26):
+2024-11-22 10:47:27,667 - INFO -  - Loss: 0.6963585352326043
+2024-11-22 10:47:27,667 - INFO -  - Accuracy: 0.5488980716253443
+2024-11-22 10:47:27,667 - INFO -  - ROC AUC: 0.5391247148395404
+2024-11-22 10:47:27,667 - INFO -  - F1 Score: 0.07355021216407355
+2024-11-22 10:47:27,667 - INFO - Sent reply
+2024-11-22 10:47:27,667 - INFO - Sent reply
+2024-11-22 10:47:27,667 - INFO - 
+2024-11-22 10:47:27,667 - INFO - Received: train message 2915481c-0f66-45a7-aa52-b3013b6cfda1
+2024-11-22 10:47:27,667 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,667 - INFO - 
+2024-11-22 10:47:27,667 - INFO - Received: train message 82aa081b-56da-497c-ae27-3e201d4bbbb6
+2024-11-22 10:47:27,667 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,742 - INFO - Sent reply
+2024-11-22 10:47:27,755 - INFO - Sent reply
+2024-11-22 10:47:27,782 - INFO - 
+2024-11-22 10:47:27,782 - INFO - Received: evaluate message 2678893e-d627-41d6-a74b-4fc792f75022
+2024-11-22 10:47:27,782 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,782 - INFO - 
+2024-11-22 10:47:27,782 - INFO - Received: evaluate message f9de5255-5698-4ba2-9d22-aafd4ab357e9
+2024-11-22 10:47:27,782 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,797 - INFO - Evaluation Metrics (Round 27):
+2024-11-22 10:47:27,797 - INFO - Evaluation Metrics (Round 27):
+2024-11-22 10:47:27,797 - INFO -  - Accuracy: 0.5509641873278237
+2024-11-22 10:47:27,797 - INFO -  - Loss: 0.7300457065022291
+2024-11-22 10:47:27,797 - INFO -  - ROC AUC: 0.539040741207261
+2024-11-22 10:47:27,797 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,797 - INFO -  - F1 Score: 0.07386363636363637
+2024-11-22 10:47:27,797 - INFO -  - ROC AUC: 0.5729143337066069
+2024-11-22 10:47:27,797 - INFO -  - F1 Score: 0.1616871704745167
+2024-11-22 10:47:27,797 - INFO - Sent reply
+2024-11-22 10:47:27,797 - INFO - Sent reply
+2024-11-22 10:47:27,798 - INFO - 
+2024-11-22 10:47:27,798 - INFO - Received: train message a9395f9b-ab7d-41c5-b52a-fc08593ef622
+2024-11-22 10:47:27,798 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,798 - INFO - 
+2024-11-22 10:47:27,798 - INFO - Received: train message 4148a3ae-229c-485f-abc7-df8420bb2ee4
+2024-11-22 10:47:27,801 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,865 - INFO - Sent reply
+2024-11-22 10:47:27,882 - INFO - Sent reply
+2024-11-22 10:47:27,909 - INFO - 
+2024-11-22 10:47:27,909 - INFO - Received: evaluate message 230cd4a8-0f94-41df-8eb7-82b24210d1de
+2024-11-22 10:47:27,909 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,909 - INFO - 
+2024-11-22 10:47:27,909 - INFO - Received: evaluate message 7a15f48c-629a-42f5-b19e-7540429fc457
+2024-11-22 10:47:27,909 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,921 - INFO - Evaluation Metrics (Round 28):
+2024-11-22 10:47:27,921 - INFO -  - Loss: 0.7299437995453756
+2024-11-22 10:47:27,921 - INFO -  - Accuracy: 0.530511811023622
+2024-11-22 10:47:27,921 - INFO -  - ROC AUC: 0.5730543113101902
+2024-11-22 10:47:27,921 - INFO -  - F1 Score: 0.1616871704745167
+2024-11-22 10:47:27,921 - INFO - Evaluation Metrics (Round 28):
+2024-11-22 10:47:27,921 - INFO -  - Loss: 0.6953101479113148
+2024-11-22 10:47:27,921 - INFO -  - Accuracy: 0.5516528925619835
+2024-11-22 10:47:27,921 - INFO -  - ROC AUC: 0.5390267456018809
+2024-11-22 10:47:27,921 - INFO -  - F1 Score: 0.07396870554765292
+2024-11-22 10:47:27,921 - INFO - Sent reply
+2024-11-22 10:47:27,923 - INFO - Sent reply
+2024-11-22 10:47:27,923 - INFO - 
+2024-11-22 10:47:27,923 - INFO - Received: train message e65353a2-e84f-40f0-a4ba-f006d43385f1
+2024-11-22 10:47:27,923 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,923 - INFO - 
+2024-11-22 10:47:27,923 - INFO - Received: train message 015238ac-b77a-40a6-872a-0000c80b1c07
+2024-11-22 10:47:27,923 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:27,993 - INFO - Sent reply
+2024-11-22 10:47:28,005 - INFO - Sent reply
+2024-11-22 10:47:28,038 - INFO - 
+2024-11-22 10:47:28,038 - INFO - Received: evaluate message bfa692fa-2220-40a9-87db-1210d7b9aabe
+2024-11-22 10:47:28,038 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,038 - INFO - 
+2024-11-22 10:47:28,038 - INFO - Received: evaluate message 3aeb8101-86cd-4fd6-a6e2-23360047a464
+2024-11-22 10:47:28,038 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,045 - INFO - Evaluation Metrics (Round 29):
+2024-11-22 10:47:28,045 - INFO -  - Loss: 0.7297963843722868
+2024-11-22 10:47:28,045 - INFO -  - Accuracy: 0.5295275590551181
+2024-11-22 10:47:28,045 - INFO -  - ROC AUC: 0.5731382978723405
+2024-11-22 10:47:28,045 - INFO -  - F1 Score: 0.16140350877192983
+2024-11-22 10:47:28,045 - INFO - Sent reply
+2024-11-22 10:47:28,051 - INFO - Evaluation Metrics (Round 29):
+2024-11-22 10:47:28,051 - INFO -  - Loss: 0.6948882784967988
+2024-11-22 10:47:28,051 - INFO -  - Accuracy: 0.5523415977961432
+2024-11-22 10:47:28,051 - INFO -  - ROC AUC: 0.5389147807588417
+2024-11-22 10:47:28,051 - INFO -  - F1 Score: 0.07407407407407407
+2024-11-22 10:47:28,051 - INFO - Sent reply
+2024-11-22 10:47:28,052 - INFO - 
+2024-11-22 10:47:28,054 - INFO - Received: train message aefd9dd8-f41a-4852-843d-d90dc1577615
+2024-11-22 10:47:28,054 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,055 - INFO - 
+2024-11-22 10:47:28,055 - INFO - Received: train message be52801e-a280-41c1-9f8d-0fe372501b19
+2024-11-22 10:47:28,055 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,119 - INFO - Sent reply
+2024-11-22 10:47:28,135 - INFO - Sent reply
+2024-11-22 10:47:28,167 - INFO - 
+2024-11-22 10:47:28,167 - INFO - Received: evaluate message a9131649-a2cb-42fd-8270-7a26d78747bb
+2024-11-22 10:47:28,167 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,167 - INFO - 
+2024-11-22 10:47:28,167 - INFO - Received: evaluate message e5df450d-ff05-42f3-8d1c-ef1ab419c951
+2024-11-22 10:47:28,167 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,175 - INFO - Evaluation Metrics (Round 30):
+2024-11-22 10:47:28,175 - INFO -  - Loss: 0.7296127488410084
+2024-11-22 10:47:28,175 - INFO -  - Accuracy: 0.5295275590551181
+2024-11-22 10:47:28,175 - INFO - Evaluation Metrics (Round 30):
+2024-11-22 10:47:28,175 - INFO -  - ROC AUC: 0.5732082866741322
+2024-11-22 10:47:28,175 - INFO -  - Loss: 0.6945104408825242
+2024-11-22 10:47:28,175 - INFO -  - F1 Score: 0.16140350877192983
+2024-11-22 10:47:28,175 - INFO -  - Accuracy: 0.553030303030303
+2024-11-22 10:47:28,175 - INFO -  - ROC AUC: 0.5389287763642217
+2024-11-22 10:47:28,175 - INFO -  - F1 Score: 0.07417974322396577
+2024-11-22 10:47:28,175 - INFO - Sent reply
+2024-11-22 10:47:28,175 - INFO - Sent reply
+2024-11-22 10:47:28,183 - INFO - 
+2024-11-22 10:47:28,183 - INFO - Received: train message 8e7bab98-35cb-43f6-9ef4-7284964097fb
+2024-11-22 10:47:28,183 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,183 - INFO - 
+2024-11-22 10:47:28,183 - INFO - Received: train message b8dc545d-17e0-48ff-93bc-586ecf088fa6
+2024-11-22 10:47:28,183 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,241 - INFO - Sent reply
+2024-11-22 10:47:28,268 - INFO - Sent reply
+2024-11-22 10:47:28,301 - INFO - 
+2024-11-22 10:47:28,301 - INFO - Received: evaluate message 081b5009-f8af-4a3b-8cd2-9a2e9f59c0ac
+2024-11-22 10:47:28,301 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,301 - INFO - 
+2024-11-22 10:47:28,301 - INFO - Received: evaluate message 47a64936-a002-4785-81fc-bacadfbe9a10
+2024-11-22 10:47:28,301 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,310 - INFO - Evaluation Metrics (Round 31):
+2024-11-22 10:47:28,310 - INFO -  - Loss: 0.7294018138208969
+2024-11-22 10:47:28,310 - INFO -  - Accuracy: 0.5295275590551181
+2024-11-22 10:47:28,310 - INFO -  - ROC AUC: 0.5733902575587906
+2024-11-22 10:47:28,310 - INFO -  - F1 Score: 0.16140350877192983
+2024-11-22 10:47:28,310 - INFO - Sent reply
+2024-11-22 10:47:28,314 - INFO - Evaluation Metrics (Round 31):
+2024-11-22 10:47:28,314 - INFO -  - Loss: 0.694166833269578
+2024-11-22 10:47:28,314 - INFO -  - Accuracy: 0.5544077134986226
+2024-11-22 10:47:28,314 - INFO -  - ROC AUC: 0.5389567675749815
+2024-11-22 10:47:28,314 - INFO -  - F1 Score: 0.07439198855507868
+2024-11-22 10:47:28,314 - INFO - Sent reply
+2024-11-22 10:47:28,314 - INFO - 
+2024-11-22 10:47:28,314 - INFO - Received: train message f7bfd395-b5b3-4afe-9a02-8f3083f4ede8
+2024-11-22 10:47:28,314 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,318 - INFO - 
+2024-11-22 10:47:28,318 - INFO - Received: train message 6eb92370-be8a-4b45-82e3-cfe719ed1130
+2024-11-22 10:47:28,318 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,402 - INFO - Sent reply
+2024-11-22 10:47:28,417 - INFO - Sent reply
+2024-11-22 10:47:28,448 - INFO - 
+2024-11-22 10:47:28,448 - INFO - Received: evaluate message d9f26e12-33bd-48d1-8be4-d95380744593
+2024-11-22 10:47:28,448 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,448 - INFO - 
+2024-11-22 10:47:28,456 - INFO - Received: evaluate message 3eea213f-d841-4280-8e74-6f71557ae1cf
+2024-11-22 10:47:28,456 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,466 - INFO - Evaluation Metrics (Round 32):
+2024-11-22 10:47:28,466 - INFO -  - Loss: 0.7291698146962602
+2024-11-22 10:47:28,466 - INFO -  - Accuracy: 0.531496062992126
+2024-11-22 10:47:28,466 - INFO -  - ROC AUC: 0.5735442329227323
+2024-11-22 10:47:28,466 - INFO -  - F1 Score: 0.1619718309859155
+2024-11-22 10:47:28,466 - INFO - Sent reply
+2024-11-22 10:47:28,466 - INFO - Evaluation Metrics (Round 32):
+2024-11-22 10:47:28,466 - INFO -  - Loss: 0.6938492578535362
+2024-11-22 10:47:28,466 - INFO -  - Accuracy: 0.5557851239669421
+2024-11-22 10:47:28,466 - INFO -  - ROC AUC: 0.5389987543911212
+2024-11-22 10:47:28,466 - INFO -  - F1 Score: 0.0746054519368723
+2024-11-22 10:47:28,466 - INFO - Sent reply
+2024-11-22 10:47:28,466 - INFO - 
+2024-11-22 10:47:28,466 - INFO - Received: train message ce359555-369e-4fc9-8f7e-5faf5a63796e
+2024-11-22 10:47:28,472 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,473 - INFO - 
+2024-11-22 10:47:28,473 - INFO - Received: train message 484441ec-f2f1-4708-87ff-45a4b798e93f
+2024-11-22 10:47:28,473 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,536 - INFO - Sent reply
+2024-11-22 10:47:28,556 - INFO - Sent reply
+2024-11-22 10:47:28,590 - INFO - 
+2024-11-22 10:47:28,590 - INFO - Received: evaluate message 698dac51-35db-4c9a-9c64-1a02468b3fde
+2024-11-22 10:47:28,590 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,591 - INFO - 
+2024-11-22 10:47:28,591 - INFO - Received: evaluate message 2c5c6a59-e39f-48d1-9cac-f3b17580914b
+2024-11-22 10:47:28,591 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,603 - INFO - Evaluation Metrics (Round 33):
+2024-11-22 10:47:28,603 - INFO -  - Loss: 0.7289218798554615
+2024-11-22 10:47:28,603 - INFO -  - Accuracy: 0.53248031496063
+2024-11-22 10:47:28,603 - INFO -  - ROC AUC: 0.5735022396416574
+2024-11-22 10:47:28,603 - INFO -  - F1 Score: 0.16225749559082892
+2024-11-22 10:47:28,604 - INFO - Sent reply
+2024-11-22 10:47:28,605 - INFO - Evaluation Metrics (Round 33):
+2024-11-22 10:47:28,605 - INFO -  - Loss: 0.693551802742814
+2024-11-22 10:47:28,605 - INFO -  - Accuracy: 0.5557851239669421
+2024-11-22 10:47:28,605 - INFO -  - ROC AUC: 0.5391667016556801
+2024-11-22 10:47:28,605 - INFO -  - F1 Score: 0.0746054519368723
+2024-11-22 10:47:28,606 - INFO - Sent reply
+2024-11-22 10:47:28,609 - INFO - 
+2024-11-22 10:47:28,609 - INFO - Received: train message 868d9bd3-fe1a-4206-927c-a7b83e98dcb7
+2024-11-22 10:47:28,609 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,609 - INFO - 
+2024-11-22 10:47:28,609 - INFO - Received: train message abffd3ee-94cb-46a7-b072-35aabeaf8d65
+2024-11-22 10:47:28,609 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,669 - INFO - Sent reply
+2024-11-22 10:47:28,690 - INFO - Sent reply
+2024-11-22 10:47:28,716 - INFO - 
+2024-11-22 10:47:28,716 - INFO - Received: evaluate message 48beb026-ea6e-409d-b7f8-6b6f1232a829
+2024-11-22 10:47:28,716 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,716 - INFO - 
+2024-11-22 10:47:28,716 - INFO - Received: evaluate message 5173c101-bf29-4e08-9f9b-1f66fc85ea48
+2024-11-22 10:47:28,716 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,732 - INFO - Evaluation Metrics (Round 34):
+2024-11-22 10:47:28,732 - INFO -  - Loss: 0.7286619447415903
+2024-11-22 10:47:28,732 - INFO -  - Accuracy: 0.5334645669291339
+2024-11-22 10:47:28,732 - INFO -  - ROC AUC: 0.5735582306830906
+2024-11-22 10:47:28,732 - INFO -  - F1 Score: 0.1625441696113074
+2024-11-22 10:47:28,732 - INFO - Sent reply
+2024-11-22 10:47:28,732 - INFO - Evaluation Metrics (Round 34):
+2024-11-22 10:47:28,732 - INFO -  - Loss: 0.6932699223182854
+2024-11-22 10:47:28,732 - INFO -  - Accuracy: 0.5564738292011019
+2024-11-22 10:47:28,732 - INFO -  - ROC AUC: 0.5392646708933395
+2024-11-22 10:47:28,732 - INFO -  - F1 Score: 0.07471264367816093
+2024-11-22 10:47:28,732 - INFO - Sent reply
+2024-11-22 10:47:28,732 - INFO - 
+2024-11-22 10:47:28,732 - INFO - Received: train message 070d92dc-69f5-4a54-bd36-e968e4e2b163
+2024-11-22 10:47:28,732 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,732 - INFO - 
+2024-11-22 10:47:28,732 - INFO - Received: train message dfb1ce23-a711-4ac8-86e2-378cffa3a6c2
+2024-11-22 10:47:28,740 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,805 - INFO - Sent reply
+2024-11-22 10:47:28,818 - INFO - Sent reply
+2024-11-22 10:47:28,852 - INFO - 
+2024-11-22 10:47:28,852 - INFO - Received: evaluate message 29858b31-b848-426a-8422-f56dfa222300
+2024-11-22 10:47:28,852 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,854 - INFO - 
+2024-11-22 10:47:28,854 - INFO - Received: evaluate message 194cc552-21bc-4fa6-ba3c-c95b83c2f695
+2024-11-22 10:47:28,854 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,862 - INFO - Evaluation Metrics (Round 35):
+2024-11-22 10:47:28,862 - INFO -  - Loss: 0.7283930742859153
+2024-11-22 10:47:28,862 - INFO -  - Accuracy: 0.5334645669291339
+2024-11-22 10:47:28,862 - INFO -  - ROC AUC: 0.5735442329227324
+2024-11-22 10:47:28,862 - INFO - Evaluation Metrics (Round 35):
+2024-11-22 10:47:28,862 - INFO -  - F1 Score: 0.1625441696113074
+2024-11-22 10:47:28,862 - INFO -  - Loss: 0.6930001610845988
+2024-11-22 10:47:28,862 - INFO -  - Accuracy: 0.5557851239669421
+2024-11-22 10:47:28,862 - INFO -  - ROC AUC: 0.5395165917901779
+2024-11-22 10:47:28,862 - INFO -  - F1 Score: 0.0746054519368723
+2024-11-22 10:47:28,862 - INFO - Sent reply
+2024-11-22 10:47:28,862 - INFO - Sent reply
+2024-11-22 10:47:28,867 - INFO - 
+2024-11-22 10:47:28,867 - INFO - Received: train message 0996d6bd-ddfa-4040-9e15-f025d32ed94a
+2024-11-22 10:47:28,869 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,869 - INFO - 
+2024-11-22 10:47:28,869 - INFO - Received: train message 850f701a-5fa6-4651-8a68-eae4ca76f46a
+2024-11-22 10:47:28,869 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,935 - INFO - Sent reply
+2024-11-22 10:47:28,950 - INFO - Sent reply
+2024-11-22 10:47:28,977 - INFO - 
+2024-11-22 10:47:28,977 - INFO - Received: evaluate message 8ce129b9-8dba-4230-b8a7-5c63cb6cb0ac
+2024-11-22 10:47:28,977 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,977 - INFO - 
+2024-11-22 10:47:28,977 - INFO - Received: evaluate message b7fe5520-afa0-4b2b-9a65-dcf4e247a6af
+2024-11-22 10:47:28,977 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,988 - INFO - Evaluation Metrics (Round 36):
+2024-11-22 10:47:28,988 - INFO -  - Loss: 0.7281176401311436
+2024-11-22 10:47:28,988 - INFO -  - Accuracy: 0.5344488188976378
+2024-11-22 10:47:28,988 - INFO -  - ROC AUC: 0.5735582306830906
+2024-11-22 10:47:28,988 - INFO -  - F1 Score: 0.16283185840707964
+2024-11-22 10:47:28,988 - INFO -  - Loss: 0.692739875105274
+2024-11-22 10:47:28,988 - INFO -  - Accuracy: 0.5571625344352618
+2024-11-22 10:47:28,988 - INFO -  - ROC AUC: 0.5396845390547369
+2024-11-22 10:47:28,988 - INFO -  - F1 Score: 0.07482014388489208
+2024-11-22 10:47:28,988 - INFO - Sent reply
+2024-11-22 10:47:28,988 - INFO - Sent reply
+2024-11-22 10:47:28,992 - INFO - 
+2024-11-22 10:47:28,992 - INFO - Received: train message 8c9d1c1e-cf6a-4e49-987a-8c6b828525f7
+2024-11-22 10:47:28,992 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:28,992 - INFO - 
+2024-11-22 10:47:28,992 - INFO - Received: train message 73b5fbe5-5b1b-4ed7-8dd5-9169e6e27e51
+2024-11-22 10:47:28,992 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,056 - INFO - Sent reply
+2024-11-22 10:47:29,074 - INFO - Sent reply
+2024-11-22 10:47:29,101 - INFO - 
+2024-11-22 10:47:29,101 - INFO - Received: evaluate message feb74b1b-c24b-4a02-8473-c4b714221fbd
+2024-11-22 10:47:29,101 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,101 - INFO - 
+2024-11-22 10:47:29,101 - INFO - Received: evaluate message bf2e4999-843f-4bbd-8929-001482c37efa
+2024-11-22 10:47:29,101 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,115 - INFO - Evaluation Metrics (Round 37):
+2024-11-22 10:47:29,115 - INFO -  - Loss: 0.7278374736957652
+2024-11-22 10:47:29,115 - INFO -  - Accuracy: 0.5344488188976378
+2024-11-22 10:47:29,115 - INFO -  - ROC AUC: 0.5737541993281076
+2024-11-22 10:47:29,115 - INFO -  - F1 Score: 0.16283185840707964
+2024-11-22 10:47:29,115 - INFO - Evaluation Metrics (Round 37):
+2024-11-22 10:47:29,115 - INFO -  - Loss: 0.6924870371950097
+2024-11-22 10:47:29,115 - INFO -  - Accuracy: 0.5585399449035813
+2024-11-22 10:47:29,115 - INFO -  - ROC AUC: 0.5397545170816364
+2024-11-22 10:47:29,115 - INFO -  - F1 Score: 0.07503607503607504
+2024-11-22 10:47:29,115 - INFO - Sent reply
+2024-11-22 10:47:29,118 - INFO - 
+2024-11-22 10:47:29,121 - INFO - Received: train message 51575e69-cbe0-4fa5-a975-25d5bef36311
+2024-11-22 10:47:29,121 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,121 - INFO - 
+2024-11-22 10:47:29,122 - INFO - Received: train message 8e6bf809-26d3-41c3-8b2c-6670f97b9cf7
+2024-11-22 10:47:29,122 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,185 - INFO - Sent reply
+2024-11-22 10:47:29,192 - INFO - Sent reply
+2024-11-22 10:47:29,225 - INFO - 
+2024-11-22 10:47:29,225 - INFO - Received: evaluate message c61be793-3097-4986-a3ba-93b636807098
+2024-11-22 10:47:29,225 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,225 - INFO - 
+2024-11-22 10:47:29,225 - INFO - Received: evaluate message 4014d415-8148-4f35-b35e-7cb8ff90e5ec
+2024-11-22 10:47:29,225 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,233 - INFO - Evaluation Metrics (Round 38):
+2024-11-22 10:47:29,233 - INFO -  - Loss: 0.7275539862338402
+2024-11-22 10:47:29,233 - INFO -  - Accuracy: 0.5344488188976378
+2024-11-22 10:47:29,233 - INFO -  - ROC AUC: 0.5736702127659574
+2024-11-22 10:47:29,233 - INFO -  - F1 Score: 0.16283185840707964
+2024-11-22 10:47:29,241 - INFO - Sent reply
+2024-11-22 10:47:29,241 - INFO - Evaluation Metrics (Round 38):
+2024-11-22 10:47:29,241 - INFO -  - Loss: 0.6922400912414909
+2024-11-22 10:47:29,241 - INFO -  - Accuracy: 0.5585399449035813
+2024-11-22 10:47:29,241 - INFO -  - ROC AUC: 0.5398384907139158
+2024-11-22 10:47:29,241 - INFO -  - F1 Score: 0.07503607503607504
+2024-11-22 10:47:29,241 - INFO - Sent reply
+2024-11-22 10:47:29,241 - INFO - 
+2024-11-22 10:47:29,241 - INFO - Received: train message c64a8ece-a345-482d-8dcd-4065db351153
+2024-11-22 10:47:29,241 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,241 - INFO - 
+2024-11-22 10:47:29,241 - INFO - Received: train message c16afa2e-fba4-4c7a-8f24-28b3af70606e
+2024-11-22 10:47:29,241 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,305 - INFO - Sent reply
+2024-11-22 10:47:29,326 - INFO - Sent reply
+2024-11-22 10:47:29,361 - INFO - 
+2024-11-22 10:47:29,361 - INFO - Received: evaluate message 3c292594-24f4-463d-8c6d-81cb6f2d0d98
+2024-11-22 10:47:29,361 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,361 - INFO - 
+2024-11-22 10:47:29,361 - INFO - Received: evaluate message 4c748852-61a6-4e3f-9996-07bd8dc4642f
+2024-11-22 10:47:29,361 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,369 - INFO - Evaluation Metrics (Round 39):
+2024-11-22 10:47:29,369 - INFO -  - Loss: 0.7272682624814782
+2024-11-22 10:47:29,369 - INFO -  - Accuracy: 0.5344488188976378
+2024-11-22 10:47:29,369 - INFO -  - ROC AUC: 0.5736002239641658
+2024-11-22 10:47:29,369 - INFO -  - F1 Score: 0.16283185840707964
+2024-11-22 10:47:29,369 - INFO - Sent reply
+2024-11-22 10:47:29,369 - INFO - Evaluation Metrics (Round 39):
+2024-11-22 10:47:29,369 - INFO -  - Loss: 0.691997841720007
+2024-11-22 10:47:29,369 - INFO -  - Accuracy: 0.559228650137741
+2024-11-22 10:47:29,369 - INFO -  - ROC AUC: 0.539796503897776
+2024-11-22 10:47:29,369 - INFO -  - F1 Score: 0.07514450867052024
+2024-11-22 10:47:29,369 - INFO - Sent reply
+2024-11-22 10:47:29,379 - INFO - 
+2024-11-22 10:47:29,379 - INFO - Received: train message 9e9862a3-73ef-4649-943d-14aedeb39f6e
+2024-11-22 10:47:29,380 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,380 - INFO - 
+2024-11-22 10:47:29,380 - INFO - Received: train message 4b214b90-7cfd-4e0d-9661-76f76db326fa
+2024-11-22 10:47:29,380 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,439 - INFO - Sent reply
+2024-11-22 10:47:29,457 - INFO - Sent reply
+2024-11-22 10:47:29,493 - INFO - 
+2024-11-22 10:47:29,493 - INFO - Received: evaluate message bf0a3f52-be17-479d-b7ad-5c55b6df8f0b
+2024-11-22 10:47:29,493 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,493 - INFO - 
+2024-11-22 10:47:29,493 - INFO - Received: evaluate message 0845129c-4e90-41f1-9170-df012c3ac4d0
+2024-11-22 10:47:29,493 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,509 - INFO - Evaluation Metrics (Round 40):
+2024-11-22 10:47:29,509 - INFO -  - Loss: 0.6917593700262551
+2024-11-22 10:47:29,509 - INFO -  - Accuracy: 0.5599173553719008
+2024-11-22 10:47:29,509 - INFO -  - ROC AUC: 0.5398944731354356
+2024-11-22 10:47:29,509 - INFO -  - F1 Score: 0.07525325615050651
+2024-11-22 10:47:29,509 - INFO - Evaluation Metrics (Round 40):
+2024-11-22 10:47:29,509 - INFO -  - Loss: 0.7269811340673639
+2024-11-22 10:47:29,509 - INFO -  - Accuracy: 0.5364173228346457
+2024-11-22 10:47:29,509 - INFO -  - ROC AUC: 0.5735582306830906
+2024-11-22 10:47:29,509 - INFO -  - F1 Score: 0.16341030195381884
+2024-11-22 10:47:29,509 - INFO - Sent reply
+2024-11-22 10:47:29,509 - INFO - Sent reply
+2024-11-22 10:47:29,512 - INFO - 
+2024-11-22 10:47:29,512 - INFO - Received: train message 0a88a8b4-fe4e-4661-9608-201b8355eb6b
+2024-11-22 10:47:29,512 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,512 - INFO - 
+2024-11-22 10:47:29,512 - INFO - Received: train message 6e188ffb-137a-4b88-99c0-546c97f3fa13
+2024-11-22 10:47:29,512 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,571 - INFO - Sent reply
+2024-11-22 10:47:29,592 - INFO - Sent reply
+2024-11-22 10:47:29,621 - INFO - 
+2024-11-22 10:47:29,621 - INFO - Received: evaluate message 890f935f-d0c5-45af-bcaf-e9b12736b1a6
+2024-11-22 10:47:29,621 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,621 - INFO - 
+2024-11-22 10:47:29,621 - INFO - Received: evaluate message 82e7b5f6-2839-4dcd-9e2b-bee66456d006
+2024-11-22 10:47:29,625 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,635 - INFO - Evaluation Metrics (Round 41):
+2024-11-22 10:47:29,635 - INFO -  - Loss: 0.72669323668604
+2024-11-22 10:47:29,635 - INFO -  - Accuracy: 0.5374015748031497
+2024-11-22 10:47:29,635 - INFO -  - ROC AUC: 0.5733342665173572
+2024-11-22 10:47:29,635 - INFO -  - F1 Score: 0.16370106761565836
+2024-11-22 10:47:29,635 - INFO - Sent reply
+2024-11-22 10:47:29,635 - INFO - Evaluation Metrics (Round 41):
+2024-11-22 10:47:29,635 - INFO -  - Loss: 0.6915239705144332
+2024-11-22 10:47:29,635 - INFO -  - Accuracy: 0.5606060606060606
+2024-11-22 10:47:29,635 - INFO -  - ROC AUC: 0.539978446767715
+2024-11-22 10:47:29,635 - INFO -  - F1 Score: 0.07536231884057971
+2024-11-22 10:47:29,635 - INFO - Sent reply
+2024-11-22 10:47:29,638 - INFO - 
+2024-11-22 10:47:29,638 - INFO - Received: train message 85e2ce0a-76af-4529-9ead-bbc15192c274
+2024-11-22 10:47:29,638 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,641 - INFO - 
+2024-11-22 10:47:29,641 - INFO - Received: train message 86812ea8-4317-4345-a3a3-eb1b9efe2ef7
+2024-11-22 10:47:29,641 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,701 - INFO - Sent reply
+2024-11-22 10:47:29,720 - INFO - Sent reply
+2024-11-22 10:47:29,750 - INFO - 
+2024-11-22 10:47:29,750 - INFO - Received: evaluate message a06aac22-b436-47b7-a158-8ba39cd453bd
+2024-11-22 10:47:29,750 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,750 - INFO - 
+2024-11-22 10:47:29,750 - INFO - Received: evaluate message 369483a0-3da7-4a84-b5fd-5880a22d9303
+2024-11-22 10:47:29,750 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,758 - INFO - Evaluation Metrics (Round 42):
+2024-11-22 10:47:29,758 - INFO - Evaluation Metrics (Round 42):
+2024-11-22 10:47:29,758 - INFO -  - Loss: 0.7264050546170034
+2024-11-22 10:47:29,758 - INFO -  - Loss: 0.6912911014765887
+2024-11-22 10:47:29,758 - INFO -  - Accuracy: 0.5374015748031497
+2024-11-22 10:47:29,758 - INFO -  - Accuracy: 0.5612947658402204
+2024-11-22 10:47:29,758 - INFO -  - ROC AUC: 0.5733202687569989
+2024-11-22 10:47:29,758 - INFO -  - ROC AUC: 0.5401044072161342
+2024-11-22 10:47:29,758 - INFO -  - F1 Score: 0.16370106761565836
+2024-11-22 10:47:29,758 - INFO -  - F1 Score: 0.07547169811320754
+2024-11-22 10:47:29,766 - INFO - Sent reply
+2024-11-22 10:47:29,766 - INFO - 
+2024-11-22 10:47:29,766 - INFO - Received: train message e7368da9-b6df-4260-8a02-d05acf7b7f86
+2024-11-22 10:47:29,766 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,766 - INFO - 
+2024-11-22 10:47:29,766 - INFO - Received: train message 5e51ac2c-ba51-4b23-a96c-b6d1fa3b9070
+2024-11-22 10:47:29,766 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,835 - INFO - Sent reply
+2024-11-22 10:47:29,850 - INFO - Sent reply
+2024-11-22 10:47:29,883 - INFO - 
+2024-11-22 10:47:29,883 - INFO - Received: evaluate message 60c3f6e4-d38c-4b18-aa40-fa4f3331e85e
+2024-11-22 10:47:29,883 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,883 - INFO - 
+2024-11-22 10:47:29,883 - INFO - Received: evaluate message 21376a4a-45f7-4477-be50-4ad2215cfed7
+2024-11-22 10:47:29,883 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,891 - INFO - Evaluation Metrics (Round 43):
+2024-11-22 10:47:29,891 - INFO -  - Loss: 0.7261169553269744
+2024-11-22 10:47:29,891 - INFO -  - Accuracy: 0.5374015748031497
+2024-11-22 10:47:29,891 - INFO -  - ROC AUC: 0.5732502799552073
+2024-11-22 10:47:29,891 - INFO -  - F1 Score: 0.16370106761565836
+2024-11-22 10:47:29,896 - INFO - Sent reply
+2024-11-22 10:47:29,896 - INFO - Evaluation Metrics (Round 43):
+2024-11-22 10:47:29,896 - INFO -  - Loss: 0.6910603474498486
+2024-11-22 10:47:29,896 - INFO -  - Accuracy: 0.5612947658402204
+2024-11-22 10:47:29,896 - INFO -  - ROC AUC: 0.5401463940322739
+2024-11-22 10:47:29,896 - INFO -  - F1 Score: 0.07547169811320754
+2024-11-22 10:47:29,896 - INFO - Sent reply
+2024-11-22 10:47:29,896 - INFO - 
+2024-11-22 10:47:29,896 - INFO - Received: train message 052335b6-99ab-4a5c-b8ed-112aff5fe24c
+2024-11-22 10:47:29,896 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,896 - INFO - 
+2024-11-22 10:47:29,896 - INFO - Received: train message 2496efda-f670-45f5-a5b0-0afec05f2fd8
+2024-11-22 10:47:29,896 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:29,956 - INFO - Sent reply
+2024-11-22 10:47:29,975 - INFO - Sent reply
+2024-11-22 10:47:30,011 - INFO - 
+2024-11-22 10:47:30,011 - INFO - Received: evaluate message 1f9709ce-8131-43e3-9fbb-ee297c2de210
+2024-11-22 10:47:30,011 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,011 - INFO - 
+2024-11-22 10:47:30,011 - INFO - Received: evaluate message fe581d3e-56b4-4044-a95f-ee1e6304c84b
+2024-11-22 10:47:30,011 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,027 - INFO - Evaluation Metrics (Round 44):
+2024-11-22 10:47:30,027 - INFO -  - Loss: 0.7258292163313944
+2024-11-22 10:47:30,027 - INFO -  - Accuracy: 0.5383858267716536
+2024-11-22 10:47:30,027 - INFO -  - ROC AUC: 0.5732922732362823
+2024-11-22 10:47:30,027 - INFO -  - F1 Score: 0.16399286987522282
+2024-11-22 10:47:30,027 - INFO - Sent reply
+2024-11-22 10:47:30,027 - INFO - Evaluation Metrics (Round 44):
+2024-11-22 10:47:30,027 - INFO -  - Loss: 0.6908313901766119
+2024-11-22 10:47:30,027 - INFO -  - Accuracy: 0.5612947658402204
+2024-11-22 10:47:30,027 - INFO -  - ROC AUC: 0.5402023764537935
+2024-11-22 10:47:30,027 - INFO -  - F1 Score: 0.07547169811320754
+2024-11-22 10:47:30,027 - INFO - Sent reply
+2024-11-22 10:47:30,031 - INFO - 
+2024-11-22 10:47:30,031 - INFO - Received: train message b037cbef-8926-4192-8595-0126c5c26092
+2024-11-22 10:47:30,031 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,031 - INFO - 
+2024-11-22 10:47:30,031 - INFO - Received: train message 49869d23-364d-4ac0-9929-5c197b36c2ac
+2024-11-22 10:47:30,031 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,086 - INFO - Sent reply
+2024-11-22 10:47:30,102 - INFO - Sent reply
+2024-11-22 10:47:30,145 - INFO - 
+2024-11-22 10:47:30,145 - INFO - Received: evaluate message 802d8cfe-8736-4c8f-88c5-69cadc48ff12
+2024-11-22 10:47:30,147 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,147 - INFO - 
+2024-11-22 10:47:30,147 - INFO - Received: evaluate message 95727561-b454-4f17-81a3-47bc8801be90
+2024-11-22 10:47:30,147 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,158 - INFO - Evaluation Metrics (Round 45):
+2024-11-22 10:47:30,158 - INFO -  - Loss: 0.6906039862016013
+2024-11-22 10:47:30,158 - INFO -  - Accuracy: 0.5606060606060606
+2024-11-22 10:47:30,158 - INFO -  - Loss: 0.7255420460202133
+
+2024-11-22 10:47:30,158 - INFO -  - F1 Score: 0.07536231884057971
+2024-11-22 10:47:30,158 - INFO -  - Accuracy: 0.5393700787401575
+2024-11-22 10:47:30,158 - INFO -  - ROC AUC: 0.5732362821948488
+2024-11-22 10:47:30,158 - INFO -  - F1 Score: 0.16428571428571428
+2024-11-22 10:47:30,158 - INFO - Sent reply
+2024-11-22 10:47:30,158 - INFO - Sent reply
+2024-11-22 10:47:30,162 - INFO - 
+2024-11-22 10:47:30,162 - INFO - Received: train message 4232f869-df41-4d7e-93d0-fae13016a17d
+2024-11-22 10:47:30,162 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,163 - INFO - 
+2024-11-22 10:47:30,163 - INFO - Received: train message 62b2c8ed-6bd0-4731-8b7f-b68a0e54115d
+2024-11-22 10:47:30,163 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,219 - INFO - Sent reply
+2024-11-22 10:47:30,242 - INFO - Sent reply
+2024-11-22 10:47:30,274 - INFO - 
+2024-11-22 10:47:30,274 - INFO - Received: evaluate message d58b501c-a049-4e54-a455-231ce5ebe214
+2024-11-22 10:47:30,274 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,274 - INFO - 
+2024-11-22 10:47:30,274 - INFO - Received: evaluate message 14916b3d-3310-4901-931f-21376c855626
+2024-11-22 10:47:30,274 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,290 - INFO - Evaluation Metrics (Round 46):
+2024-11-22 10:47:30,290 - INFO -  - Loss: 0.7252555997826283
+2024-11-22 10:47:30,290 - INFO -  - Accuracy: 0.5393700787401575
+2024-11-22 10:47:30,290 - INFO -  - ROC AUC: 0.5734742441209406
+2024-11-22 10:47:30,290 - INFO -  - F1 Score: 0.16428571428571428
+2024-11-22 10:47:30,290 - INFO - Sent reply
+2024-11-22 10:47:30,290 - INFO - Evaluation Metrics (Round 46):
+2024-11-22 10:47:30,290 - INFO -  - Loss: 0.6903779495758984
+2024-11-22 10:47:30,290 - INFO -  - Accuracy: 0.5599173553719008
+2024-11-22 10:47:30,290 - INFO -  - ROC AUC: 0.5403423325075926
+2024-11-22 10:47:30,290 - INFO -  - F1 Score: 0.07525325615050651
+2024-11-22 10:47:30,290 - INFO - Sent reply
+2024-11-22 10:47:30,290 - INFO - 
+2024-11-22 10:47:30,290 - INFO - Received: train message 2893b780-c85d-43ce-9910-425934792f60
+2024-11-22 10:47:30,290 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,290 - INFO - 
+2024-11-22 10:47:30,290 - INFO - Received: train message 994ee381-1e33-417f-b17b-9abbb40e2f36
+2024-11-22 10:47:30,290 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,355 - INFO - Sent reply
+2024-11-22 10:47:30,375 - INFO - Sent reply
+2024-11-22 10:47:30,406 - INFO - 
+2024-11-22 10:47:30,406 - INFO - Received: evaluate message 6451b3fb-6636-4cb7-b275-bb28fbda7873
+2024-11-22 10:47:30,406 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,406 - INFO - 
+2024-11-22 10:47:30,406 - INFO - Received: evaluate message 3d2cb16e-3b82-41c1-89cb-54752919d427
+2024-11-22 10:47:30,406 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,418 - INFO - Evaluation Metrics (Round 47):
+2024-11-22 10:47:30,418 - INFO -  - Loss: 0.7249699924742422
+2024-11-22 10:47:30,418 - INFO -  - Accuracy: 0.5383858267716536
+2024-11-22 10:47:30,418 - INFO -  - ROC AUC: 0.5734602463605823
+2024-11-22 10:47:30,418 - INFO -  - F1 Score: 0.16100178890876565
+2024-11-22 10:47:30,418 - INFO - Sent reply
+2024-11-22 10:47:30,418 - INFO - Evaluation Metrics (Round 47):
+2024-11-22 10:47:30,418 - INFO -  - Loss: 0.6901531385004863
+2024-11-22 10:47:30,418 - INFO -  - Accuracy: 0.5599173553719008
+2024-11-22 10:47:30,418 - INFO -  - ROC AUC: 0.5404822885613917
+2024-11-22 10:47:30,418 - INFO -  - F1 Score: 0.07525325615050651
+2024-11-22 10:47:30,418 - INFO - Sent reply
+2024-11-22 10:47:30,418 - INFO - 
+2024-11-22 10:47:30,418 - INFO - Received: train message 363f5924-c12c-4419-b086-4984f404932b
+2024-11-22 10:47:30,418 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,418 - INFO - 
+2024-11-22 10:47:30,418 - INFO - Received: train message 26a82370-7897-4a04-8597-096a0cd047e2
+2024-11-22 10:47:30,418 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,500 - INFO - Sent reply
+2024-11-22 10:47:30,502 - INFO - Sent reply
+2024-11-22 10:47:30,535 - INFO - 
+2024-11-22 10:47:30,535 - INFO - Received: evaluate message 9c5ae407-632b-4aac-a037-0c86267ed8d9
+2024-11-22 10:47:30,535 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,535 - INFO - 
+2024-11-22 10:47:30,536 - INFO - Received: evaluate message 846c6f8c-36e6-4b3a-834c-cc3d45c6ea33
+2024-11-22 10:47:30,536 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,546 - INFO - Evaluation Metrics (Round 48):
+2024-11-22 10:47:30,546 - INFO -  - Loss: 0.724685308041191
+2024-11-22 10:47:30,546 - INFO -  - Accuracy: 0.5383858267716536
+2024-11-22 10:47:30,546 - INFO -  - ROC AUC: 0.5735862262038075
+2024-11-22 10:47:30,546 - INFO -  - F1 Score: 0.16100178890876565
+2024-11-22 10:47:30,546 - INFO - Sent reply
+2024-11-22 10:47:30,546 - INFO - Evaluation Metrics (Round 48):
+2024-11-22 10:47:30,546 - INFO -  - Loss: 0.6899294450137299
+2024-11-22 10:47:30,546 - INFO -  - Accuracy: 0.5599173553719008
+2024-11-22 10:47:30,546 - INFO -  - ROC AUC: 0.5407342094582301
+2024-11-22 10:47:30,546 - INFO -  - F1 Score: 0.07525325615050651
+2024-11-22 10:47:30,546 - INFO - Sent reply
+2024-11-22 10:47:30,546 - INFO - 
+2024-11-22 10:47:30,546 - INFO - Received: train message 6fe13b2d-2ef2-4022-9431-9c677ce5dd70
+2024-11-22 10:47:30,546 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,546 - INFO - 
+2024-11-22 10:47:30,554 - INFO - Received: train message 83bd4057-0a62-4818-beb4-671240724ed1
+2024-11-22 10:47:30,554 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,618 - INFO - Sent reply
+2024-11-22 10:47:30,636 - INFO - Sent reply
+2024-11-22 10:47:30,669 - INFO - 
+2024-11-22 10:47:30,669 - INFO - Received: evaluate message f996331f-4a3e-431d-a71e-65662ae44dba
+2024-11-22 10:47:30,669 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,669 - INFO - 
+2024-11-22 10:47:30,669 - INFO - Received: evaluate message 76f5d9cc-c7c0-4904-a82c-00c97d90e7d0
+2024-11-22 10:47:30,669 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,677 - INFO - Evaluation Metrics (Round 49):
+2024-11-22 10:47:30,677 - INFO -  - Loss: 0.7244016069367345
+2024-11-22 10:47:30,677 - INFO -  - Accuracy: 0.5383858267716536
+2024-11-22 10:47:30,677 - INFO -  - ROC AUC: 0.5737122060470325
+2024-11-22 10:47:30,677 - INFO -  - F1 Score: 0.16100178890876565
+2024-11-22 10:47:30,677 - INFO - Evaluation Metrics (Round 49):
+2024-11-22 10:47:30,677 - INFO -  - Loss: 0.6897067870335021
+2024-11-22 10:47:30,677 - INFO -  - Accuracy: 0.5599173553719008
+2024-11-22 10:47:30,677 - INFO -  - ROC AUC: 0.5408881611174091
+2024-11-22 10:47:30,677 - INFO -  - F1 Score: 0.07525325615050651
+2024-11-22 10:47:30,677 - INFO - Sent reply
+2024-11-22 10:47:30,677 - INFO - Sent reply
+2024-11-22 10:47:30,683 - INFO - 
+2024-11-22 10:47:30,685 - INFO - Received: train message 2e71ce78-0588-435a-ad6b-2e3b9f455039
+2024-11-22 10:47:30,685 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,685 - INFO - 
+2024-11-22 10:47:30,686 - INFO - Received: train message dfeabdb8-e3e0-4933-b923-2b30ed32636f
+2024-11-22 10:47:30,686 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,752 - INFO - Sent reply
+2024-11-22 10:47:30,760 - INFO - Sent reply
+2024-11-22 10:47:30,809 - INFO - 
+2024-11-22 10:47:30,809 - INFO - Received: evaluate message 7adcefc6-7582-42c8-8951-193bbdfcecf4
+2024-11-22 10:47:30,809 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,810 - INFO - 
+2024-11-22 10:47:30,810 - INFO - Received: evaluate message 23e8a7ee-89b5-43f8-a0c7-3f8d9783a0dc
+2024-11-22 10:47:30,810 - WARNING - Deprecation Warning: The `client_fn` function must return an instance of `Client`, but an instance of `NumpyClient` was returned. Please use `NumPyClient.to_client()` method to convert it to `Client`.
+2024-11-22 10:47:30,824 - INFO - Evaluation Metrics (Round 50):
+2024-11-22 10:47:30,824 - INFO -  - Loss: 0.7206229078982593
+2024-11-22 10:47:30,824 - INFO -  - Accuracy: 0.48411154345006485
+2024-11-22 10:47:30,824 - INFO -  - ROC AUC: 0.6612639644710196
+2024-11-22 10:47:30,824 - INFO -  - F1 Score: 0.1595351294241944
+2024-11-22 10:47:30,824 - INFO - Sent reply
+2024-11-22 10:47:30,832 - INFO - Evaluation Metrics (Round 50):
+2024-11-22 10:47:30,832 - INFO -  - Loss: 0.7363717315910855
+2024-11-22 10:47:30,832 - INFO -  - Accuracy: 0.45330739299610895
+2024-11-22 10:47:30,832 - INFO -  - ROC AUC: 0.6623425745118655
+2024-11-22 10:47:30,832 - INFO -  - F1 Score: 0.15446339017051153
+2024-11-22 10:47:30,832 - INFO - Sent reply
+2024-11-22 10:47:30,841 - INFO - 
+2024-11-22 10:47:30,841 - INFO - Received: reconnect message c342a492-c635-44d0-ad33-9e2e67be71bf
+2024-11-22 10:47:30,841 - INFO - 
+2024-11-22 10:47:30,841 - INFO - Received: reconnect message 2560f72f-9818-4029-9f3a-9f707b5c0605
+2024-11-22 10:47:30,859 - DEBUG - gRPC channel closed
+2024-11-22 10:47:30,859 - INFO - Disconnect and shut down
+2024-11-22 10:47:30,859 - DEBUG - gRPC channel closed
+2024-11-22 10:47:30,859 - INFO - Disconnect and shut down

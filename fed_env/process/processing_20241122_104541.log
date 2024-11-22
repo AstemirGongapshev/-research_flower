@@ -1,0 +1,13 @@
+2024-11-22 10:45:41,985 - INFO - Data successfully loaded from ./datas/NON_IID_FL_1.csv
+2024-11-22 10:45:41,985 - INFO - Data successfully loaded from ./datas/NON_IID_FL_2.csv
+2024-11-22 10:45:42,222 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-22 10:45:42,238 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-11-22 10:45:42,253 - INFO - Data successfully prepared (scaling, SMOTE, polynomial features).
+2024-11-22 10:45:42,253 - DEBUG - ChannelConnectivity.IDLE
+2024-11-22 10:45:42,253 - DEBUG - ChannelConnectivity.CONNECTING
+2024-11-22 10:45:42,253 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-11-22 10:45:42,269 - DEBUG - ChannelConnectivity.IDLE
+2024-11-22 10:45:42,269 - DEBUG - ChannelConnectivity.CONNECTING
+2024-11-22 10:45:44,313 - DEBUG - ChannelConnectivity.TRANSIENT_FAILURE
+2024-11-22 10:45:44,313 - DEBUG - ChannelConnectivity.TRANSIENT_FAILURE
+2024-11-22 10:45:44,526 - DEBUG - gRPC channel closed
