@@ -1,4 +1,4 @@
-
+import pandas as pd
 from local_tasks import (
     get_data,
     prepare_data,
@@ -17,9 +17,9 @@ GLOBAL_DATA_NON_IID_PATH = "./datas/NON_IID.csv"
 
 TEST_SAMPLE_PATH = "./datas/TEST_SAMPLE.csv"
 
-
 PATH_FOR_IID_RES = "./local_env/results/iid_res.json"
 PATH_FOR_NON_IID_RES = "./local_env/results/non_iid_res.json"
+
 
 key_1_iid = "local_1_iid"
 key_2_iid = "local_2_iid"
@@ -29,54 +29,142 @@ key_1_noniid = "local_1_noniid"
 key_2_noniid = "local_2_noniid"
 key_noniid = "global_noniid"
 
-if __name__ == "__main__":
+def process_dataset(
+    df: pd.DataFrame,
+    test_df: pd.DataFrame,
+    test_labels: pd.Series,
+    add_noise: bool,
+    noise_level: float,
+    key: str,
+    save_path: str
+):
+    """
+    Processes a single dataset: adds noise if required, prepares data,
+    trains the model, evaluates it, and saves the results.
+
+    Parameters:
+    - df (pd.DataFrame): The original dataset.
+    - test_df (pd.DataFrame): The test dataset (features only).
+    - test_labels (pd.Series): The target variable for the test dataset.
+    - add_noise (bool): Whether to add Gaussian noise.
+    - noise_level (float): The level of Gaussian noise to add.
+    - key (str): The key for saving results.
+    - save_path (str): The path to save the results.
+    """
+    try:
+        if add_noise:
+            columns = df.drop(columns="Fraud").columns
+            df = add_gaussian_noise(df, columns, noise_level=noise_level)
+            print(f"Added Gaussian noise with level {noise_level}.")
+
+        
+        train_loader, val_loader, test_loader = prepare_data(
+            df,
+            test_df,
+            test_labels
+        )
+
+        
+        for X_batch, y_batch in train_loader:
+            input_dim = X_batch.shape[1]
+            break
+
+        
+        coefficients, metrics = fit_predict(
+            train_loader=train_loader,
+            val_loader=val_loader,
+            test_loader=test_loader,
+            input_dim=input_dim
+        )
+
+        
+        save_results(metrics, key, save_path)
+        print(f"Results saved with key '{key}' in '{save_path}'.")
     
+    except Exception as e:
+        print(f"Error processing dataset with key '{key}': {e}")
+
+def main():
+    """
+    Main function to process IID and NON_IID datasets for global and clients,
+    train models, evaluate them, and save the results.
+    """
+    # Load the test sample dataset
     test_sample = get_data(TEST_SAMPLE_PATH)
+    X_test = test_sample.drop(columns="Fraud")
+    y_test = test_sample.Fraud
 
-    #TODO IID
+    # --- Global IID ---
     glob_iid = get_data(GLOBAL_DATA_IID_PATH)
-    X_global_train, y_global_train, X_test_iid = prepare_data(glob_iid, test_sample.drop(columns="Fraud"))
-    _, glob_metrics_iid = fit_predict(X_global_train, X_test_iid, y_global_train, test_sample.Fraud)
-    save_results(glob_metrics_iid, key_iid, PATH_FOR_IID_RES)
+    process_dataset(
+        df=glob_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=False,
+        noise_level=0.0,  # Not used since add_noise=False
+        key=key_iid,
+        save_path=PATH_FOR_IID_RES
+    )
 
-    #TODO NON_IID
+    # --- Global NON_IID ---
     glob_non_iid = get_data(GLOBAL_DATA_NON_IID_PATH)
-    columns = glob_non_iid.drop(columns="Fraud").columns
-    glob_non_iid_noise = add_gaussian_noise(glob_non_iid, columns, noise_level=1.5)
-    X_global_train_n, y_global_train_n, X_test_non_iid = prepare_data(glob_non_iid_noise, test_sample.drop(columns="Fraud"))
-    _, glob_metrics_non_iid = fit_predict(X_global_train_n, X_test_non_iid, y_global_train_n, test_sample.Fraud)
-    save_results(glob_metrics_non_iid, key_noniid, PATH_FOR_NON_IID_RES)
- 
+    process_dataset(
+        df=glob_non_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=True,
+        noise_level=1.5,
+        key=key_noniid,
+        save_path=PATH_FOR_NON_IID_RES
+    )
 
-    # TODO client_1 iid, client_2 iid
+    # --- Client 1 IID ---
     client_1_iid = get_data(CLIENT_1_DATA_IID_PATH)
-    X_train_1, y_train_1, X_test_iid_1 = prepare_data(client_1_iid, test_sample.drop(columns="Fraud"))
-    _, client1_metrics_iid = fit_predict(X_train_1, X_test_iid_1, y_train_1, test_sample.Fraud)
-    save_results(client1_metrics_iid, key_1_iid, PATH_FOR_IID_RES)
+    process_dataset(
+        df=client_1_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=False,
+        noise_level=0.0,
+        key=key_1_iid,
+        save_path=PATH_FOR_IID_RES
+    )
 
+    # --- Client 2 IID ---
     client_2_iid = get_data(CLIENT_2_DATA_IID_PATH)
-    X_train_2, y_train_2, X_test_iid_2 = prepare_data(client_2_iid, test_sample.drop(columns="Fraud"))
-    _, client2_metrics_iid = fit_predict(X_train_2, X_test_iid_2, y_train_2, test_sample.Fraud)
-    save_results(client2_metrics_iid, key_2_iid, PATH_FOR_IID_RES)
+    process_dataset(
+        df=client_2_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=False,
+        noise_level=0.0,
+        key=key_2_iid,
+        save_path=PATH_FOR_IID_RES
+    )
 
-
-    # TODO NON_IID client_1, client_2 with normal noise 
+    # --- Client 1 NON_IID ---
     client_1_non_iid = get_data(CLIENT_1_DATA_NON_IID_PATH)
-    columns_1 = client_1_non_iid.drop(columns="Fraud").columns
-    client_1_non_iid_noise = add_gaussian_noise(client_1_non_iid, columns_1, noise_level=1.5)
+    process_dataset(
+        df=client_1_non_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=True,
+        noise_level=1.5,
+        key=key_1_noniid,
+        save_path=PATH_FOR_NON_IID_RES
+    )
 
-    X_train_1_non, y_train_1_non, X_test_non_iid_1 = prepare_data(client_1_non_iid_noise, test_sample.drop(columns="Fraud"))
-    _, client1_metrics_non_iid = fit_predict(X_train_1_non, X_test_non_iid_1, y_train_1_non, test_sample.Fraud)
-    save_results(client1_metrics_non_iid, key_1_noniid, PATH_FOR_NON_IID_RES)
-
-
-
+    # --- Client 2 NON_IID ---
     client_2_non_iid = get_data(CLIENT_2_DATA_NON_IID_PATH)
-    columns_2 = client_2_non_iid.drop(columns="Fraud").columns
-    client_2_non_iid_noise = add_gaussian_noise(client_2_non_iid, columns_2, noise_level=1.5)
-    
-    X_train_2_non, y_train_2_non, X_test_non_iid_2 = prepare_data(client_2_non_iid_noise, test_sample.drop(columns="Fraud"))
-    _, client2_metrics_non_iid = fit_predict(X_train_2_non, X_test_non_iid_2, y_train_2_non, test_sample.Fraud)
-    save_results(client2_metrics_non_iid, key_2_noniid, PATH_FOR_NON_IID_RES)
+    process_dataset(
+        df=client_2_non_iid,
+        test_df=X_test,
+        test_labels=y_test,
+        add_noise=True,
+        noise_level=1.5,
+        key=key_2_noniid,
+        save_path=PATH_FOR_NON_IID_RES
+    )
 
-    
+if __name__ == "__main__":
+    main()
