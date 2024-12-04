@@ -9,6 +9,10 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from datetime import datetime
 
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
+
 
 log_dir = "./fed_env/process"
 os.makedirs(log_dir, exist_ok=True)
@@ -166,3 +170,5 @@ def prepare_data(df: pd.DataFrame, X_test: pd.DataFrame) -> Tuple[np.ndarray, np
     except Exception as e:
         logging.error(f"Failed to prepare data: {e}")
         raise
+
+

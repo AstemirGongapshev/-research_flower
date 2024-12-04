@@ -2,7 +2,7 @@ import asyncio
 import os
 
 SERVER_SCRIPT = "./fed_env/server.py"
-CLIENT_SCRIPTS = ["./fed_env/client_1.py", "./fed_env/client_2.py"]  # Список клиентских скриптов
+CLIENT_SCRIPTS = ["./fed_env/client_1_torch.py", "./fed_env/client_2_torch.py"]  # Список клиентских скриптов
 
 async def start_server():
     """

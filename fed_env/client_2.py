@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score, f1_score
 import pandas as pd
-from fed_tasks import (
+from fed_env.fed_tasks_sklearn import (
                             get_data,
                             prepare_data,
                             set_initial_parameters,

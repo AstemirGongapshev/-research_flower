@@ -65,12 +65,12 @@ def process_dataset(
         )
 
         
-        for X_batch, y_batch in train_loader:
+        for X_batch in train_loader:
             input_dim = X_batch.shape[1]
             break
 
         
-        coefficients, metrics = fit_predict(
+        _, metrics = fit_predict(
             train_loader=train_loader,
             val_loader=val_loader,
             test_loader=test_loader,
