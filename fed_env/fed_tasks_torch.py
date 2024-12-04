@@ -8,10 +8,12 @@ from typing import List, Tuple, Dict
 import logging
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score, accuracy_score, log_loss, f1_score
 from imblearn.over_sampling import SMOTE
 from tqdm import tqdm
 from datetime import datetime
+import pickle
 
 
 
@@ -282,3 +284,52 @@ def test(model: torch.nn.Module, test_loader: DataLoader, device: str) -> Dict[s
     except ValueError as e:
         logging.error(f"Error in metric computation: {e}")
         return {}
+    
+
+
+def prepare_validation_data(scaler, poly, batch_size: int = 32):
+    
+    data = pd.read_csv("./datas/TEST_SAMPLE.csv")  
+
+   
+    X_val, X_test, y_val, y_test = train_test_split(
+        data.drop(columns="Fraud"),
+        data.Fraud,
+        test_size=0.2,  
+        random_state=223,
+        shuffle=True
+    )
+
+
+    X_val_scaled = scaler.transform(X_val)
+    X_val_poly = poly.transform(X_val_scaled)
+
+    X_test_scaled = scaler.transform(X_test)
+    X_test_poly = poly.transform(X_test_scaled)
+
+    X_val_tensor = torch.tensor(X_val_poly.astype(np.float32))
+    y_val_tensor = torch.tensor(y_val.to_numpy(), dtype=torch.long) 
+
+    X_test_tensor = torch.tensor(X_test_poly.astype(np.float32))
+    y_test_tensor = torch.tensor(y_test.to_numpy(), dtype=torch.long)  
+
+    
+    val_dataset = TensorDataset(X_val_tensor, y_val_tensor)
+    test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
+
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+
+    input_dim = X_val_tensor.shape[1]
+    return val_loader, input_dim, test_loader, input_dim
+
+
+
+
+
+def load_transformers(transformers_dir: str, key: str = None):
+    with open(f"{transformers_dir}/scaler_{key}.pkl", "rb") as f:
+        scaler = pickle.load(f)
+    with open(f"{transformers_dir}/poly_{key}.pkl", "rb") as f:
+        poly = pickle.load(f)
+    return scaler, poly
