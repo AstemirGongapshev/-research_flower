@@ -33,43 +33,17 @@ logging.basicConfig(
 
 
 
-
-
-
-
 def get_model_parameters(model: torch.nn.Module) -> List[np.ndarray]:
-    """
-    Retrieve the parameters of a PyTorch model as a list of numpy arrays.
-
-    Parameters:
-    model (torch.nn.Module): The PyTorch model.
-
-    Returns:
-    List[np.ndarray]: A list containing the model's parameters.
-    """
     return [param.data.cpu().numpy() for param in model.parameters()]
 
 
 def set_model_parameters(model: torch.nn.Module, parameters: List[np.ndarray]) -> None:
-    """
-    Set the parameters of a PyTorch model from a list of numpy arrays.
-
-    Parameters:
-    model (torch.nn.Module): The PyTorch model.
-    parameters (List[np.ndarray]): A list containing the model's parameters.
-    """
     params_dict = zip(model.state_dict().keys(), parameters)
     state_dict = {k: torch.tensor(v) for k, v in params_dict}
     model.load_state_dict(state_dict)
 
 
 def set_initial_parameters(model: torch.nn.Module) -> None:
-    """
-    Initialize a PyTorch model's parameters with random values.
-
-    Parameters:
-    model (torch.nn.Module): The PyTorch model.
-    """
     for param in model.parameters():
         if param.dim() > 1:
             nn.init.xavier_uniform_(param)
@@ -84,23 +58,6 @@ def prepare_data(
     random_state: int = 42,
     batch_size: int = 32
 ) -> Tuple[DataLoader, DataLoader, int]:
-    """
-    Preprocesses the data by scaling features, generating polynomial features, applying SMOTE,
-    and creating DataLoaders.
-
-    Parameters:
-    - df (pd.DataFrame): Training data with a 'Fraud' column as the target variable.
-    - X_test (pd.DataFrame): Test data to be scaled and transformed.
-    - y_test (pd.Series): Test target vector.
-    - random_state (int): Random seed for reproducibility.
-    - batch_size (int): Batch size for DataLoaders.
-
-    Returns:
-    - Tuple[DataLoader, DataLoader, int]:
-        - train_loader (DataLoader): DataLoader for the training set.
-        - test_loader (DataLoader): DataLoader for the test set.
-        - input_dim (int): Input dimension for the model.
-    """
     if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
     if 'Unnamed: 0' in X_test.columns:
@@ -155,20 +112,15 @@ def prepare_data(
 
 
 
-def save_metrics_json(client, strategy_suffix: str, filename: str) -> None:
-    """
-    Save client metrics to a JSON file. Append metrics to the given strategy suffix.
-
-    Parameters:
-    client: An object containing a list of metrics.
-    strategy_suffix (str): The key under which metrics are stored (e.g., 'fed_avg_noniid').
-    filename (str): Path to the JSON file where metrics are saved.
-    """
-   
-    metrics_list = client.metrics  
+def save_metrics_json(client, strategy_suffix: str, filename: str ) -> None:
+    metrics = {
+        "losses": list(client.losses),
+        "ROC_AUCs": list(client.ROC_AUCs),
+        "ACCURACYs": list(client.ACCURACYs),
+        "F1s": list(client.F1s)
+    }
 
     if os.path.exists(filename) and os.path.getsize(filename) > 0:
-        
         with open(filename, 'r') as f:
             try:
                 all_metrics = json.load(f)
@@ -177,36 +129,18 @@ def save_metrics_json(client, strategy_suffix: str, filename: str) -> None:
     else:
         all_metrics = {}
 
-    
     if strategy_suffix not in all_metrics:
         all_metrics[strategy_suffix] = []
 
-    
-    all_metrics[strategy_suffix].extend(metrics_list)
+    all_metrics[strategy_suffix].append(metrics)
 
-   
     os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-   
     with open(filename, 'w') as f:
         json.dump(all_metrics, f, indent=4)
-
     print(f"Metrics successfully saved to {filename} under suffix {strategy_suffix}")
 
 
-
-
 def train(model: torch.nn.Module, train_loader: DataLoader, learning_rate: float, num_epochs: int, device: str) -> None:
-    """
-    Train the PyTorch model using the provided DataLoader.
-
-    Parameters:
-    - model (torch.nn.Module): The PyTorch model to train.
-    - train_loader (DataLoader): DataLoader containing the training data.
-    - learning_rate (float): Learning rate for the optimizer.
-    - num_epochs (int): Number of epochs to train the model.
-    - device (str): Device to use for training ('cpu' or 'cuda').
-    """
     try:
         model.to(device)
         criterion = nn.CrossEntropyLoss()
@@ -236,17 +170,6 @@ def train(model: torch.nn.Module, train_loader: DataLoader, learning_rate: float
 
 
 def test(model: torch.nn.Module, test_loader: DataLoader, device: str) -> Dict[str, float]:
-    """
-    Evaluate the PyTorch model using the provided DataLoader.
-
-    Parameters:
-    - model (torch.nn.Module): The PyTorch model to evaluate.
-    - test_loader (DataLoader): DataLoader containing the test data.
-    - device (str): Device to use for evaluation ('cpu' or 'cuda').
-
-    Returns:
-    - Dict[str, float]: Dictionary containing evaluation metrics (log-loss, ROC AUC, accuracy, F1 score).
-    """
     model.to(device)
     model.eval()
     test_labels = []

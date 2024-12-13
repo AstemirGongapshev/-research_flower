@@ -58,25 +58,11 @@ class CustomClient(fl.client.NumPyClient):
         self.metrics = []
 
     def get_parameters(self, config: Dict[str, int]) -> NDArrays:
-        """
-        Получение параметров модели для передачи серверу.
 
-        Returns:
-        - NDArrays: Параметры модели.
-        """
         return get_model_parameters(self.model)
 
     def fit(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[NDArrays, int, Dict]:
-        """
-        Локальное обучение модели.
 
-        Parameters:
-        - parameters (NDArrays): Параметры модели от сервера.
-        - config (Dict[str, int]): Конфигурация текущего раунда.
-
-        Returns:
-        - Tuple[NDArrays, int, Dict]: Обновлённые параметры модели, размер данных и дополнительная информация.
-        """
         global glob_round
         glob_round += 1
 
@@ -145,4 +131,4 @@ if __name__ == "__main__":
     fl.client.start_client(server_address="127.0.0.1:8080", client=client)
 
 
-    save_metrics_json(client, "fed_avg_noniid", SAVE_PATH)
+    # save_metrics_json(client, "fed_avg_iid", SAVE_PATH)

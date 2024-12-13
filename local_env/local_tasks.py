@@ -43,15 +43,6 @@ logging.basicConfig(
 
 
 def get_data(path: str) -> pd.DataFrame:
-    """
-    Load a CSV file into a Pandas DataFrame.
-
-    Parameters:
-    path (str): The path to the CSV file.
-
-    Returns:
-    pd.DataFrame: Loaded dataset as a DataFrame.
-    """
     try:
         df = pd.read_csv(path)
         logging.info(f"Data successfully loaded from {path}")
@@ -62,17 +53,6 @@ def get_data(path: str) -> pd.DataFrame:
 
 
 def add_gaussian_noise(df: pd.DataFrame, columns: List[str], noise_level: float = 0.01) -> pd.DataFrame:
-    """
-    Add Gaussian noise to specified columns of a DataFrame.
-
-    Parameters:
-    df (pd.DataFrame): The input DataFrame.
-    columns (List[str]): List of column names to which noise should be added.
-    noise_level (float): Standard deviation of the Gaussian noise (default is 0.01).
-
-    Returns:
-    pd.DataFrame: DataFrame with added noise.
-    """
     try:
         for col in columns:
             noise = np.random.normal(0, noise_level, size=df[col].shape)
@@ -93,25 +73,7 @@ def prepare_data(
     random_state: int = 42,
     batch_size: int = 64
 ) -> Tuple[DataLoader, DataLoader, DataLoader]:
-    """
-    Preprocesses the data by scaling features, generating polynomial features, applying SMOTE,
-    splitting into training and validation sets, and creating DataLoaders.
 
-    Parameters:
-    - df (pd.DataFrame): Training data with a 'Fraud' column as the target variable.
-    - X_test (pd.DataFrame): Test data to be scaled and transformed.
-    - y_test (pd.Series): Test target vector.
-    - validation_size (float): Proportion of the training data to include in the validation set.
-    - random_state (int): Random seed for reproducibility.
-    - batch_size (int): Batch size for DataLoaders.
-
-    Returns:
-    - Tuple[DataLoader, DataLoader, DataLoader]:
-        - train_loader (DataLoader): DataLoader for the training set.
-        - val_loader (DataLoader): DataLoader for the validation set.
-        - test_loader (DataLoader): DataLoader for the test set.
-    """
-   
     if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
     if 'Unnamed: 0' in X_test.columns:
@@ -196,24 +158,6 @@ def fit_predict(
     num_epochs: int = 50,
     patience: int = 5
 ) -> Tuple[np.ndarray, Dict[str, float]]:
-    """
-    Trains a logistic regression model and evaluates its performance.
-
-    Parameters:
-    - train_loader (DataLoader): DataLoader for training data.
-    - val_loader (DataLoader): DataLoader for validation data.
-    - test_loader (DataLoader): DataLoader for test data.
-    - input_dim (int): Dimensionality of the input data.
-    - device (torch.device): Device for training (CPU or GPU).
-    - learning_rate (float): Learning rate for the optimizer.
-    - num_epochs (int): Maximum number of training epochs.
-    - patience (int): Number of epochs with no improvement in ROC AUC before early stopping.
-
-    Returns:
-    - Tuple[np.ndarray, Dict[str, float]]:
-        - coefficients (np.ndarray): Model coefficients.
-        - metrics (Dict[str, float]): Dictionary containing evaluation metrics (log-loss, ROC AUC, accuracy, F1 score).
-    """
     try:
         
         model = LogisticRegressionModel(input_dim).to(device)
@@ -345,14 +289,6 @@ def fit_predict(
 
 
 def save_results(metrics: dict, key: str, path: str):
-    """
-    Save or update metrics for a specific model key in a JSON file.
-
-    Parameters:
-    metrics (dict): The metrics to save or update.
-    key (str): The key representing the model (e.g., 'local_1_iid').
-    path (str): Path to the JSON file (e.g., 'iid_res.json').
-    """
     try:
         if os.path.exists(path):
 

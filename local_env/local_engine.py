@@ -38,19 +38,7 @@ def process_dataset(
     key: str,
     save_path: str
 ):
-    """
-    Processes a single dataset: adds noise if required, prepares data,
-    trains the model, evaluates it, and saves the results.
 
-    Parameters:
-    - df (pd.DataFrame): The original dataset.
-    - test_df (pd.DataFrame): The test dataset (features only).
-    - test_labels (pd.Series): The target variable for the test dataset.
-    - add_noise (bool): Whether to add Gaussian noise.
-    - noise_level (float): The level of Gaussian noise to add.
-    - key (str): The key for saving results.
-    - save_path (str): The path to save the results.
-    """
     try:
         if add_noise:
             columns = df.drop(columns="Fraud").columns
@@ -85,10 +73,6 @@ def process_dataset(
         print(f"Error processing dataset with key '{key}': {e}")
 
 def main():
-    """
-    Main function to process IID and NON_IID datasets for global and clients,
-    train models, evaluate them, and save the results.
-    """
     # Load the test sample dataset
     test_sample = get_data(TEST_SAMPLE_PATH)
     X_test = test_sample.drop(columns="Fraud")

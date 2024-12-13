@@ -4,8 +4,17 @@ from typing import List, Tuple, Dict, Union, Optional
 from flwr.common import Parameters, NDArrays, ndarrays_to_parameters, parameters_to_ndarrays
 from flwr.server.strategy import FedAvg
 import logging
+from datetime import datetime 
+import os
+log_dir = "./fed_env/process"
+os.makedirs(log_dir, exist_ok=True)
 
-
+log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+logging.basicConfig(
+    filename=log_filename,
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 class EarlyStoppingFedAvg(FedAvg):
     def __init__(
@@ -13,13 +22,15 @@ class EarlyStoppingFedAvg(FedAvg):
         *,
         model: torch.nn.Module,
         val_loader,  
+        test_loader,  
         device: str = "cpu",
-        patience: int = 3,
+        patience: int = 5,
         **kwargs
     ):
         super().__init__(**kwargs)
         self.model = model
         self.val_loader = val_loader
+        self.test_loader = test_loader
         self.device = device
         self.patience = patience
         self.best_roc_auc = -float("inf")
@@ -42,7 +53,8 @@ class EarlyStoppingFedAvg(FedAvg):
         if aggregated_params is None:
             return None, {}
 
-        
+        # logging.info(f"Aggregated_params: {aggregated_params}")
+
         self.set_model_parameters_from_aggregated(aggregated_params)
 
         
@@ -57,15 +69,19 @@ class EarlyStoppingFedAvg(FedAvg):
             logging.info(f"No improvement in ROC AUC for {self.counter} round(s).")
 
         if self.counter >= self.patience:
-            logging.warning("Early stopping triggered!")
+            logging.warning("Early stopping triggered!❗️❗️❗️")
+            
             self.should_stop = True
+            roc_auc_test = self.evaluate_on_validation(is_test=True)
+            logging.info(f"ROC AUC on test set = {roc_auc_test:.4f}")
+            roc_auc = roc_auc_test
 
         
         logging.info(f"Round {server_round}: ROC AUC = {roc_auc:.4f}")
         return aggregated_params, aggregated_metrics
 
     def set_model_parameters_from_aggregated(self, parameters: Parameters):
-        """Устанавливаем параметры в модель из агрегированных данных."""
+       
         param_arrays = parameters_to_ndarrays(parameters)
         state_dict = {
             key: torch.tensor(value).to(self.device)
@@ -73,20 +89,30 @@ class EarlyStoppingFedAvg(FedAvg):
         }
         self.model.load_state_dict(state_dict)
 
-    def evaluate_on_validation(self) -> float:
-        """Оценка модели на валидационной выборке."""
+    def evaluate_on_validation(self, is_test:bool=False) -> float:
+       
         self.model.eval()
         all_labels = []
         all_predictions = []
 
-        with torch.no_grad():
-            for inputs, labels in self.val_loader:
-                inputs, labels = inputs.to(self.device), labels.to(self.device)
-                outputs = self.model(inputs)
-                probabilities = torch.softmax(outputs, dim=1)[:, 1]
-                all_labels.extend(labels.cpu().numpy())
-                all_predictions.extend(probabilities.cpu().numpy())
-
+        if not is_test:
+            with torch.no_grad():
+                for inputs, labels in self.val_loader:
+                    inputs, labels = inputs.to(self.device), labels.to(self.device)
+                    outputs = self.model(inputs)
+                    probabilities = torch.softmax(outputs, dim=1)[:, 1]
+                    all_labels.extend(labels.cpu().numpy())
+                    all_predictions.extend(probabilities.cpu().numpy())
+        else:
+            with torch.no_grad():
+                for inputs, labels in self.test_loader:
+                    inputs, labels = inputs.to(self.device), labels.to(self.device)
+                    outputs = self.model(inputs)
+                    probabilities = torch.softmax(outputs, dim=1)[:, 1]
+                    all_labels.extend(labels.cpu().numpy())
+                    all_predictions.extend(probabilities.cpu().numpy())
         
         roc_auc = roc_auc_score(all_labels, all_predictions)
         return roc_auc
+
+

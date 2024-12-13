@@ -5,9 +5,7 @@ SERVER_SCRIPT = "./fed_env/server.py"
 CLIENT_SCRIPTS = ["./fed_env/client_1_torch.py", "./fed_env/client_2_torch.py"]  # Список клиентских скриптов
 
 async def start_server():
-    """
-    Start the server process and return it.
-    """
+
     print("Starting server...")
     env = os.environ.copy()
     process = await asyncio.create_subprocess_exec(
@@ -20,13 +18,6 @@ async def start_server():
 
 
 async def start_client(script_name: str, client_id: int):
-    """
-    Start a client process.
-
-    Parameters:
-    script_name (str): The client script to execute.
-    client_id (int): The ID of the client (used for differentiation).
-    """
     print(f"Starting client {client_id} ({script_name})...")
     env = os.environ.copy()
     env["CLIENT_ID"] = str(client_id)
@@ -40,13 +31,6 @@ async def start_client(script_name: str, client_id: int):
 
 
 async def read_stream(stream, name):
-    """
-    Read from an asyncio stream and print the output in real-time.
-
-    Parameters:
-    stream: The stream to read (stdout or stderr).
-    name (str): Name to identify the stream (e.g., "Server", "Client 1").
-    """
     while True:
         line = await stream.readline()
         if not line:
@@ -59,13 +43,6 @@ async def read_stream(stream, name):
 
 
 async def run_process_with_output(process, name):
-    """
-    Run a process and continuously print its output.
-
-    Parameters:
-    process: The process to monitor.
-    name (str): Name to identify the process (e.g., "Server", "Client 1").
-    """
     await asyncio.gather(
         read_stream(process.stdout, name),
         read_stream(process.stderr, name),
@@ -74,9 +51,6 @@ async def run_process_with_output(process, name):
 
 
 async def main():
-    """
-    Main function to orchestrate server and clients.
-    """
     # Start the server
     server = await start_server()
     asyncio.create_task(run_process_with_output(server, "Server"))

@@ -24,19 +24,6 @@ import os
 
 
 
-
-
-log_dir = "./fed_env/process"
-os.makedirs(log_dir, exist_ok=True)
-
-log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-logging.basicConfig(
-    filename=log_filename,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
-
-
 glob_round = 0
 
 
@@ -58,28 +45,13 @@ class CustomClient(fl.client.NumPyClient):
         self.metrics = []
 
     def get_parameters(self, config: Dict[str, int]) -> NDArrays:
-        """
-        Получение параметров модели для передачи серверу.
 
-        Returns:
-        - NDArrays: Параметры модели.
-        """
         return get_model_parameters(self.model)
 
     def fit(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[NDArrays, int, Dict]:
-        """
-        Локальное обучение модели.
 
-        Parameters:
-        - parameters (NDArrays): Параметры модели от сервера.
-        - config (Dict[str, int]): Конфигурация текущего раунда.
-
-        Returns:
-        - Tuple[NDArrays, int, Dict]: Обновлённые параметры модели, размер данных и дополнительная информация.
-        """
         global glob_round
         glob_round += 1
-
        
         set_model_parameters(self.model, parameters)
 
@@ -89,16 +61,7 @@ class CustomClient(fl.client.NumPyClient):
         return get_model_parameters(self.model), len(self.train_loader.dataset), {}
 
     def evaluate(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[float, int, Dict]:
-        """
-        Оценка модели на тестовой выборке.
 
-        Parameters:
-        - parameters (NDArrays): Параметры модели от сервера.
-        - config (Dict[str, int]): Конфигурация текущего раунда.
-
-        Returns:
-        - Tuple[float, int, Dict]: Потери, размер данных и метрики.
-        """
         global glob_round
         set_model_parameters(self.model, parameters)
 

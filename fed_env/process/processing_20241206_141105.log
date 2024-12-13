@@ -1,0 +1,20 @@
+2024-12-06 14:11:05,033 - INFO - Data successfully loaded from ./datas/IID_1.csv
+2024-12-06 14:11:05,041 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-12-06 14:11:05,041 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-12-06 14:11:05,051 - INFO - Features scaled using MinMaxScaler.
+2024-12-06 14:11:05,056 - INFO - Features scaled using MinMaxScaler.
+2024-12-06 14:11:05,091 - INFO - Polynomial features of degree 2 generated.
+2024-12-06 14:11:05,091 - INFO - Polynomial features of degree 2 generated.
+2024-12-06 14:11:05,357 - INFO - SMOTE applied. Training sample size increased to 11562.
+2024-12-06 14:11:05,374 - INFO - SMOTE applied. Training sample size increased to 11646.
+2024-12-06 14:11:05,391 - INFO - DataLoaders for Train and Test sets created.
+2024-12-06 14:11:05,398 - INFO - DataLoaders for Train and Test sets created.
+2024-12-06 14:11:05,410 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-12-06 14:11:05,417 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-12-06 14:11:05,430 - DEBUG - ChannelConnectivity.IDLE
+2024-12-06 14:11:05,430 - DEBUG - ChannelConnectivity.CONNECTING
+2024-12-06 14:11:05,432 - DEBUG - ChannelConnectivity.IDLE
+2024-12-06 14:11:05,435 - DEBUG - ChannelConnectivity.CONNECTING
+2024-12-06 14:11:07,440 - DEBUG - ChannelConnectivity.TRANSIENT_FAILURE
+2024-12-06 14:11:07,457 - DEBUG - gRPC channel closed
+2024-12-06 14:11:07,652 - DEBUG - gRPC channel closed

@@ -30,15 +30,7 @@ logging.basicConfig(
 
 
 def get_model_parameters(model) -> List[np.ndarray]:
-    """
-    Retrieve the parameters of a given model.
 
-    Parameters:
-    model: A scikit-learn model (e.g., LogisticRegression).
-
-    Returns:
-    List[np.ndarray]: A list containing the model's coefficients and intercepts (if applicable).
-    """
     if model.fit_intercept:
         params = [model.coef_, model.intercept_]
     else:
@@ -47,16 +39,6 @@ def get_model_parameters(model) -> List[np.ndarray]:
 
 
 def set_model_parameters(model, params: List[np.ndarray]) -> object:
-    """
-    Set the parameters of a given model.
-
-    Parameters:
-    model: A scikit-learn model (e.g., LogisticRegression).
-    params (List[np.ndarray]): A list containing the model's coefficients and intercepts.
-
-    Returns:
-    object: The updated model with the new parameters.
-    """
     model.coef_ = params[0]
     if model.fit_intercept:
         model.intercept_ = params[1]
@@ -64,12 +46,6 @@ def set_model_parameters(model, params: List[np.ndarray]) -> object:
 
 
 def set_initial_parameters(model) -> None:
-    """
-    Initialize a model's parameters with random values.
-
-    Parameters:
-    model: A scikit-learn model (e.g., LogisticRegression).
-    """
     n_features = 594  # Fixed number of features
     model.classes_ = np.arange(1)  # Dummy class
     model.coef_ = np.random.randn(1, n_features)
@@ -78,14 +54,6 @@ def set_initial_parameters(model) -> None:
 
 
 def save_metrics_json(client, strategy_suffix: str, filename: str ) -> None:
-    """
-    Save client metrics to a JSON file. Append metrics to the given strategy suffix.
-
-    Parameters:
-    client: An object containing metric attributes (losses, ROC_AUCs, ACCURACYs, F1s).
-    strategy_suffix (str): The key under which metrics are stored (e.g., 'fed_avg_iid').
-    filename (str): Path to the JSON file where metrics are saved (default is './met_.json').
-    """
     metrics = {
         "losses": list(client.losses),
         "ROC_AUCs": list(client.ROC_AUCs),
@@ -114,15 +82,6 @@ def save_metrics_json(client, strategy_suffix: str, filename: str ) -> None:
 
 
 def get_data(path: str) -> pd.DataFrame:
-    """
-    Load a CSV file into a Pandas DataFrame.
-
-    Parameters:
-    path (str): The path to the CSV file.
-
-    Returns:
-    pd.DataFrame: Loaded dataset as a DataFrame.
-    """
     try:
         df = pd.read_csv(path)
         logging.info(f"Data successfully loaded from {path}")
@@ -133,17 +92,6 @@ def get_data(path: str) -> pd.DataFrame:
 
 
 def prepare_data(df: pd.DataFrame, X_test: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """
-    Preprocess data by scaling, generating polynomial features, and applying SMOTE.
-
-    Parameters:
-    df (pd.DataFrame): Training data with a 'Fraud' column as the target variable.
-    X_test (pd.DataFrame): Test data to be scaled and transformed.
-
-    Returns:
-    Tuple[np.ndarray, np.ndarray, np.ndarray]: Processed training features, 
-    resampled training targets, and processed test features.
-    """
     if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
     if 'Unnamed: 0' in X_test.columns:
