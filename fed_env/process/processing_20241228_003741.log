@@ -1,0 +1,464 @@
+2024-12-28 00:37:41,306 - INFO - EarlyStoppingFedAvg initialized.
+2024-12-28 00:37:41,306 - INFO - Starting Flower server, config: num_rounds=50, no round_timeout
+2024-12-28 00:37:41,323 - INFO - Flower ECE: gRPC server running (50 rounds), SSL is disabled
+2024-12-28 00:37:41,323 - INFO - [INIT]
+2024-12-28 00:37:41,323 - INFO - Requesting initial parameters from one random client
+2024-12-28 00:37:43,179 - INFO - Received initial parameters from one random client
+2024-12-28 00:37:43,179 - INFO - Evaluating initial global parameters
+2024-12-28 00:37:43,179 - INFO - 
+2024-12-28 00:37:43,179 - INFO - [ROUND 1]
+2024-12-28 00:37:43,522 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:45,417 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:45,417 - WARNING - No fit_metrics_aggregation_fn provided
+2024-12-28 00:37:45,473 - INFO - Round 1: ROC AUC = 0.6969, Accuracy = 0.9362
+2024-12-28 00:37:45,473 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:45,544 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:45,544 - WARNING - No evaluate_metrics_aggregation_fn provided
+2024-12-28 00:37:45,544 - INFO - 
+2024-12-28 00:37:45,544 - INFO - [ROUND 2]
+2024-12-28 00:37:45,544 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:45,855 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:45,889 - INFO - No improvement in ROC AUC for 1 round(s).
+2024-12-28 00:37:45,889 - INFO - Round 2: ROC AUC = 0.6814, Accuracy = 0.9362
+2024-12-28 00:37:45,889 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:45,955 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:45,955 - INFO - 
+2024-12-28 00:37:45,955 - INFO - [ROUND 3]
+2024-12-28 00:37:45,955 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:46,261 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:46,302 - INFO - No improvement in ROC AUC for 2 round(s).
+2024-12-28 00:37:46,302 - INFO - Round 3: ROC AUC = 0.6668, Accuracy = 0.9362
+2024-12-28 00:37:46,302 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:46,356 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:46,356 - INFO - 
+2024-12-28 00:37:46,356 - INFO - [ROUND 4]
+2024-12-28 00:37:46,356 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:46,638 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:46,685 - INFO - No improvement in ROC AUC for 3 round(s).
+2024-12-28 00:37:46,685 - INFO - Round 4: ROC AUC = 0.6603, Accuracy = 0.9362
+2024-12-28 00:37:46,685 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:46,748 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:46,748 - INFO - 
+2024-12-28 00:37:46,748 - INFO - [ROUND 5]
+2024-12-28 00:37:46,748 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,033 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:47,079 - INFO - No improvement in ROC AUC for 4 round(s).
+2024-12-28 00:37:47,079 - INFO - Round 5: ROC AUC = 0.6593, Accuracy = 0.9362
+2024-12-28 00:37:47,079 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,138 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:47,138 - INFO - 
+2024-12-28 00:37:47,138 - INFO - [ROUND 6]
+2024-12-28 00:37:47,138 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,432 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:47,465 - INFO - No improvement in ROC AUC for 5 round(s).
+2024-12-28 00:37:47,465 - INFO - Round 6: ROC AUC = 0.6491, Accuracy = 0.9362
+2024-12-28 00:37:47,465 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,522 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:47,522 - INFO - 
+2024-12-28 00:37:47,522 - INFO - [ROUND 7]
+2024-12-28 00:37:47,522 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,809 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:47,850 - INFO - No improvement in ROC AUC for 6 round(s).
+2024-12-28 00:37:47,850 - INFO - Round 7: ROC AUC = 0.6463, Accuracy = 0.9362
+2024-12-28 00:37:47,850 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:47,906 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:47,906 - INFO - 
+2024-12-28 00:37:47,906 - INFO - [ROUND 8]
+2024-12-28 00:37:47,906 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:48,217 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:48,259 - INFO - No improvement in ROC AUC for 7 round(s).
+2024-12-28 00:37:48,259 - INFO - Round 8: ROC AUC = 0.6471, Accuracy = 0.9362
+2024-12-28 00:37:48,259 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:48,322 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:48,322 - INFO - 
+2024-12-28 00:37:48,322 - INFO - [ROUND 9]
+2024-12-28 00:37:48,322 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:48,600 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:48,654 - INFO - No improvement in ROC AUC for 8 round(s).
+2024-12-28 00:37:48,654 - INFO - Round 9: ROC AUC = 0.6452, Accuracy = 0.9362
+2024-12-28 00:37:48,655 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:48,707 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:48,707 - INFO - 
+2024-12-28 00:37:48,707 - INFO - [ROUND 10]
+2024-12-28 00:37:48,707 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,014 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:49,046 - INFO - No improvement in ROC AUC for 9 round(s).
+2024-12-28 00:37:49,046 - INFO - Round 10: ROC AUC = 0.6416, Accuracy = 0.9362
+2024-12-28 00:37:49,046 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,106 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:49,106 - INFO - 
+2024-12-28 00:37:49,106 - INFO - [ROUND 11]
+2024-12-28 00:37:49,106 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,423 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:49,464 - INFO - No improvement in ROC AUC for 10 round(s).
+2024-12-28 00:37:49,464 - INFO - Round 11: ROC AUC = 0.6444, Accuracy = 0.9362
+2024-12-28 00:37:49,464 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,522 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:49,522 - INFO - 
+2024-12-28 00:37:49,522 - INFO - [ROUND 12]
+2024-12-28 00:37:49,522 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,815 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:49,862 - INFO - No improvement in ROC AUC for 11 round(s).
+2024-12-28 00:37:49,862 - INFO - Round 12: ROC AUC = 0.6436, Accuracy = 0.9362
+2024-12-28 00:37:49,862 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:49,922 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:49,922 - INFO - 
+2024-12-28 00:37:49,922 - INFO - [ROUND 13]
+2024-12-28 00:37:49,922 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:50,240 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:50,273 - INFO - No improvement in ROC AUC for 12 round(s).
+2024-12-28 00:37:50,273 - INFO - Round 13: ROC AUC = 0.6437, Accuracy = 0.9362
+2024-12-28 00:37:50,273 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:50,322 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:50,322 - INFO - 
+2024-12-28 00:37:50,322 - INFO - [ROUND 14]
+2024-12-28 00:37:50,337 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:50,647 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:50,686 - INFO - No improvement in ROC AUC for 13 round(s).
+2024-12-28 00:37:50,686 - INFO - Round 14: ROC AUC = 0.6418, Accuracy = 0.9362
+2024-12-28 00:37:50,686 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:50,743 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:50,743 - INFO - 
+2024-12-28 00:37:50,743 - INFO - [ROUND 15]
+2024-12-28 00:37:50,743 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,038 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:51,078 - INFO - No improvement in ROC AUC for 14 round(s).
+2024-12-28 00:37:51,078 - INFO - Round 15: ROC AUC = 0.6391, Accuracy = 0.9362
+2024-12-28 00:37:51,078 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,138 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:51,138 - INFO - 
+2024-12-28 00:37:51,138 - INFO - [ROUND 16]
+2024-12-28 00:37:51,138 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,448 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:51,489 - INFO - No improvement in ROC AUC for 15 round(s).
+2024-12-28 00:37:51,489 - INFO - Round 16: ROC AUC = 0.6405, Accuracy = 0.9362
+2024-12-28 00:37:51,489 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,552 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:51,552 - INFO - 
+2024-12-28 00:37:51,552 - INFO - [ROUND 17]
+2024-12-28 00:37:51,554 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,864 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:51,888 - INFO - No improvement in ROC AUC for 16 round(s).
+2024-12-28 00:37:51,888 - INFO - Round 17: ROC AUC = 0.6381, Accuracy = 0.9362
+2024-12-28 00:37:51,888 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:51,970 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:51,970 - INFO - 
+2024-12-28 00:37:51,970 - INFO - [ROUND 18]
+2024-12-28 00:37:51,970 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:52,265 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:52,297 - INFO - No improvement in ROC AUC for 17 round(s).
+2024-12-28 00:37:52,297 - INFO - Round 18: ROC AUC = 0.6380, Accuracy = 0.9362
+2024-12-28 00:37:52,297 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:52,411 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:52,411 - INFO - 
+2024-12-28 00:37:52,411 - INFO - [ROUND 19]
+2024-12-28 00:37:52,411 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:52,715 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:52,755 - INFO - No improvement in ROC AUC for 18 round(s).
+2024-12-28 00:37:52,755 - INFO - Round 19: ROC AUC = 0.6350, Accuracy = 0.9362
+2024-12-28 00:37:52,755 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:52,822 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:52,822 - INFO - 
+2024-12-28 00:37:52,822 - INFO - [ROUND 20]
+2024-12-28 00:37:52,822 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:53,112 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:53,156 - INFO - No improvement in ROC AUC for 19 round(s).
+2024-12-28 00:37:53,156 - INFO - Round 20: ROC AUC = 0.6343, Accuracy = 0.9362
+2024-12-28 00:37:53,156 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:53,222 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:53,222 - INFO - 
+2024-12-28 00:37:53,222 - INFO - [ROUND 21]
+2024-12-28 00:37:53,222 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:53,513 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:53,538 - INFO - No improvement in ROC AUC for 20 round(s).
+2024-12-28 00:37:53,538 - INFO - Round 21: ROC AUC = 0.6328, Accuracy = 0.9362
+2024-12-28 00:37:53,538 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:53,605 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:53,605 - INFO - 
+2024-12-28 00:37:53,605 - INFO - [ROUND 22]
+2024-12-28 00:37:53,605 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:53,899 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:53,947 - INFO - No improvement in ROC AUC for 21 round(s).
+2024-12-28 00:37:53,947 - INFO - Round 22: ROC AUC = 0.6333, Accuracy = 0.9362
+2024-12-28 00:37:53,947 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:54,005 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:54,005 - INFO - 
+2024-12-28 00:37:54,005 - INFO - [ROUND 23]
+2024-12-28 00:37:54,005 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:54,330 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:54,370 - INFO - No improvement in ROC AUC for 22 round(s).
+2024-12-28 00:37:54,370 - INFO - Round 23: ROC AUC = 0.6319, Accuracy = 0.9362
+2024-12-28 00:37:54,370 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:54,427 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:54,427 - INFO - 
+2024-12-28 00:37:54,427 - INFO - [ROUND 24]
+2024-12-28 00:37:54,427 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:54,726 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:54,762 - INFO - No improvement in ROC AUC for 23 round(s).
+2024-12-28 00:37:54,762 - INFO - Round 24: ROC AUC = 0.6310, Accuracy = 0.9362
+2024-12-28 00:37:54,762 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:54,821 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:54,821 - INFO - 
+2024-12-28 00:37:54,821 - INFO - [ROUND 25]
+2024-12-28 00:37:54,821 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:55,135 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:55,181 - INFO - No improvement in ROC AUC for 24 round(s).
+2024-12-28 00:37:55,181 - INFO - Round 25: ROC AUC = 0.6261, Accuracy = 0.9362
+2024-12-28 00:37:55,181 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:55,249 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:55,249 - INFO - 
+2024-12-28 00:37:55,249 - INFO - [ROUND 26]
+2024-12-28 00:37:55,249 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:55,535 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:55,574 - INFO - No improvement in ROC AUC for 25 round(s).
+2024-12-28 00:37:55,574 - INFO - Round 26: ROC AUC = 0.6290, Accuracy = 0.9362
+2024-12-28 00:37:55,574 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:55,638 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:55,638 - INFO - 
+2024-12-28 00:37:55,638 - INFO - [ROUND 27]
+2024-12-28 00:37:55,638 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:55,948 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:55,995 - INFO - No improvement in ROC AUC for 26 round(s).
+2024-12-28 00:37:55,995 - INFO - Round 27: ROC AUC = 0.6285, Accuracy = 0.9362
+2024-12-28 00:37:55,995 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:56,058 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:56,058 - INFO - 
+2024-12-28 00:37:56,058 - INFO - [ROUND 28]
+2024-12-28 00:37:56,058 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:56,382 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:56,422 - INFO - No improvement in ROC AUC for 27 round(s).
+2024-12-28 00:37:56,422 - INFO - Round 28: ROC AUC = 0.6258, Accuracy = 0.9362
+2024-12-28 00:37:56,422 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:56,486 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:56,488 - INFO - 
+2024-12-28 00:37:56,488 - INFO - [ROUND 29]
+2024-12-28 00:37:56,488 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:56,796 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:56,838 - INFO - No improvement in ROC AUC for 28 round(s).
+2024-12-28 00:37:56,838 - INFO - Round 29: ROC AUC = 0.6247, Accuracy = 0.9362
+2024-12-28 00:37:56,838 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:56,903 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:56,903 - INFO - 
+2024-12-28 00:37:56,903 - INFO - [ROUND 30]
+2024-12-28 00:37:56,903 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:57,186 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:57,221 - INFO - No improvement in ROC AUC for 29 round(s).
+2024-12-28 00:37:57,221 - INFO - Round 30: ROC AUC = 0.6233, Accuracy = 0.9362
+2024-12-28 00:37:57,221 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:57,279 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:57,279 - INFO - 
+2024-12-28 00:37:57,279 - INFO - [ROUND 31]
+2024-12-28 00:37:57,279 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:57,571 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:57,604 - INFO - No improvement in ROC AUC for 30 round(s).
+2024-12-28 00:37:57,604 - INFO - Round 31: ROC AUC = 0.6248, Accuracy = 0.9362
+2024-12-28 00:37:57,604 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:57,671 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:57,671 - INFO - 
+2024-12-28 00:37:57,671 - INFO - [ROUND 32]
+2024-12-28 00:37:57,671 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:57,980 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:58,021 - INFO - No improvement in ROC AUC for 31 round(s).
+2024-12-28 00:37:58,021 - INFO - Round 32: ROC AUC = 0.6233, Accuracy = 0.9362
+2024-12-28 00:37:58,021 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:58,086 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:58,086 - INFO - 
+2024-12-28 00:37:58,086 - INFO - [ROUND 33]
+2024-12-28 00:37:58,086 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:58,379 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:58,421 - INFO - No improvement in ROC AUC for 32 round(s).
+2024-12-28 00:37:58,421 - INFO - Round 33: ROC AUC = 0.6225, Accuracy = 0.9362
+2024-12-28 00:37:58,421 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:58,486 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:58,486 - INFO - 
+2024-12-28 00:37:58,486 - INFO - [ROUND 34]
+2024-12-28 00:37:58,486 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:58,803 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:58,837 - INFO - No improvement in ROC AUC for 33 round(s).
+2024-12-28 00:37:58,837 - INFO - Round 34: ROC AUC = 0.6208, Accuracy = 0.9362
+2024-12-28 00:37:58,837 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:58,908 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:58,908 - INFO - 
+2024-12-28 00:37:58,908 - INFO - [ROUND 35]
+2024-12-28 00:37:58,908 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:59,207 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:59,254 - INFO - No improvement in ROC AUC for 34 round(s).
+2024-12-28 00:37:59,254 - INFO - Round 35: ROC AUC = 0.6189, Accuracy = 0.9362
+2024-12-28 00:37:59,254 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:59,321 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:59,321 - INFO - 
+2024-12-28 00:37:59,321 - INFO - [ROUND 36]
+2024-12-28 00:37:59,321 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:59,611 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:37:59,653 - INFO - No improvement in ROC AUC for 35 round(s).
+2024-12-28 00:37:59,653 - INFO - Round 36: ROC AUC = 0.6166, Accuracy = 0.9362
+2024-12-28 00:37:59,653 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:37:59,720 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:37:59,720 - INFO - 
+2024-12-28 00:37:59,720 - INFO - [ROUND 37]
+2024-12-28 00:37:59,720 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,019 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:00,059 - INFO - No improvement in ROC AUC for 36 round(s).
+2024-12-28 00:38:00,059 - INFO - Round 37: ROC AUC = 0.6186, Accuracy = 0.9362
+2024-12-28 00:38:00,059 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,120 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:00,120 - INFO - 
+2024-12-28 00:38:00,120 - INFO - [ROUND 38]
+2024-12-28 00:38:00,120 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,417 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:00,452 - INFO - No improvement in ROC AUC for 37 round(s).
+2024-12-28 00:38:00,452 - INFO - Round 38: ROC AUC = 0.6166, Accuracy = 0.9362
+2024-12-28 00:38:00,452 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,520 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:00,520 - INFO - 
+2024-12-28 00:38:00,520 - INFO - [ROUND 39]
+2024-12-28 00:38:00,520 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,823 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:00,863 - INFO - No improvement in ROC AUC for 38 round(s).
+2024-12-28 00:38:00,863 - INFO - Round 39: ROC AUC = 0.6141, Accuracy = 0.9362
+2024-12-28 00:38:00,863 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:00,920 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:00,920 - INFO - 
+2024-12-28 00:38:00,920 - INFO - [ROUND 40]
+2024-12-28 00:38:00,920 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:01,230 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:01,270 - INFO - No improvement in ROC AUC for 39 round(s).
+2024-12-28 00:38:01,270 - INFO - Round 40: ROC AUC = 0.6159, Accuracy = 0.9362
+2024-12-28 00:38:01,270 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:01,337 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:01,337 - INFO - 
+2024-12-28 00:38:01,337 - INFO - [ROUND 41]
+2024-12-28 00:38:01,337 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:01,702 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:01,744 - INFO - No improvement in ROC AUC for 40 round(s).
+2024-12-28 00:38:01,744 - INFO - Round 41: ROC AUC = 0.6161, Accuracy = 0.9362
+2024-12-28 00:38:01,744 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:01,803 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:01,803 - INFO - 
+2024-12-28 00:38:01,803 - INFO - [ROUND 42]
+2024-12-28 00:38:01,803 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:02,123 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:02,163 - INFO - No improvement in ROC AUC for 41 round(s).
+2024-12-28 00:38:02,163 - INFO - Round 42: ROC AUC = 0.6146, Accuracy = 0.9362
+2024-12-28 00:38:02,163 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:02,220 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:02,220 - INFO - 
+2024-12-28 00:38:02,220 - INFO - [ROUND 43]
+2024-12-28 00:38:02,220 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:02,550 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:02,593 - INFO - No improvement in ROC AUC for 42 round(s).
+2024-12-28 00:38:02,593 - INFO - Round 43: ROC AUC = 0.6139, Accuracy = 0.9362
+2024-12-28 00:38:02,593 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:02,654 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:02,654 - INFO - 
+2024-12-28 00:38:02,654 - INFO - [ROUND 44]
+2024-12-28 00:38:02,654 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:02,957 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:02,997 - INFO - No improvement in ROC AUC for 43 round(s).
+2024-12-28 00:38:02,997 - INFO - Round 44: ROC AUC = 0.6158, Accuracy = 0.9362
+2024-12-28 00:38:02,997 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:03,061 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:03,061 - INFO - 
+2024-12-28 00:38:03,061 - INFO - [ROUND 45]
+2024-12-28 00:38:03,061 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:03,364 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:03,396 - INFO - No improvement in ROC AUC for 44 round(s).
+2024-12-28 00:38:03,396 - INFO - Round 45: ROC AUC = 0.6158, Accuracy = 0.9362
+2024-12-28 00:38:03,396 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:03,454 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:03,454 - INFO - 
+2024-12-28 00:38:03,454 - INFO - [ROUND 46]
+2024-12-28 00:38:03,454 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:03,755 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:03,795 - INFO - No improvement in ROC AUC for 45 round(s).
+2024-12-28 00:38:03,795 - INFO - Round 46: ROC AUC = 0.6119, Accuracy = 0.9362
+2024-12-28 00:38:03,795 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:03,853 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:03,853 - INFO - 
+2024-12-28 00:38:03,853 - INFO - [ROUND 47]
+2024-12-28 00:38:03,853 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:04,149 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:04,186 - INFO - No improvement in ROC AUC for 46 round(s).
+2024-12-28 00:38:04,186 - INFO - Round 47: ROC AUC = 0.6112, Accuracy = 0.9362
+2024-12-28 00:38:04,186 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:04,237 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:04,237 - INFO - 
+2024-12-28 00:38:04,237 - INFO - [ROUND 48]
+2024-12-28 00:38:04,237 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:04,547 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:04,585 - INFO - No improvement in ROC AUC for 47 round(s).
+2024-12-28 00:38:04,585 - INFO - Round 48: ROC AUC = 0.6122, Accuracy = 0.9362
+2024-12-28 00:38:04,585 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:04,636 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:04,636 - INFO - 
+2024-12-28 00:38:04,636 - INFO - [ROUND 49]
+2024-12-28 00:38:04,636 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:04,930 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:04,970 - INFO - No improvement in ROC AUC for 48 round(s).
+2024-12-28 00:38:04,970 - INFO - Round 49: ROC AUC = 0.6097, Accuracy = 0.9362
+2024-12-28 00:38:04,970 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:05,035 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:05,035 - INFO - 
+2024-12-28 00:38:05,035 - INFO - [ROUND 50]
+2024-12-28 00:38:05,036 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:05,322 - INFO - aggregate_fit: received 2 results and 0 failures
+2024-12-28 00:38:05,363 - INFO - No improvement in ROC AUC for 49 round(s).
+2024-12-28 00:38:05,363 - INFO - Round 50: ROC AUC = 0.6112, Accuracy = 0.9362
+2024-12-28 00:38:05,363 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2024-12-28 00:38:05,420 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2024-12-28 00:38:05,420 - INFO - 
+2024-12-28 00:38:05,420 - INFO - [SUMMARY]
+2024-12-28 00:38:05,420 - INFO - Run finished 50 round(s) in 22.23s
+2024-12-28 00:38:05,420 - INFO - 	History (loss, distributed):
+2024-12-28 00:38:05,420 - INFO - 		round 1: 0.5144999623298645
+2024-12-28 00:38:05,420 - INFO - 		round 2: 0.5624421238899231
+2024-12-28 00:38:05,420 - INFO - 		round 3: 0.47460733354091644
+2024-12-28 00:38:05,420 - INFO - 		round 4: 0.5135062336921692
+2024-12-28 00:38:05,420 - INFO - 		round 5: 0.5517115592956543
+2024-12-28 00:38:05,429 - INFO - 		round 6: 0.5009807646274567
+2024-12-28 00:38:05,429 - INFO - 		round 7: 0.4804317504167557
+2024-12-28 00:38:05,429 - INFO - 		round 8: 0.5696322321891785
+2024-12-28 00:38:05,429 - INFO - 		round 9: 0.4618520885705948
+2024-12-28 00:38:05,429 - INFO - 		round 10: 0.45437340438365936
+2024-12-28 00:38:05,429 - INFO - 		round 11: 0.4744946360588074
+2024-12-28 00:38:05,429 - INFO - 		round 12: 0.532130241394043
+2024-12-28 00:38:05,429 - INFO - 		round 13: 0.5004318803548813
+2024-12-28 00:38:05,429 - INFO - 		round 14: 0.5125010311603546
+2024-12-28 00:38:05,429 - INFO - 		round 15: 0.47658678889274597
+2024-12-28 00:38:05,429 - INFO - 		round 16: 0.49747535586357117
+2024-12-28 00:38:05,429 - INFO - 		round 17: 0.4413685202598572
+2024-12-28 00:38:05,429 - INFO - 		round 18: 0.49698205292224884
+2024-12-28 00:38:05,429 - INFO - 		round 19: 0.4830838292837143
+2024-12-28 00:38:05,429 - INFO - 		round 20: 0.4670514166355133
+2024-12-28 00:38:05,429 - INFO - 		round 21: 0.4622686952352524
+2024-12-28 00:38:05,429 - INFO - 		round 22: 0.4872768074274063
+2024-12-28 00:38:05,429 - INFO - 		round 23: 0.4832477867603302
+2024-12-28 00:38:05,429 - INFO - 		round 24: 0.47844597697257996
+2024-12-28 00:38:05,429 - INFO - 		round 25: 0.4692688584327698
+2024-12-28 00:38:05,429 - INFO - 		round 26: 0.455916628241539
+2024-12-28 00:38:05,429 - INFO - 		round 27: 0.4908045530319214
+2024-12-28 00:38:05,429 - INFO - 		round 28: 0.5286859273910522
+2024-12-28 00:38:05,429 - INFO - 		round 29: 0.48294541239738464
+2024-12-28 00:38:05,429 - INFO - 		round 30: 0.4756091684103012
+2024-12-28 00:38:05,429 - INFO - 		round 31: 0.4454641044139862
+2024-12-28 00:38:05,429 - INFO - 		round 32: 0.4731051176786423
+2024-12-28 00:38:05,429 - INFO - 		round 33: 0.472949355840683
+2024-12-28 00:38:05,429 - INFO - 		round 34: 0.4407460689544678
+2024-12-28 00:38:05,429 - INFO - 		round 35: 0.47868672013282776
+2024-12-28 00:38:05,429 - INFO - 		round 36: 0.48185327649116516
+2024-12-28 00:38:05,429 - INFO - 		round 37: 0.44767558574676514
+2024-12-28 00:38:05,429 - INFO - 		round 38: 0.45918409526348114
+2024-12-28 00:38:05,429 - INFO - 		round 39: 0.4795829951763153
+2024-12-28 00:38:05,429 - INFO - 		round 40: 0.48793676495552063
+2024-12-28 00:38:05,429 - INFO - 		round 41: 0.49690307676792145
+2024-12-28 00:38:05,429 - INFO - 		round 42: 0.47864288091659546
+2024-12-28 00:38:05,429 - INFO - 		round 43: 0.4308133125305176
+2024-12-28 00:38:05,429 - INFO - 		round 44: 0.48235687613487244
+2024-12-28 00:38:05,429 - INFO - 		round 45: 0.4849739521741867
+2024-12-28 00:38:05,429 - INFO - 		round 46: 0.4497006684541702
+2024-12-28 00:38:05,429 - INFO - 		round 47: 0.4088968336582184
+2024-12-28 00:38:05,429 - INFO - 		round 48: 0.4961816221475601
+2024-12-28 00:38:05,429 - INFO - 		round 49: 0.5631666779518127
+2024-12-28 00:38:05,429 - INFO - 		round 50: 0.4738058000802994
+2024-12-28 00:38:05,429 - INFO - 
+2024-12-28 00:38:05,472 - INFO - Training stopped. Early stopping or all rounds are completed.

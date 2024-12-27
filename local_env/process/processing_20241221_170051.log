@@ -1,0 +1,67 @@
+2024-12-21 17:00:51,679 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-12-21 17:00:51,710 - INFO - Data successfully loaded from ./datas/IID.csv
+2024-12-21 17:00:51,726 - INFO - Data split into Train (9868) and Val (2468) samples.
+2024-12-21 17:00:51,739 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:51,805 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:52,176 - INFO - SMOTE applied. Training sample size increased to 18564.
+2024-12-21 17:00:52,208 - INFO - DataLoaders for Train, Val, and Test sets created.
+2024-12-21 17:00:52,366 - INFO - Data successfully loaded from ./datas/NON_IID.csv
+2024-12-21 17:00:52,386 - INFO - Gaussian noise added to columns: Index(['Unnamed: 0', 'Month', 'WeekOfMonth', 'DayOfWeek', 'Make',
+       'AccidentArea', 'DayOfWeekClaimed', 'MonthClaimed',
+       'WeekOfMonthClaimed', 'Sex', 'MaritalStatus', 'Age', 'Fault',
+       'PolicyType', 'VehicleCategory', 'VehiclePrice', 'PolicyNumber',
+       'RepNumber', 'Deductible', 'DriverRating', 'Days_Policy_Accident',
+       'Days_Policy_Claim', 'PastNumberOfClaims', 'AgeOfVehicle',
+       'PoliceReportFiled', 'WitnessPresent', 'AgentType',
+       'NumberOfSuppliments', 'AddressChange_Claim', 'NumberOfCars', 'Year',
+       'BasePolicy', 'AgeGroup', 'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.5
+2024-12-21 17:00:52,408 - INFO - Data split into Train (9868) and Val (2468) samples.
+2024-12-21 17:00:52,416 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:52,482 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:52,649 - INFO - SMOTE applied. Training sample size increased to 18564.
+2024-12-21 17:00:52,673 - INFO - DataLoaders for Train, Val, and Test sets created.
+2024-12-21 17:00:52,704 - INFO - Data successfully loaded from ./datas/IID_1.csv
+2024-12-21 17:00:52,704 - INFO - Data split into Train (4934) and Val (1234) samples.
+2024-12-21 17:00:52,727 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:52,768 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:52,851 - INFO - SMOTE applied. Training sample size increased to 9248.
+2024-12-21 17:00:52,860 - INFO - DataLoaders for Train, Val, and Test sets created.
+2024-12-21 17:00:52,884 - INFO - Data successfully loaded from ./datas/IID_2.csv
+2024-12-21 17:00:52,892 - INFO - Data split into Train (4934) and Val (1234) samples.
+2024-12-21 17:00:52,892 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:52,936 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:53,002 - INFO - SMOTE applied. Training sample size increased to 9316.
+2024-12-21 17:00:53,013 - INFO - DataLoaders for Train, Val, and Test sets created.
+2024-12-21 17:00:53,034 - INFO - Data successfully loaded from ./datas/NON_IID_1.csv
+2024-12-21 17:00:53,046 - INFO - Gaussian noise added to columns: Index(['Month', 'WeekOfMonth', 'DayOfWeek', 'Make', 'AccidentArea',
+       'DayOfWeekClaimed', 'MonthClaimed', 'WeekOfMonthClaimed', 'Sex',
+       'MaritalStatus', 'Age', 'Fault', 'PolicyType', 'VehicleCategory',
+       'VehiclePrice', 'PolicyNumber', 'RepNumber', 'Deductible',
+       'DriverRating', 'Days_Policy_Accident', 'Days_Policy_Claim',
+       'PastNumberOfClaims', 'AgeOfVehicle', 'PoliceReportFiled',
+       'WitnessPresent', 'AgentType', 'NumberOfSuppliments',
+       'AddressChange_Claim', 'NumberOfCars', 'Year', 'BasePolicy', 'AgeGroup',
+       'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.5
+2024-12-21 17:00:53,052 - INFO - Data split into Train (4064) and Val (1016) samples.
+2024-12-21 17:00:53,055 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:53,089 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:53,149 - INFO - SMOTE applied. Training sample size increased to 7426.
+2024-12-21 17:00:53,157 - INFO - DataLoaders for Train, Val, and Test sets created.
+2024-12-21 17:00:53,174 - INFO - Data successfully loaded from ./datas/NON_IID_2.csv
+2024-12-21 17:00:53,190 - INFO - Gaussian noise added to columns: Index(['Month', 'WeekOfMonth', 'DayOfWeek', 'Make', 'AccidentArea',
+       'DayOfWeekClaimed', 'MonthClaimed', 'WeekOfMonthClaimed', 'Sex',
+       'MaritalStatus', 'Age', 'Fault', 'PolicyType', 'VehicleCategory',
+       'VehiclePrice', 'PolicyNumber', 'RepNumber', 'Deductible',
+       'DriverRating', 'Days_Policy_Accident', 'Days_Policy_Claim',
+       'PastNumberOfClaims', 'AgeOfVehicle', 'PoliceReportFiled',
+       'WitnessPresent', 'AgentType', 'NumberOfSuppliments',
+       'AddressChange_Claim', 'NumberOfCars', 'Year', 'BasePolicy', 'AgeGroup',
+       'VehiclePrice_Cat'],
+      dtype='object') with noise level: 1.5
+2024-12-21 17:00:53,198 - INFO - Data split into Train (5804) and Val (1452) samples.
+2024-12-21 17:00:53,205 - INFO - Features scaled using MinMaxScaler.
+2024-12-21 17:00:53,252 - INFO - Polynomial features of degree 2 generated.
+2024-12-21 17:00:53,324 - INFO - SMOTE applied. Training sample size increased to 11140.
+2024-12-21 17:00:53,336 - INFO - DataLoaders for Train, Val, and Test sets created.

@@ -1,0 +1,2 @@
+2024-12-28 00:39:02,992 - INFO - EarlyStoppingFedAvg initialized.
+2024-12-28 00:39:02,993 - INFO - Starting Flower server, config: num_rounds=20, no round_timeout

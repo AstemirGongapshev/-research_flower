@@ -1,0 +1,10 @@
+2024-12-28 00:39:05,125 - INFO - Data successfully loaded from ./datas/IID_1.csv
+2024-12-28 00:39:05,125 - INFO - Data successfully loaded from ./datas/TEST_SAMPLE.csv
+2024-12-28 00:39:05,140 - INFO - Features scaled using MinMaxScaler.
+2024-12-28 00:39:05,172 - INFO - Polynomial features of degree 2 generated.
+2024-12-28 00:39:05,313 - INFO - SMOTE applied. Training sample size increased to 11562.
+2024-12-28 00:39:05,337 - INFO - DataLoaders for Train and Test sets created.
+2024-12-28 00:39:05,346 - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2024-12-28 00:39:05,365 - DEBUG - ChannelConnectivity.IDLE
+2024-12-28 00:39:05,365 - DEBUG - ChannelConnectivity.CONNECTING
+2024-12-28 00:39:05,365 - DEBUG - ChannelConnectivity.READY

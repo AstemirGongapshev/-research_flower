@@ -1,0 +1,5 @@
+2024-12-28 00:38:49,632 - INFO - EarlyStoppingFedAvg initialized.
+2024-12-28 00:38:49,632 - INFO - Starting Flower server, config: num_rounds=50, no round_timeout
+2024-12-28 00:38:49,651 - INFO - Flower ECE: gRPC server running (50 rounds), SSL is disabled
+2024-12-28 00:38:49,651 - INFO - [INIT]
+2024-12-28 00:38:49,651 - INFO - Requesting initial parameters from one random client

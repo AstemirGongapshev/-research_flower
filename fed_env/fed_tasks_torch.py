@@ -218,8 +218,8 @@ def prepare_validation_data(scaler, poly, batch_size: int = 32):
     X_val, X_test, y_val, y_test = train_test_split(
         data.drop(columns="Fraud"),
         data.Fraud,
-        test_size=0.2,  
-        random_state=223,
+        test_size=0.4,  
+        random_state=1111,
         shuffle=True
     )
 

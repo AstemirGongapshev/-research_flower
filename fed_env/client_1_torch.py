@@ -29,15 +29,7 @@ glob_round = 0
 
 class CustomClient(fl.client.NumPyClient):
     def __init__(self, model: torch.nn.Module, train_loader, test_loader, device: str):
-        """
-        Инициализация кастомного клиента.
 
-        Parameters:
-        - model (torch.nn.Module): PyTorch-модель.
-        - train_loader (DataLoader): DataLoader для обучающей выборки.
-        - test_loader (DataLoader): DataLoader для тестовой выборки.
-        - device (str): Устройство для вычислений ('cpu' или 'cuda').
-        """
         self.model = model
         self.train_loader = train_loader
         self.test_loader = test_loader
@@ -108,4 +100,4 @@ if __name__ == "__main__":
     fl.client.start_client(server_address="127.0.0.1:8080", client=client)
 
 
-    save_metrics_json(client, "fed_avg_noniid", SAVE_PATH)
+    # save_metrics_json(client, "fed_avg_iid", SAVE_PATH)

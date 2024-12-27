@@ -42,15 +42,7 @@ glob_round = 0
 
 class CustomClient(fl.client.NumPyClient):
     def __init__(self, model: torch.nn.Module, train_loader, test_loader, device: str):
-        """
-        Инициализация кастомного клиента.
 
-        Parameters:
-        - model (torch.nn.Module): PyTorch-модель.
-        - train_loader (DataLoader): DataLoader для обучающей выборки.
-        - test_loader (DataLoader): DataLoader для тестовой выборки.
-        - device (str): Устройство для вычислений ('cpu' или 'cuda').
-        """
         self.model = model
         self.train_loader = train_loader
         self.test_loader = test_loader
@@ -75,16 +67,7 @@ class CustomClient(fl.client.NumPyClient):
         return get_model_parameters(self.model), len(self.train_loader.dataset), {}
 
     def evaluate(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[float, int, Dict]:
-        """
-        Оценка модели на тестовой выборке.
-
-        Parameters:
-        - parameters (NDArrays): Параметры модели от сервера.
-        - config (Dict[str, int]): Конфигурация текущего раунда.
-
-        Returns:
-        - Tuple[float, int, Dict]: Потери, размер данных и метрики.
-        """
+    
         global glob_round
         set_model_parameters(self.model, parameters)
 
