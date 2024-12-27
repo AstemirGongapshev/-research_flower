@@ -161,7 +161,7 @@ if __name__ == "__main__":
     TRANSFORMER_PATH = "./transformers"
 
    
-    scaler_iid, poly_iid = load_transformers(TRANSFORMER_PATH, key="noniid")
+    scaler_iid, poly_iid = load_transformers(TRANSFORMER_PATH, key="iid")
 
    
     val_loader, input_dim_val, test_loader, _ = prepare_validation_data(
