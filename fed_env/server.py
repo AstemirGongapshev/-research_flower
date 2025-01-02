@@ -144,15 +144,15 @@ import logging
 import os
 from datetime import datetime
 
-log_dir = "./fed_env/process"
-os.makedirs(log_dir, exist_ok=True)
+# log_dir = "./fed_env/process"
+# os.makedirs(log_dir, exist_ok=True)
 
-log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-logging.basicConfig(
-    filename=log_filename,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+# logging.basicConfig(
+#     filename=log_filename,
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
 
 def fit_round(server_round):
     return {"server_round": server_round}
@@ -182,14 +182,17 @@ if __name__ == "__main__":
         on_fit_config_fn=fit_round,  
     )
 
-    fl.server.start_server(
+    ServerHistory=fl.server.start_server(
         server_address="0.0.0.0:8080",
         strategy=fed_strategy,
         config=fl.server.ServerConfig(num_rounds=20),  
     )
 
+    # ServerHistory.losses_distributed[0][0]
+    # logging.info(f'Centralized metrics: {ServerHistory.metrics_centralized}')
+    # logging.info(f'Num rounds: {')
     fed_strategy.save_round_metrics(filename="./fed_env/results/server_metrics.json",
                                     strategy_suffix="fed_avg")
 
-    logging.info("Training stopped. Early stopping or all rounds are completed.")
+    # logging.info("Training stopped. Early stopping or all rounds are completed.")
     print("Training has stopped. Metrics saved.")

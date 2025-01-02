@@ -26,15 +26,15 @@ import os
 
 
 
-log_dir = "./fed_env/process"
-os.makedirs(log_dir, exist_ok=True)
+# log_dir = "./fed_env/process"
+# os.makedirs(log_dir, exist_ok=True)
 
-log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-logging.basicConfig(
-    filename=log_filename,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+# logging.basicConfig(
+#     filename=log_filename,
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
 
 
 glob_round = 0
