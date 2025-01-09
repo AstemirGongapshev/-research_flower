@@ -1,0 +1,232 @@
+2025-01-09 16:56:55,202 - INFO - EarlyStoppingFedAvg initialized.
+2025-01-09 16:56:55,205 - INFO - Starting Flower server, config: num_rounds=50, no round_timeout
+2025-01-09 16:56:55,275 - INFO - Flower ECE: gRPC server running (50 rounds), SSL is disabled
+2025-01-09 16:56:55,275 - INFO - [INIT]
+2025-01-09 16:56:55,275 - INFO - Requesting initial parameters from one random client
+2025-01-09 16:56:55,796 - INFO - Received initial parameters from one random client
+2025-01-09 16:56:55,797 - INFO - Evaluating initial global parameters
+2025-01-09 16:56:55,797 - INFO - 
+2025-01-09 16:56:55,797 - INFO - [ROUND 1]
+2025-01-09 16:56:55,798 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:58,154 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:56:58,155 - WARNING - No fit_metrics_aggregation_fn provided
+2025-01-09 16:56:58,213 - INFO - Round 1: ROC AUC = 0.7825, Accuracy = 0.6519
+2025-01-09 16:56:58,213 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:58,293 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:56:58,293 - WARNING - No evaluate_metrics_aggregation_fn provided
+2025-01-09 16:56:58,293 - INFO - 
+2025-01-09 16:56:58,293 - INFO - [ROUND 2]
+2025-01-09 16:56:58,293 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:58,739 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:56:58,846 - INFO - Round 2: ROC AUC = 0.7865, Accuracy = 0.6514
+2025-01-09 16:56:58,847 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:58,962 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:56:58,962 - INFO - 
+2025-01-09 16:56:58,962 - INFO - [ROUND 3]
+2025-01-09 16:56:58,963 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:59,356 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:56:59,401 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:56:59,401 - INFO - Round 3: ROC AUC = 0.7858, Accuracy = 0.6573
+2025-01-09 16:56:59,401 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:59,470 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:56:59,470 - INFO - 
+2025-01-09 16:56:59,471 - INFO - [ROUND 4]
+2025-01-09 16:56:59,471 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:56:59,966 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:00,009 - INFO - Round 4: ROC AUC = 0.7899, Accuracy = 0.6351
+2025-01-09 16:57:00,009 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:00,086 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:00,086 - INFO - 
+2025-01-09 16:57:00,086 - INFO - [ROUND 5]
+2025-01-09 16:57:00,086 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:00,403 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:00,447 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:57:00,447 - INFO - Round 5: ROC AUC = 0.7899, Accuracy = 0.6492
+2025-01-09 16:57:00,447 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:00,519 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:00,520 - INFO - 
+2025-01-09 16:57:00,520 - INFO - [ROUND 6]
+2025-01-09 16:57:00,521 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:01,038 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:01,081 - INFO - Round 6: ROC AUC = 0.7947, Accuracy = 0.6497
+2025-01-09 16:57:01,082 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:01,149 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:01,149 - INFO - 
+2025-01-09 16:57:01,150 - INFO - [ROUND 7]
+2025-01-09 16:57:01,150 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:01,604 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:01,650 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:57:01,650 - INFO - Round 7: ROC AUC = 0.7885, Accuracy = 0.6411
+2025-01-09 16:57:01,650 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:01,721 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:01,721 - INFO - 
+2025-01-09 16:57:01,721 - INFO - [ROUND 8]
+2025-01-09 16:57:01,721 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:02,103 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:02,150 - INFO - No improvement in ROC AUC for 2 round(s).
+2025-01-09 16:57:02,151 - INFO - Round 8: ROC AUC = 0.7931, Accuracy = 0.6876
+2025-01-09 16:57:02,151 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:02,229 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:02,230 - INFO - 
+2025-01-09 16:57:02,230 - INFO - [ROUND 9]
+2025-01-09 16:57:02,230 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:02,577 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:02,622 - INFO - No improvement in ROC AUC for 3 round(s).
+2025-01-09 16:57:02,623 - INFO - Round 9: ROC AUC = 0.7938, Accuracy = 0.6589
+2025-01-09 16:57:02,623 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:02,697 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:02,698 - INFO - 
+2025-01-09 16:57:02,698 - INFO - [ROUND 10]
+2025-01-09 16:57:02,698 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:03,056 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:03,099 - INFO - Round 10: ROC AUC = 0.7972, Accuracy = 0.6697
+2025-01-09 16:57:03,099 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:03,172 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:03,174 - INFO - 
+2025-01-09 16:57:03,174 - INFO - [ROUND 11]
+2025-01-09 16:57:03,174 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:03,482 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:03,525 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:57:03,525 - INFO - Round 11: ROC AUC = 0.7933, Accuracy = 0.6292
+2025-01-09 16:57:03,526 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:03,596 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:03,596 - INFO - 
+2025-01-09 16:57:03,596 - INFO - [ROUND 12]
+2025-01-09 16:57:03,597 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:03,918 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:04,024 - INFO - No improvement in ROC AUC for 2 round(s).
+2025-01-09 16:57:04,024 - INFO - Round 12: ROC AUC = 0.7943, Accuracy = 0.6616
+2025-01-09 16:57:04,024 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:04,097 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:04,097 - INFO - 
+2025-01-09 16:57:04,097 - INFO - [ROUND 13]
+2025-01-09 16:57:04,097 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:04,422 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:04,467 - INFO - Round 13: ROC AUC = 0.7974, Accuracy = 0.7065
+2025-01-09 16:57:04,467 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:04,534 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:04,535 - INFO - 
+2025-01-09 16:57:04,535 - INFO - [ROUND 14]
+2025-01-09 16:57:04,535 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:04,866 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:04,917 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:57:04,917 - INFO - Round 14: ROC AUC = 0.7950, Accuracy = 0.6497
+2025-01-09 16:57:04,917 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:04,994 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:04,994 - INFO - 
+2025-01-09 16:57:04,994 - INFO - [ROUND 15]
+2025-01-09 16:57:04,995 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:05,335 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:05,379 - INFO - No improvement in ROC AUC for 2 round(s).
+2025-01-09 16:57:05,379 - INFO - Round 15: ROC AUC = 0.7959, Accuracy = 0.6595
+2025-01-09 16:57:05,379 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:05,449 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:05,450 - INFO - 
+2025-01-09 16:57:05,450 - INFO - [ROUND 16]
+2025-01-09 16:57:05,451 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:05,766 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:05,811 - INFO - Round 16: ROC AUC = 0.7990, Accuracy = 0.6800
+2025-01-09 16:57:05,811 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:05,879 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:05,879 - INFO - 
+2025-01-09 16:57:05,880 - INFO - [ROUND 17]
+2025-01-09 16:57:05,880 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:06,400 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:06,454 - INFO - No improvement in ROC AUC for 1 round(s).
+2025-01-09 16:57:06,454 - INFO - Round 17: ROC AUC = 0.7978, Accuracy = 0.7016
+2025-01-09 16:57:06,454 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:06,537 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:06,537 - INFO - 
+2025-01-09 16:57:06,537 - INFO - [ROUND 18]
+2025-01-09 16:57:06,537 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:06,990 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:07,037 - INFO - No improvement in ROC AUC for 2 round(s).
+2025-01-09 16:57:07,037 - INFO - Round 18: ROC AUC = 0.7973, Accuracy = 0.7038
+2025-01-09 16:57:07,037 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:07,109 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:07,109 - INFO - 
+2025-01-09 16:57:07,109 - INFO - [ROUND 19]
+2025-01-09 16:57:07,109 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:07,471 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:07,515 - INFO - No improvement in ROC AUC for 3 round(s).
+2025-01-09 16:57:07,515 - INFO - Round 19: ROC AUC = 0.7972, Accuracy = 0.6973
+2025-01-09 16:57:07,515 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:07,586 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:07,586 - INFO - 
+2025-01-09 16:57:07,586 - INFO - [ROUND 20]
+2025-01-09 16:57:07,586 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:07,930 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:07,972 - INFO - No improvement in ROC AUC for 4 round(s).
+2025-01-09 16:57:07,972 - INFO - Round 20: ROC AUC = 0.7981, Accuracy = 0.6914
+2025-01-09 16:57:07,972 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:08,042 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:08,042 - INFO - 
+2025-01-09 16:57:08,042 - INFO - [ROUND 21]
+2025-01-09 16:57:08,043 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:08,402 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:08,445 - INFO - No improvement in ROC AUC for 5 round(s).
+2025-01-09 16:57:08,445 - INFO - Round 21: ROC AUC = 0.7981, Accuracy = 0.6676
+2025-01-09 16:57:08,445 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:08,513 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:08,514 - INFO - 
+2025-01-09 16:57:08,514 - INFO - [ROUND 22]
+2025-01-09 16:57:08,514 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:08,817 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:08,861 - INFO - No improvement in ROC AUC for 6 round(s).
+2025-01-09 16:57:08,861 - INFO - Round 22: ROC AUC = 0.7971, Accuracy = 0.6838
+2025-01-09 16:57:08,861 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:08,930 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:08,931 - INFO - 
+2025-01-09 16:57:08,931 - INFO - [ROUND 23]
+2025-01-09 16:57:08,931 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:09,240 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:09,285 - INFO - No improvement in ROC AUC for 7 round(s).
+2025-01-09 16:57:09,286 - INFO - Round 23: ROC AUC = 0.7982, Accuracy = 0.6638
+2025-01-09 16:57:09,286 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:09,355 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:09,355 - INFO - 
+2025-01-09 16:57:09,355 - INFO - [ROUND 24]
+2025-01-09 16:57:09,355 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:09,667 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:09,710 - INFO - No improvement in ROC AUC for 8 round(s).
+2025-01-09 16:57:09,710 - INFO - Round 24: ROC AUC = 0.7973, Accuracy = 0.6935
+2025-01-09 16:57:09,710 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:09,778 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:09,778 - INFO - 
+2025-01-09 16:57:09,778 - INFO - [ROUND 25]
+2025-01-09 16:57:09,779 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:10,108 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:10,157 - INFO - No improvement in ROC AUC for 9 round(s).
+2025-01-09 16:57:10,157 - INFO - Round 25: ROC AUC = 0.7988, Accuracy = 0.7151
+2025-01-09 16:57:10,157 - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:10,231 - INFO - aggregate_evaluate: received 2 results and 0 failures
+2025-01-09 16:57:10,232 - INFO - 
+2025-01-09 16:57:10,232 - INFO - [ROUND 26]
+2025-01-09 16:57:10,233 - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2025-01-09 16:57:10,598 - INFO - aggregate_fit: received 2 results and 0 failures
+2025-01-09 16:57:10,643 - INFO - No improvement in ROC AUC for 10 round(s).
+2025-01-09 16:57:10,643 - WARNING - Early stopping triggered! \u2757\ufe0f\u2757\ufe0f\u2757\ufe0f
+2025-01-09 16:57:10,671 - INFO - ROC AUC on test set = 0.8118
+2025-01-09 16:57:10,671 - INFO - Accuracy on test set = 0.7042
+2025-01-09 17:21:29,928 - ERROR - Exception iterating responses: 
+Traceback (most recent call last):
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\grpc\_server.py", line 653, in _take_response_from_response_iterator
+    return next(response_iterator), True
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\flower_service_servicer.py", line 117, in Join
+    ins_wrapper: InsWrapper = next(ins_wrapper_iterator)
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\grpc_bridge.py", line 165, in ins_wrapper_iterator
+    self._raise_if_closed()
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\grpc_bridge.py", line 81, in _raise_if_closed
+    raise GrpcBridgeClosed()
+flwr.server.superlink.fleet.grpc_bidi.grpc_bridge.GrpcBridgeClosed
+2025-01-09 17:21:29,965 - ERROR - Exception iterating responses: 
+Traceback (most recent call last):
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\grpc\_server.py", line 653, in _take_response_from_response_iterator
+    return next(response_iterator), True
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\flower_service_servicer.py", line 117, in Join
+    ins_wrapper: InsWrapper = next(ins_wrapper_iterator)
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\grpc_bridge.py", line 165, in ins_wrapper_iterator
+    self._raise_if_closed()
+  File "C:\Users\Астемир\.pyenv\pyenv-win\versions\3.10.6\lib\site-packages\flwr\server\superlink\fleet\grpc_bidi\grpc_bridge.py", line 81, in _raise_if_closed
+    raise GrpcBridgeClosed()
+flwr.server.superlink.fleet.grpc_bidi.grpc_bridge.GrpcBridgeClosed

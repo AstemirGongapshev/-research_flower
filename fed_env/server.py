@@ -178,21 +178,20 @@ if __name__ == "__main__":
         val_loader=val_loader,
         test_loader=test_loader,
         device=device,
-        patience=20,  
+        patience=10,  
         on_fit_config_fn=fit_round,  
     )
 
     ServerHistory=fl.server.start_server(
         server_address="0.0.0.0:8080",
         strategy=fed_strategy,
-        config=fl.server.ServerConfig(num_rounds=20),  
+        config=fl.server.ServerConfig(num_rounds=50),  
     )
 
     # ServerHistory.losses_distributed[0][0]
     # logging.info(f'Centralized metrics: {ServerHistory.metrics_centralized}')
     # logging.info(f'Num rounds: {')
-    fed_strategy.save_round_metrics(filename="./fed_env/results/server_metrics.json",
-                                    strategy_suffix="fed_avg")
+    # fed_strategy.save_round_metrics(filename="./fed_env/results/server_metrics_iid.json")
 
     # logging.info("Training stopped. Early stopping or all rounds are completed.")
     print("Training has stopped. Metrics saved.")

@@ -18,17 +18,17 @@ import pickle
 
 
 
-log_dir = "./fed_env/process"
-os.makedirs(log_dir, exist_ok=True)
+# log_dir = "./fed_env/process"
+# os.makedirs(log_dir, exist_ok=True)
 
 
-log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+# log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
 
-logging.basicConfig(
-    filename=log_filename,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# logging.basicConfig(
+#     filename=log_filename,
+#     level=logging.INFO,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
 
 
 
@@ -72,20 +72,20 @@ def prepare_data(
         X_train_scaled = scaler.fit_transform(X)
         X_test_scaled = scaler.transform(X_test)
 
-        logging.info("Features scaled using MinMaxScaler.")
+        # logging.info("Features scaled using MinMaxScaler.")
 
         
         poly = PolynomialFeatures(degree=2, include_bias=False)
         X_train_poly = poly.fit_transform(X_train_scaled)
         X_test_poly = poly.transform(X_test_scaled)
 
-        logging.info("Polynomial features of degree 2 generated.")
+        # logging.info("Polynomial features of degree 2 generated.")
 
        
         smote = SMOTE(random_state=random_state)
         X_train_resampled, y_train_resampled = smote.fit_resample(X_train_poly, y)
 
-        logging.info(f"SMOTE applied. Training sample size increased to {len(X_train_resampled)}.")
+        # logging.info(f"SMOTE applied. Training sample size increased to {len(X_train_resampled)}.")
 
         
         X_train_tensor = torch.from_numpy(X_train_resampled.astype(np.float32))
@@ -101,7 +101,7 @@ def prepare_data(
         train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
         test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
-        logging.info("DataLoaders for Train and Test sets created.")
+        # logging.info("DataLoaders for Train and Test sets created.")
 
         input_dim = X_train_tensor.shape[1]
         return train_loader, test_loader, input_dim
@@ -162,7 +162,7 @@ def train(model: torch.nn.Module, train_loader: DataLoader, learning_rate: float
 
                 epoch_loss += loss.item()
 
-            logging.info(f"Epoch {epoch + 1}/{num_epochs}: Loss = {epoch_loss:.4f}")
+            # logging.info(f"Epoch {epoch + 1}/{num_epochs}: Loss = {epoch_loss:.4f}")
 
     except Exception as e:
         logging.error(f"Training failed: {e}")
@@ -192,10 +192,10 @@ def test(model: torch.nn.Module, test_loader: DataLoader, device: str) -> Dict[s
         test_accuracy = accuracy_score(test_labels, test_pred_binary)
         test_f1 = f1_score(test_labels, test_pred_binary)
 
-        logging.info(
-            f"Test Metrics | Log-loss: {test_logloss:.4f} | "
-            f"ROC AUC: {test_roc_auc:.4f} | Accuracy: {test_accuracy:.4f} | F1 Score: {test_f1:.4f}"
-        )
+        # logging.info(
+        #     f"Test Metrics | Log-loss: {test_logloss:.4f} | "
+        #     f"ROC AUC: {test_roc_auc:.4f} | Accuracy: {test_accuracy:.4f} | F1 Score: {test_f1:.4f}"
+        # )
 
         return {
             "logloss_test": test_logloss,
