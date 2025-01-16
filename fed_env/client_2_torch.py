@@ -11,8 +11,8 @@ from fed_tasks_torch import (
     get_model_parameters,
     set_model_parameters,
     train,
+    train_prox,
     test,
-    save_metrics_json
 )
 
 from model import LogisticRegressionModel
@@ -21,21 +21,6 @@ from fed_tasks_sklearn import get_data
 import logging
 from datetime import datetime
 import os
-
-
-
-
-
-# log_dir = "./fed_env/process"
-# os.makedirs(log_dir, exist_ok=True)
-
-# log_filename = os.path.join(log_dir, f"processing_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-# logging.basicConfig(
-#     filename=log_filename,
-#     level=logging.INFO,
-#     format="%(asctime)s - %(levelname)s - %(message)s"
-# )
-
 
 glob_round = 0
 
@@ -48,6 +33,8 @@ class CustomClient(fl.client.NumPyClient):
         self.test_loader = test_loader
         self.device = device
         self.metrics = []
+        self.global_parameters = None
+        self.proximal_mu = 0.3
 
     def get_parameters(self, config: Dict[str, int]) -> NDArrays:
 
@@ -57,39 +44,52 @@ class CustomClient(fl.client.NumPyClient):
 
         global glob_round
         glob_round += 1
-
-       
+        print(parameters)
         set_model_parameters(self.model, parameters)
+        self.global_parameters = parameters
 
-        train(self.model, self.train_loader, learning_rate=0.001, num_epochs=1, device=self.device)
+        train_prox(
+            self.model,
+            self.train_loader,
+            learning_rate=0.001,
+            num_epochs=1,
+            device=self.device,
+            proximal_mu=self.proximal_mu,
+            global_params=self.global_parameters,  
+        )
+        # train(
+        #     self.model,
+        #     self.train_loader,
+        #     learning_rate=0.001,
+        #     num_epochs=1,
+        #     device=self.device,
+        # )
 
      
         return get_model_parameters(self.model), len(self.train_loader.dataset), {}
 
     def evaluate(self, parameters: NDArrays, config: Dict[str, int]) -> Tuple[float, int, Dict]:
-    
+
         global glob_round
         set_model_parameters(self.model, parameters)
-
-        
+       
         metrics = test(self.model, self.test_loader, device=self.device)
 
-        
         # logging.info(f"Evaluation Metrics (Round {glob_round}):")
         # for key, value in metrics.items():
         #     logging.info(f" - {key.capitalize()}: {value:.4f}")
 
         self.metrics.append(metrics)
 
-        
+         #TODO must be sure that metrics are sending the correct (logging) metrics>>>
         return metrics["logloss_test"], len(self.test_loader.dataset), metrics
 
 
 if __name__ == "__main__":
   
-    TRAIN_DATA_PATH = "./datas/IID_2.csv"
+    TRAIN_DATA_PATH = "./datas/NON_IID_FL_2.csv"
     TEST_SAMPLE_PATH = "./datas/TEST_SAMPLE.csv"
-    SAVE_PATH = "./fed_env/results/iid.json"
+    # SAVE_PATH = "./fed_env/results/iid.json"
 
 
     data_noniid = get_data(TRAIN_DATA_PATH)

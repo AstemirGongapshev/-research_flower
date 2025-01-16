@@ -11,8 +11,8 @@ CLIENT_1_DATA_IID_PATH = "./datas/IID_1.csv"
 CLIENT_2_DATA_IID_PATH = "./datas/IID_2.csv"
 GLOBAL_DATA_IID_PATH = "./datas/IID.csv"
 
-CLIENT_1_DATA_NON_IID_PATH = "./datas/NON_IID_1.csv"
-CLIENT_2_DATA_NON_IID_PATH = "./datas/NON_IID_2.csv"
+CLIENT_1_DATA_NON_IID_PATH = "./datas/NON_IID_FL_1.csv"
+CLIENT_2_DATA_NON_IID_PATH = "./datas/NON_IID_FL_2.csv"
 GLOBAL_DATA_NON_IID_PATH = "./datas/NON_IID.csv"
 
 TEST_SAMPLE_PATH = "./datas/TEST_SAMPLE.csv"
@@ -133,8 +133,8 @@ def main():
         df=client_1_non_iid,
         test_df=X_test,
         test_labels=y_test,
-        add_noise=True,
-        noise_level=1.5,
+        add_noise=False,
+        noise_level=0.0,
         key=key_1_noniid,
         save_path=PATH_FOR_NON_IID_RES
     )
@@ -145,8 +145,8 @@ def main():
         df=client_2_non_iid,
         test_df=X_test,
         test_labels=y_test,
-        add_noise=True,
-        noise_level=1.5,
+        add_noise=False,
+        noise_level=0.0,
         key=key_2_noniid,
         save_path=PATH_FOR_NON_IID_RES
     )

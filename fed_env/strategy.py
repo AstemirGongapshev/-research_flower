@@ -99,7 +99,7 @@ class EarlyStoppingFedAvg(FedAvg):
             self.round_metrics.append(round_info_test)
             
             roc_auc = roc_auc_test
-            self.save_metrics(data=self.round_metrics, filename="./fed_env/results/metrics_iid.json", strategy_suffix="fed_avg")
+            self.save_metrics(data=self.round_metrics, filename="./fed_env/results/metrics_noniid.json", strategy_suffix="fed_prox")
                                     
             
             raise RuntimeError(f"Early stopping triggered: ROC AUC test = {roc_auc_test:.4f}, Accuracy test = {accuracy_test:.4f}")

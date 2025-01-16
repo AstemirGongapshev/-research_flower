@@ -162,7 +162,7 @@ def fit_predict(
         
         model = LogisticRegressionModel(input_dim).to(device)
         criterion = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+        optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
         best_val_roc_auc = 0.0
         epochs_without_improvement = 0

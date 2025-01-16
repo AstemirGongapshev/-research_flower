@@ -4,7 +4,7 @@ import pandas as pd
 import torch
 import json
 import torch.nn as nn
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 import logging
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import MinMaxScaler, PolynomialFeatures
@@ -13,6 +13,7 @@ from sklearn.metrics import roc_auc_score, accuracy_score, log_loss, f1_score
 from imblearn.over_sampling import SMOTE
 from tqdm import tqdm
 from datetime import datetime
+from flwr.common import NDArrays
 import pickle
 
 
@@ -140,11 +141,17 @@ def save_metrics_json(client, strategy_suffix: str, filename: str ) -> None:
     print(f"Metrics successfully saved to {filename} under suffix {strategy_suffix}")
 
 
-def train(model: torch.nn.Module, train_loader: DataLoader, learning_rate: float, num_epochs: int, device: str) -> None:
+def train(
+        model: torch.nn.Module,
+        train_loader: DataLoader,
+        learning_rate: float,
+        num_epochs: int,
+        device: str
+    ) -> None:
     try:
         model.to(device)
         criterion = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+        optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate) #maybe Adam
 
         for epoch in range(num_epochs):
             model.train()
@@ -167,6 +174,53 @@ def train(model: torch.nn.Module, train_loader: DataLoader, learning_rate: float
     except Exception as e:
         logging.error(f"Training failed: {e}")
         raise
+
+def train_prox(
+        model: torch.nn.Module,
+        train_loader: DataLoader,
+        learning_rate: float,
+        num_epochs: int,
+        device: str,
+        proximal_mu: float = 0.0,
+        global_params: Optional[NDArrays] = None,
+    ) -> None:
+    
+        try:
+            model.to(device)
+            criterion = nn.CrossEntropyLoss()
+            optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+
+            for epoch in range(num_epochs):
+                model.train()
+                epoch_loss = 0.0
+
+                for inputs, labels in tqdm(train_loader, desc=f"Epoch {epoch + 1}/{num_epochs} - Training", leave=False):
+                    inputs = inputs.to(device)
+                    labels = labels.to(device)
+
+                    optimizer.zero_grad()
+                    outputs = model(inputs)
+                    loss = criterion(outputs, labels)
+
+                    
+                    if proximal_mu > 0.0 and global_params is not None:
+                        proximal_term = 0.0
+                        for local_param, global_param in zip(model.parameters(), global_params):
+                            global_tensor = torch.tensor(global_param, device=device)
+                            proximal_term += torch.norm(local_param - global_tensor, p=2) ** 2
+                        loss += (proximal_mu / 2) * proximal_term
+
+                    loss.backward()
+                    optimizer.step()
+
+                    epoch_loss += loss.item()
+
+                
+                logging.info(f"Epoch {epoch + 1}/{num_epochs}: Loss = {epoch_loss:.4f}")
+
+        except Exception as e:
+            logging.error(f"Training failed: {e}")
+            raise
 
 
 def test(model: torch.nn.Module, test_loader: DataLoader, device: str) -> Dict[str, float]:
